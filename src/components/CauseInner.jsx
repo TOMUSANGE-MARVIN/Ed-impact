@@ -1,0 +1,137 @@
+import Link from "next/link";
+import ProgressBar from "../helper/ProgressBar";
+
+const defaultPrograms = [
+  {
+    image: { url: "/assets/images/cause/one.png" },
+    tag: "Motivation",
+    title: "Teacher Motivation",
+    description: "Instilling autonomy, mastery and purpose so teachers rediscover the love of teaching.",
+    percent: 100,
+    statOneLabel: "Reach",
+    statOneValue: "199,856 teachers",
+    statTwoLabel: "Coverage",
+    statTwoValue: "National",
+  },
+  {
+    image: { url: "/assets/images/cause/two.png" },
+    tag: "Systems",
+    title: "System Strengthening",
+    description: "Working through local government structures to build ownership that outlasts our involvement.",
+    percent: 88,
+    statOneLabel: "Coverage",
+    statOneValue: "155/176 LGs",
+    statTwoLabel: "Focus",
+    statTwoValue: "Secondary Education",
+  },
+  {
+    image: { url: "/assets/images/cause/three.png" },
+    tag: "CPD",
+    title: "Continuous Professional Development",
+    description: "Peer-led feedback and classroom observation that builds lasting instructional practice.",
+    percent: 96,
+    statOneLabel: "Coverage",
+    statOneValue: "22/23 PTCs",
+    statTwoLabel: "Focus",
+    statTwoValue: "Primary Education",
+  },
+  {
+    image: { url: "/assets/images/cause/four.png" },
+    tag: "Evidence",
+    title: "Evidence & Research",
+    description: "Generating rigorous, locally grounded data that informs policy design and proves what works.",
+    percent: 73,
+    statOneLabel: "Literacy",
+    statOneValue: "73.1% programme",
+    statTwoLabel: "Comparison",
+    statTwoValue: "57.0% control schools",
+  },
+];
+
+const CauseInner = ({ programs = defaultPrograms }) => {
+  return (
+    <section className='cause cause-three-alt'>
+      <div className='container'>
+        <div className='row justify-content-center'>
+          <div className='col-12 col-md-8 col-xl-7'>
+            <div
+              className='section__header mb-60 text-center'
+              data-aos='fade-up'
+              data-aos-duration={1000}
+            >
+              <span className='sub-title'>
+                <i className='icon-education' />
+                Our Model
+              </span>
+              <h2 className='title-animation_inner'>
+                The Four <span>Interventions</span> Behind Our Work
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div className='row gutter-30'>
+          {[...programs, ...programs].map((item, index) => (
+            <div className='col-12 col-md-6 col-xl-4 col-xxl-3' key={item.id ? `${item.id}-${index}` : index}>
+              <div
+                className='cause__slider-inner'
+                data-aos='fade-up'
+                data-aos-duration={1000}
+                data-aos-delay={(index % 4) * 300}
+              >
+                <div className='cause__slider-single van-tilt'>
+                  <div className='thumb'>
+                    <Link href='/cause-details'>
+                      <img
+                        src={item.image?.url || "/assets/images/cause/one.png"}
+                        alt='Image_inner'
+                      />
+                    </Link>
+                    <div className='tag'>
+                      <Link href='/our-causes'>{item.tag}</Link>
+                    </div>
+                  </div>
+                  <div className='content'>
+                    <h6>
+                      <Link href='/cause-details'>{item.title}</Link>
+                    </h6>
+                    <p>{item.description}</p>
+                  </div>
+                  <div className='cause__slider-cta'>
+                    <div className='cause__progress progress-bar-single'>
+                      <ProgressBar percent={item.percent} label={item.statOneLabel} />
+                      <div className='cause-progress__goal'>
+                        <p>
+                          {item.statOneLabel}:{" "}
+                          <span className='raised'>{item.statOneValue}</span>
+                        </p>
+                        <p>
+                          {item.statTwoLabel}:{" "}
+                          <span className='goal'>{item.statTwoValue}</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div className='cause__cta'>
+                      <Link
+                        href='/cause-details'
+                        aria-label='learn more'
+                        title='learn more'
+                        className='btn--secondary'
+                      >
+                        Learn More
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className='spade'>
+        <img src='assets/images/help/spade.png' alt='Image_inner' />
+      </div>
+    </section>
+  );
+};
+
+export default CauseInner;

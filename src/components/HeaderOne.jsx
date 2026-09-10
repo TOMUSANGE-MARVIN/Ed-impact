@@ -1,0 +1,422 @@
+"use client";
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+const HeaderOne = ({ settings }) => {
+  const logoUrl = settings?.logo?.url || "/assets/images/logo.png";
+  const phone = settings?.contact?.phoneOne || "+256 781 064 668";
+  const social = settings?.social || {};
+  let pathname = usePathname();
+  let [mobileMenu, setMobileMenu] = useState(false);
+  const [scroll, setScroll] = useState(false);
+  const handleMobileMenu = () => {
+    setMobileMenu(!mobileMenu);
+  };
+
+  useEffect(() => {
+    window.onscroll = () => {
+      if (window.pageYOffset < 150) {
+        setScroll(false);
+      } else if (window.pageYOffset > 150) {
+        setScroll(true);
+      }
+      return () => (window.onscroll = null);
+    };
+  }, []);
+
+  const mobileMenuListRef = useRef(null);
+
+  useEffect(() => {
+    const desktopMenu = document.querySelector(".navbar__menu");
+
+    if (desktopMenu && mobileMenuListRef.current) {
+      mobileMenuListRef.current.innerHTML = desktopMenu.innerHTML;
+
+      const setupDropdownToggles = (container) => {
+        const dropdownLabels = container.querySelectorAll(
+          ".navbar__dropdown-label"
+        );
+
+        dropdownLabels.forEach((label) => {
+          label.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const subMenu = this.nextElementSibling;
+
+            // ✅ Only close siblings within the same level (UL)
+            const siblingLabels = Array.from(
+              this.closest("ul")?.querySelectorAll(
+                ":scope > li > .navbar__dropdown-label"
+              ) || []
+            );
+
+            siblingLabels.forEach((sibling) => {
+              const siblingSubMenu = sibling.nextElementSibling;
+
+              if (
+                sibling !== this &&
+                siblingSubMenu &&
+                siblingSubMenu.classList.contains("navbar__sub-menu")
+              ) {
+                siblingSubMenu.style.maxHeight = "0px";
+                siblingSubMenu.classList.remove("show");
+                sibling.classList.remove("navbar__item-active");
+              }
+            });
+
+            // Toggle current submenu with smooth animation
+            if (subMenu && subMenu.classList.contains("navbar__sub-menu")) {
+              const isOpen = subMenu.classList.contains("show");
+
+              if (isOpen) {
+                subMenu.style.maxHeight = "0px";
+                subMenu.classList.remove("show");
+                this.classList.remove("navbar__item-active");
+              } else {
+                subMenu.classList.add("show");
+                subMenu.style.maxHeight = subMenu.scrollHeight + "px";
+                this.classList.add("navbar__item-active");
+              }
+            }
+          });
+        });
+      };
+
+      setupDropdownToggles(mobileMenuListRef.current);
+    }
+  }, []);
+
+  return (
+    <>
+      <header
+        className={`header header-secondary ${scroll && "sticky-header"}`}
+      >
+        <div className='container'>
+          <div className='row'>
+            <div className='col-12'>
+              <div className='main-header__menu-box'>
+                <nav className='navbar p-0'>
+                  <div className='navbar-logo'>
+                    <Link href='/'>
+                      <img src={logoUrl} alt='Ed Impact Africa Foundation' />
+                    </Link>
+                  </div>
+                  <div className='navbar__menu-wrapper'>
+                    <div className='navbar__menu d-none d-xl-block'>
+                      <ul className='navbar__list'>
+                        <li
+                          className={`navbar__item nav-fade ${
+                            pathname === "/" ? "active" : ""
+                          }`}
+                        >
+                          <Link href='/'>Home</Link>
+                        </li>
+                        <li
+                          className={`navbar__item navbar__item--has-children nav-fade ${
+                            ["/about-us", "/our-team", "/team-details"].includes(pathname) ? "active" : ""
+                          }`}
+                        >
+                          <Link
+                            href='/about-us'
+                            aria-label='dropdown menu'
+                            className='navbar__dropdown-label dropdown-label-alter'
+                          >
+                            About Us
+                          </Link>
+                          <ul className='navbar__sub-menu'>
+                            <li
+                              className={
+                                ["/about-us"].includes(pathname) ? "active" : ""
+                              }
+                            >
+                              <Link href='/about-us'>Vision, Mission &amp; Ubuntu</Link>
+                            </li>
+                            <li
+                              className={
+                                ["/our-team"].includes(pathname) ? "active" : ""
+                              }
+                            >
+                              <Link href='/our-team'>Leadership &amp; Board</Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li
+                          className={`navbar__item navbar__item--has-children nav-fade ${
+                            ["/our-causes", "/cause-details"].includes(pathname)
+                              ? "active"
+                              : ""
+                          }`}
+                        >
+                          <Link
+                            href='/our-causes'
+                            aria-label='dropdown menu'
+                            className='navbar__dropdown-label dropdown-label-alter'
+                          >
+                            Our Work
+                          </Link>
+                          <ul className='navbar__sub-menu'>
+                            <li
+                              className={
+                                ["/our-causes"].includes(pathname)
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link href='/our-causes'>The 4 Interventions</Link>
+                            </li>
+                            <li
+                              className={
+                                ["/cause-details"].includes(pathname)
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link href='/cause-details'>Intervention Detail</Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li
+                          className={`navbar__item navbar__item--has-children nav-fade ${
+                            [
+                              "/faq",
+                              "/events",
+                              "/event-details",
+                              "/become-volunteer",
+                            ].includes(pathname)
+                              ? "active"
+                              : ""
+                          }`}
+                        >
+                          <Link
+                            href='#'
+                            aria-label='dropdown menu'
+                            className='navbar__dropdown-label dropdown-label-alter'
+                          >
+                            Impact
+                          </Link>
+                          <ul className='navbar__sub-menu'>
+                            <li
+                              className={
+                                ["/faq"].includes(pathname) ? "active" : ""
+                              }
+                            >
+                              <Link href='/faq'>FAQs</Link>
+                            </li>
+                            <li
+                              className={`navbar__item navbar__item--has-children ${
+                                ["/events", "/event-details"].includes(pathname)
+                                  ? "active"
+                                  : ""
+                              }`}
+                            >
+                              <Link
+                                href='#'
+                                aria-label='dropdown menu'
+                                className='navbar__dropdown-label navbar__dropdown-label-sub'
+                              >
+                                Annual Reports &amp; Stories
+                              </Link>
+                              <ul className='navbar__sub-menu navbar__sub-menu__nested'>
+                                <li
+                                  className={
+                                    ["/events"].includes(pathname)
+                                      ? "active"
+                                      : ""
+                                  }
+                                >
+                                  <Link href='/events'>Reports &amp; Updates</Link>
+                                </li>
+                                <li
+                                  className={
+                                    ["/event-details"].includes(pathname)
+                                      ? "active"
+                                      : ""
+                                  }
+                                >
+                                  <Link href='/event-details'>
+                                    Report Detail
+                                  </Link>
+                                </li>
+                              </ul>
+                            </li>
+                            <li
+                              className={
+                                ["/become-volunteer"].includes(pathname)
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link href='/become-volunteer'>Careers &amp; Volunteering</Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li
+                          className={`navbar__item navbar__item--has-children nav-fade ${
+                            [
+                              "/blog-list",
+                              "/blog-grid",
+                              "/blog-details",
+                            ].includes(pathname)
+                              ? "active"
+                              : ""
+                          } `}
+                        >
+                          <Link
+                            href='/blog-grid'
+                            aria-label='dropdown menu'
+                            className='navbar__dropdown-label dropdown-label-alter'
+                          >
+                            Insights
+                          </Link>
+                          <ul className='navbar__sub-menu'>
+                            <li
+                              className={
+                                ["/blog-list"].includes(pathname)
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link href='/blog-list'>Policy Briefs &amp; Insights</Link>
+                            </li>
+                            <li
+                              className={
+                                ["/blog-grid"].includes(pathname)
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link href='/blog-grid'>Insights Grid</Link>
+                            </li>
+                            <li
+                              className={
+                                ["/blog-details"].includes(pathname)
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link href='/blog-details'>Article Detail</Link>
+                            </li>
+                          </ul>
+                        </li>
+                        <li
+                          className={`navbar__item nav-fade ${
+                            ["/contact-us"].includes(pathname) ? "active" : ""
+                          } `}
+                        >
+                          <Link href='/contact-us'>Contact Us</Link>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className='contact-btn'>
+                      <div className='contact-icon'>
+                        <i className='icon-support' />
+                      </div>
+                      <div className='contact-content'>
+                        <p>Call Us Now</p>
+                        <a href={`tel:${phone.replace(/\s/g, "")}`}>{phone}</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='navbar__options'>
+                    <div className='navbar__mobile-options '>
+                      <Link
+                        href='/donate-us'
+                        className='btn--primary d-none d-md-flex'
+                      >
+                        Partner With Us <i className='fa-solid fa-arrow-right' />
+                      </Link>
+                    </div>
+                    <button
+                      onClick={handleMobileMenu}
+                      className='open-offcanvas-nav d-flex d-xl-none'
+                      aria-label='toggle mobile menu'
+                      title='open offcanvas menu'
+                    >
+                      <span className='icon-bar top-bar' />
+                      <span className='icon-bar middle-bar' />
+                      <span className='icon-bar bottom-bar' />
+                    </button>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div
+        className={`mobile-menu mobile-menu--primary d-block d-xxl-none ${
+          mobileMenu ? "show-menu" : ""
+        }`}
+      >
+        <nav className='mobile-menu__wrapper'>
+          <div className='mobile-menu__header nav-fade'>
+            <div className='logo'>
+              <Link href='/' aria-label='home page' title='logo'>
+                <img src='assets/images/logo.png' alt='Ed Impact Africa Foundation' />
+              </Link>
+            </div>
+            <button
+              onClick={handleMobileMenu}
+              aria-label='close mobile menu'
+              className='close-mobile-menu'
+            >
+              <i className='fa-solid fa-xmark' />
+            </button>
+          </div>
+          <div className='mobile-menu__list' ref={mobileMenuListRef}></div>
+
+          <div className='mobile-menu__cta nav-fade d-block d-md-none'>
+            <Link href='/donate-us' className='btn--primary '>
+              Partner With Us <i className='fa-solid fa-arrow-right' />
+            </Link>
+          </div>
+          <div className='mobile-menu__social social nav-fade'>
+            <Link
+              href={social.facebook || 'https://www.facebook.com/'}
+              target='_blank'
+              aria-label='share us on facebook'
+              title='facebook'
+            >
+              <i className='fa-brands fa-facebook-f' />
+            </Link>
+            <Link
+              href={social.youtube || 'https://www.youtube.com/'}
+              target='_blank'
+              aria-label='share us on youtube'
+              title='youtube'
+            >
+              <i className='fa-brands fa-youtube' />
+            </Link>
+            <Link
+              href={social.twitterX || 'https://x.com/'}
+              target='_blank'
+              aria-label='share us on twitter'
+              title='twitter'
+            >
+              <i className='fa-brands fa-x-twitter' />
+            </Link>
+            <Link
+              href={social.linkedin || 'https://www.linkedin.com/'}
+              target='_blank'
+              aria-label='share us on linkedin'
+              title='linkedin'
+            >
+              <i className='fa-brands fa-linkedin-in' />
+            </Link>
+          </div>
+        </nav>
+      </div>
+
+      <div
+        className={`mobile-menu__backdrop ${
+          mobileMenu ? "mobile-menu__backdrop-active" : ""
+        }`}
+      ></div>
+    </>
+  );
+};
+
+export default HeaderOne;
