@@ -21,7 +21,11 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
-  serverURL: process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000',
+  // Left unset in production (no NEXT_PUBLIC_SERVER_URL configured), Payload
+  // returns relative media/API URLs, which resolve correctly behind any
+  // domain or reverse proxy. A hardcoded localhost fallback here would be
+  // baked into the production build and break every media URL.
+  serverURL: process.env.NEXT_PUBLIC_SERVER_URL || '',
   admin: {
     user: Users.slug,
     importMap: {

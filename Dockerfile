@@ -19,6 +19,12 @@ ENV NODE_ENV=production
 # They are throwaway values — real ones are injected at runtime.
 ENV PAYLOAD_SECRET=build-time-placeholder-not-used-at-runtime
 ENV DATABASE_URL=file:/tmp/build-only.db
+# NEXT_PUBLIC_* variables are inlined into the compiled bundle at build time,
+# not read at container runtime — Payload uses this to generate absolute
+# media URLs, so it must be supplied as a build arg (Coolify: mark this env
+# var "available at buildtime"), not just a runtime environment variable.
+ARG NEXT_PUBLIC_SERVER_URL
+ENV NEXT_PUBLIC_SERVER_URL=${NEXT_PUBLIC_SERVER_URL}
 # The admin import map is gitignored, so it does not exist in a clean
 # checkout and must be regenerated before the Next build imports it.
 RUN npm run generate:importmap
