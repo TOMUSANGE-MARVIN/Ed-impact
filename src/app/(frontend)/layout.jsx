@@ -7,6 +7,12 @@ import "./globals.scss";
 import InitializeAOS from "@/helper/InitializeAOS";
 import RouteScrollToTop from "@/helper/RouteScrollToTop";
 
+// Pages read their content from Payload at request time, so edits made in the
+// admin panel appear immediately. Without this Next prerenders them at build
+// time, which both freezes the content until the next deploy and requires a
+// populated database during the image build.
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: "Ed Impact Africa Foundation | Transforming Education Systems Across Africa",
   description:

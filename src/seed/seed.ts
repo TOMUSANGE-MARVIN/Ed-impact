@@ -79,9 +79,9 @@ async function seed() {
 
   const postImages: Record<string, any> = {}
   for (const [key, file] of Object.entries({
-    motivation: 'blog/one.png',
-    impact: 'blog/two.png',
-    localisation: 'blog/three.png',
+    motivation: 'blog/insight-motivation.png',
+    impact: 'blog/insight-evidence.png',
+    localisation: 'blog/insight-localisation.png',
   })) {
     postImages[key] = await uploadMedia(payload, file, `${key} article image`)
   }
