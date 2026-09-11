@@ -1,3 +1,4 @@
+import ApproachOne from "@/components/ApproachOne";
 import BreadcrumbOne from "@/components/BreadcrumbOne";
 import CauseInner from "@/components/CauseInner";
 import CauseSliderThree from "@/components/CauseSliderThree";
@@ -12,9 +13,9 @@ import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getPrograms } from "@/lib/payload";
 
 export const metadata = {
-  title: "Our Work | Ed Impact Africa Foundation",
+  title: "Our Work | Teacher Professional Development & System Strengthening",
   description:
-    "Our four core interventions: Teacher Motivation, System Strengthening, Continuous Professional Development, and Evidence & Research.",
+    "Ed Impact Africa Foundation's four interventions — teacher motivation, education system strengthening, continuous professional development for teachers and education research — driving learning outcomes across Africa.",
 };
 
 const page = async () => {
@@ -40,6 +41,9 @@ const page = async () => {
 
         {/* CauseInner */}
         <CauseInner programs={programs} />
+
+        {/* ApproachOne - Theory of Change */}
+        <ApproachOne />
 
         {/* CtaSectionTwo */}
         <CtaSectionTwo />

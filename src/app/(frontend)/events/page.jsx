@@ -8,9 +8,9 @@ import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 
 export const metadata = {
-  title: "Reports & Updates | Ed Impact Africa Foundation",
+  title: "Reports & Updates | Education Impact Evaluation | Ed Impact Africa Foundation",
   description:
-    "Annual reports, evidence updates, and stories from across Ed Impact Africa Foundation's programs.",
+    "Annual reports, education impact evaluation updates and evidence from across Ed Impact Africa Foundation's programs strengthening education systems in Africa.",
 };
 
 const page = () => {

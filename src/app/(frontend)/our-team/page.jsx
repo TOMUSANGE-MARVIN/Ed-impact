@@ -9,9 +9,9 @@ import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getTeamMembers } from "@/lib/payload";
 
 export const metadata = {
-  title: "Leadership & Board | Ed Impact Africa Foundation",
+  title: "Leadership & Board | Education Leadership in Africa",
   description:
-    "Meet the Board of Directors and Executive Team leading Ed Impact Africa Foundation.",
+    "Meet the Board of Directors and Executive Team leading Ed Impact Africa Foundation's education leadership and system strengthening work across Africa.",
 };
 
 const page = async () => {

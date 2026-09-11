@@ -1,41 +1,34 @@
+import AboutBackground from "@/components/AboutBackground";
 import BreadcrumbOne from "@/components/BreadcrumbOne";
-import ContactOne from "@/components/ContactOne";
 import CtaSectionTwo from "@/components/CtaSectionTwo";
 import DifferenceTwo from "@/components/DifferenceTwo";
-import FaqOne from "@/components/FaqOne";
 import FooterOne from "@/components/FooterOne";
 import GalleryOne from "@/components/GalleryOne";
 import HeaderOne from "@/components/HeaderOne";
-import HelpOne from "@/components/HelpOne";
 import Preloader from "@/components/Preloader";
 import TeamTwo from "@/components/TeamTwo";
-import TestimonialOne from "@/components/TestimonialOne";
 import TopBarOne from "@/components/TopBarOne";
+import WhatWeDo from "@/components/WhatWeDo";
+import WhoWeAre from "@/components/WhoWeAre";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import {
   getSiteSettings,
-  getHomePage,
   getAboutPage,
   getTeamMembers,
-  getFaqs,
-  getTestimonials,
 } from "@/lib/payload";
 
 export const metadata = {
-  title: "About Us | Ed Impact Africa Foundation",
+  title: "About Us | Education Reform & Equity in Africa | Ed Impact Africa Foundation",
   description:
-    "Vision, mission, brand promise and the Ubuntu philosophy behind Ed Impact Africa Foundation, the successor to STIR Education Uganda.",
+    "The vision, mission and Ubuntu philosophy behind Ed Impact Africa Foundation's work on education system strengthening, education reform and education equity in Africa — successor to STIR Education Uganda.",
 };
 
 const page = async () => {
-  const [settings, home, about, teamMembers, faqs, testimonials] = await Promise.all([
+  const [settings, about, teamMembers] = await Promise.all([
     getSiteSettings(),
-    getHomePage(),
     getAboutPage(),
     getTeamMembers(),
-    getFaqs("general"),
-    getTestimonials(),
   ]);
 
   return (
@@ -56,28 +49,34 @@ const page = async () => {
         {/* BreadcrumbOne */}
         <BreadcrumbOne title='About Us' />
 
-        {/* HelpOne */}
-        <HelpOne ubuntu={home?.ubuntuSection} stats={settings?.stats} phone={settings?.contact?.phoneOne} />
+        {/* 1. Background */}
+        <AboutBackground
+          background={about?.background}
+          backgroundParagraphs={about?.backgroundParagraphs}
+        />
 
-        {/* CtaSectionTwo */}
-        <CtaSectionTwo />
+        {/* 2. Who We Are */}
+        <WhoWeAre
+          whoWeAre={about?.whoWeAre}
+          whoWeAreInherits={about?.whoWeAreInherits}
+        />
 
-        {/* TeamTwo */}
-        <TeamTwo teamMembers={teamMembers} />
-
-        {/* FaqOne */}
-        <FaqOne faqs={faqs} />
-
-        {/* TestimonialOne */}
-        <TestimonialOne testimonials={testimonials} />
-
-        {/* ContactOne */}
-        <ContactOne />
-
-        {/* DifferenceTwo */}
+        {/* 3. Vision, Mission & Core Values */}
         <DifferenceTwo about={about} stats={settings?.stats} />
 
-        {/* GalleryOne */}
+        {/* 4. What We Do */}
+        <WhatWeDo
+          whatWeDo={about?.whatWeDo}
+          programAnchors={about?.programAnchors}
+        />
+
+        {/* 5. Team */}
+        <TeamTwo teamMembers={teamMembers} />
+
+        {/* 6. CTA */}
+        <CtaSectionTwo />
+
+        {/* 7. Gallery */}
         <GalleryOne />
 
         {/* FooterOne */}

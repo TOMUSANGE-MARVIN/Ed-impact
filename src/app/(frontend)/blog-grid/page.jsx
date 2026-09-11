@@ -9,9 +9,9 @@ import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getPosts } from "@/lib/payload";
 
 export const metadata = {
-  title: "Insights & Policy Briefs | Ed Impact Africa Foundation",
+  title: "Insights & Policy Briefs | Education Research in Africa",
   description:
-    "Policy briefs, evidence summaries and learning reports from Ed Impact Africa Foundation.",
+    "Policy briefs, evidence-based education research and impact evaluation reports from Ed Impact Africa Foundation on strengthening education systems across Africa.",
 };
 
 const page = async () => {

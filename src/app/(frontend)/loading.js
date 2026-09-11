@@ -2,8 +2,8 @@
 export default function Loading() {
   return (
     <div className='preloader'>
-      <i className='icon-donation' />
-      <p>CHARIFUND</p>
+      <i className='icon-education' />
+      <p>ED IMPACT AFRICA</p>
     </div>
   );
 }

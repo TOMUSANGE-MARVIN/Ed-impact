@@ -28,9 +28,9 @@ import {
 } from "@/lib/payload";
 
 export const metadata = {
-  title: "Ed Impact Africa Foundation | Transforming Education Systems Across Africa",
+  title: "Ed Impact Africa Foundation | Education System Strengthening in Africa",
   description:
-    "Ed Impact Africa Foundation partners with governments and communities to strengthen education systems across Africa, so every learner receives equitable, high-quality and relevant teaching and learning.",
+    "Ed Impact Africa Foundation partners with governments across Africa on education system strengthening, teacher professional development and teacher motivation — improving learning outcomes for every child.",
 };
 
 const page = async () => {

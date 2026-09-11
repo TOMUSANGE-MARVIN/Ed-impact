@@ -11,9 +11,9 @@ import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getHomePage, getFaqs, getTeamMembers } from "@/lib/payload";
 
 export const metadata = {
-  title: "FAQs | Ed Impact Africa Foundation",
+  title: "FAQs | Ed Impact Africa Foundation — Education Reform in Africa",
   description:
-    "Answers to common questions about Ed Impact Africa Foundation's work, partnerships, and impact.",
+    "Answers to common questions about Ed Impact Africa Foundation's education system strengthening, teacher development and partnership work across Africa.",
 };
 
 const page = async () => {

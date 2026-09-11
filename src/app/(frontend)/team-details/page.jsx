@@ -10,7 +10,7 @@ import CustomCursor from "@/helper/CustomCursor";
 export const metadata = {
   title: "Team Member | Ed Impact Africa Foundation",
   description:
-    "Meet a member of the Ed Impact Africa Foundation leadership team or board.",
+    "Meet a member of the Ed Impact Africa Foundation leadership team driving education system strengthening across Africa.",
 };
 
 const page = () => {

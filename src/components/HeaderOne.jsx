@@ -115,7 +115,7 @@ const HeaderOne = ({ settings }) => {
                         </li>
                         <li
                           className={`navbar__item navbar__item--has-children nav-fade ${
-                            ["/about-us", "/our-team", "/team-details"].includes(pathname) ? "active" : ""
+                            ["/about-us", "/our-team", "/team-details", "/become-volunteer"].includes(pathname) ? "active" : ""
                           }`}
                         >
                           <Link
@@ -131,7 +131,7 @@ const HeaderOne = ({ settings }) => {
                                 ["/about-us"].includes(pathname) ? "active" : ""
                               }
                             >
-                              <Link href='/about-us'>Vision, Mission &amp; Ubuntu</Link>
+                              <Link href='/about-us'>Vision, Mission &amp; Values</Link>
                             </li>
                             <li
                               className={
@@ -139,6 +139,13 @@ const HeaderOne = ({ settings }) => {
                               }
                             >
                               <Link href='/our-team'>Leadership &amp; Board</Link>
+                            </li>
+                            <li
+                              className={
+                                ["/become-volunteer"].includes(pathname) ? "active" : ""
+                              }
+                            >
+                              <Link href='/become-volunteer'>Careers &amp; Volunteering</Link>
                             </li>
                           </ul>
                         </li>
@@ -166,6 +173,11 @@ const HeaderOne = ({ settings }) => {
                             >
                               <Link href='/our-causes'>The 4 Interventions</Link>
                             </li>
+                            <li>
+                              <Link href='/our-causes#our-approach'>
+                                Our Approach &amp; Theory Of Change
+                              </Link>
+                            </li>
                             <li
                               className={
                                 ["/cause-details"].includes(pathname)
@@ -180,17 +192,18 @@ const HeaderOne = ({ settings }) => {
                         <li
                           className={`navbar__item navbar__item--has-children nav-fade ${
                             [
-                              "/faq",
                               "/events",
                               "/event-details",
-                              "/become-volunteer",
+                              "/blog-list",
+                              "/blog-grid",
+                              "/blog-details",
                             ].includes(pathname)
                               ? "active"
                               : ""
                           }`}
                         >
                           <Link
-                            href='#'
+                            href='/events'
                             aria-label='dropdown menu'
                             className='navbar__dropdown-label dropdown-label-alter'
                           >
@@ -199,106 +212,41 @@ const HeaderOne = ({ settings }) => {
                           <ul className='navbar__sub-menu'>
                             <li
                               className={
-                                ["/faq"].includes(pathname) ? "active" : ""
-                              }
-                            >
-                              <Link href='/faq'>FAQs</Link>
-                            </li>
-                            <li
-                              className={`navbar__item navbar__item--has-children ${
-                                ["/events", "/event-details"].includes(pathname)
+                                ["/blog-list", "/blog-grid", "/blog-details"].includes(pathname)
                                   ? "active"
                                   : ""
-                              }`}
+                              }
                             >
-                              <Link
-                                href='#'
-                                aria-label='dropdown menu'
-                                className='navbar__dropdown-label navbar__dropdown-label-sub'
-                              >
-                                Annual Reports &amp; Stories
-                              </Link>
-                              <ul className='navbar__sub-menu navbar__sub-menu__nested'>
-                                <li
-                                  className={
-                                    ["/events"].includes(pathname)
-                                      ? "active"
-                                      : ""
-                                  }
-                                >
-                                  <Link href='/events'>Reports &amp; Updates</Link>
-                                </li>
-                                <li
-                                  className={
-                                    ["/event-details"].includes(pathname)
-                                      ? "active"
-                                      : ""
-                                  }
-                                >
-                                  <Link href='/event-details'>
-                                    Report Detail
-                                  </Link>
-                                </li>
-                              </ul>
+                              <Link href='/blog-list'>Data &amp; Evidence</Link>
                             </li>
                             <li
                               className={
-                                ["/become-volunteer"].includes(pathname)
+                                ["/events", "/event-details"].includes(pathname)
                                   ? "active"
                                   : ""
                               }
                             >
-                              <Link href='/become-volunteer'>Careers &amp; Volunteering</Link>
+                              <Link href='/events'>
+                                Annual Reports &amp; Testimonies
+                              </Link>
                             </li>
                           </ul>
                         </li>
                         <li
-                          className={`navbar__item navbar__item--has-children nav-fade ${
-                            [
-                              "/blog-list",
-                              "/blog-grid",
-                              "/blog-details",
-                            ].includes(pathname)
+                          className={`navbar__item nav-fade ${
+                            ["/blog-grid", "/blog-list", "/blog-details"].includes(pathname)
                               ? "active"
                               : ""
                           } `}
                         >
-                          <Link
-                            href='/blog-grid'
-                            aria-label='dropdown menu'
-                            className='navbar__dropdown-label dropdown-label-alter'
-                          >
-                            Insights
-                          </Link>
-                          <ul className='navbar__sub-menu'>
-                            <li
-                              className={
-                                ["/blog-list"].includes(pathname)
-                                  ? "active"
-                                  : ""
-                              }
-                            >
-                              <Link href='/blog-list'>Policy Briefs &amp; Insights</Link>
-                            </li>
-                            <li
-                              className={
-                                ["/blog-grid"].includes(pathname)
-                                  ? "active"
-                                  : ""
-                              }
-                            >
-                              <Link href='/blog-grid'>Insights Grid</Link>
-                            </li>
-                            <li
-                              className={
-                                ["/blog-details"].includes(pathname)
-                                  ? "active"
-                                  : ""
-                              }
-                            >
-                              <Link href='/blog-details'>Article Detail</Link>
-                            </li>
-                          </ul>
+                          <Link href='/blog-grid'>Blogs</Link>
+                        </li>
+                        <li
+                          className={`navbar__item nav-fade ${
+                            ["/faq"].includes(pathname) ? "active" : ""
+                          } `}
+                        >
+                          <Link href='/faq'>FAQs</Link>
                         </li>
                         <li
                           className={`navbar__item nav-fade ${

@@ -10,7 +10,7 @@ import CustomCursor from "@/helper/CustomCursor";
 export const metadata = {
   title: "Intervention Detail | Ed Impact Africa Foundation",
   description:
-    "A closer look at how Ed Impact Africa Foundation delivers system-led education reform across Uganda.",
+    "A closer look at how Ed Impact Africa Foundation delivers teacher professional development and system-led education reform across Uganda and Africa.",
 };
 
 const page = () => {

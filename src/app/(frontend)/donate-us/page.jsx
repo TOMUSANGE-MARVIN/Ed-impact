@@ -9,9 +9,9 @@ import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getHomePage, getFaqs, getPrograms } from "@/lib/payload";
 
 export const metadata = {
-  title: "Partner With Us | Ed Impact Africa Foundation",
+  title: "Partner With Us | Education Partnerships in Africa",
   description:
-    "Partner with Ed Impact Africa Foundation as a government, funder, or community — dedicated pathways for governments, funders and communities.",
+    "Partner with Ed Impact Africa Foundation as a government, funder or community — advancing education development and government education partnerships across Africa.",
 };
 
 const page = async () => {

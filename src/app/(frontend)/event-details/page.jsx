@@ -10,7 +10,7 @@ import CustomCursor from "@/helper/CustomCursor";
 export const metadata = {
   title: "Report Detail | Ed Impact Africa Foundation",
   description:
-    "A closer look at one of Ed Impact Africa Foundation's reports and program updates.",
+    "A closer look at one of Ed Impact Africa Foundation's education impact evaluation reports and program updates across Africa.",
 };
 
 const page = () => {
