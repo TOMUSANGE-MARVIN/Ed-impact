@@ -288,7 +288,7 @@ const FooterOne = ({ settings }) => {
         </div>
         <div className='sprade' data-aos='zoom-in' data-aos-duration={1000}>
           <img
-            src='assets/images/sprade.png'
+            src='/assets/images/sprade.png'
             alt='Image_inner'
             className='base-img'
           />
@@ -298,7 +298,7 @@ const FooterOne = ({ settings }) => {
           data-aos='zoom-in'
           data-aos-duration={1000}
         >
-          <img src='assets/images/sprade-light.png' alt='Image_inner' />
+          <img src='/assets/images/sprade-light.png' alt='Image_inner' />
         </div>
       </footer>
     </>

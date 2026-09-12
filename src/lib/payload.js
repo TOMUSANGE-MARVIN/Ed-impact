@@ -92,6 +92,15 @@ export const getPosts = async () => {
   return result.docs
 }
 
+export const getPostById = async (id) => {
+  const payload = await getPayloadClient()
+  try {
+    return await payload.findByID({ collection: 'posts', id })
+  } catch {
+    return null
+  }
+}
+
 export const getFaqs = async (page) => {
   const payload = await getPayloadClient()
   const result = await payload.find({

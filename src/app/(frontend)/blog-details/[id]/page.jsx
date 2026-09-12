@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import BlogDetailsInner from "@/components/BlogDetailsInner";
 import BreadcrumbOne from "@/components/BreadcrumbOne";
 import FooterOne from "@/components/FooterOne";
@@ -6,16 +7,31 @@ import Preloader from "@/components/Preloader";
 import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
-import { getSiteSettings, getPosts } from "@/lib/payload";
+import { getSiteSettings, getPosts, getPostById } from "@/lib/payload";
 
-export const metadata = {
-  title: "Article | Education Research & Insights | Ed Impact Africa Foundation",
-  description:
-    "An insight, policy brief or evidence-based education research report from Ed Impact Africa Foundation on strengthening education systems across Africa.",
+export const generateMetadata = async ({ params }) => {
+  const { id } = await params;
+  const post = await getPostById(id);
+  if (!post) {
+    return { title: "Article | Ed Impact Africa Foundation" };
+  }
+  return {
+    title: `${post.title} | Ed Impact Africa Foundation`,
+    description: post.excerpt,
+  };
 };
 
-const page = async () => {
-  const [settings, posts] = await Promise.all([getSiteSettings(), getPosts()]);
+const page = async ({ params }) => {
+  const { id } = await params;
+  const [settings, posts, post] = await Promise.all([
+    getSiteSettings(),
+    getPosts(),
+    getPostById(id),
+  ]);
+
+  if (!post) {
+    notFound();
+  }
 
   return (
     <AOSWrap>
@@ -33,10 +49,10 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Article' bgImage='assets/images/banner/banner-article.png' />
+        <BreadcrumbOne title={post.title} bgImage='/assets/images/banner/banner-article.png' />
 
         {/* BlogDetailsInner */}
-        <BlogDetailsInner posts={posts} />
+        <BlogDetailsInner post={post} posts={posts} />
 
         {/* FooterOne */}
         <FooterOne settings={settings} />

@@ -8,7 +8,7 @@ const defaultPost = {
   body: "It is tempting to measure success by how many teachers we have trained. But training alone rarely changes what happens in a classroom. What changes it is motivation, a teacher's sense of autonomy, mastery and purpose in their own craft.\n\nWhen teachers feel supported, recognised, and connected to their purpose, motivation grows and classrooms thrive. That is why our model is built around role-modelling and peer networks, not one-off workshops.\n\nOver 3,000 teachers are now applying evidence-informed teaching practices, strengthening learning for thousands of children across Uganda.",
 };
 
-const fallbackImages = ["assets/images/blog/one.png", "assets/images/blog/two.png", "assets/images/blog/three.png"];
+const fallbackImages = ["/assets/images/blog/one.png", "/assets/images/blog/two.png", "/assets/images/blog/three.png"];
 
 const formatDate = (dateValue) => {
   if (!dateValue) return "12 March 2026";
@@ -17,9 +17,11 @@ const formatDate = (dateValue) => {
   return d.toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" });
 };
 
-const BlogDetailsInner = ({ posts = [] }) => {
-  const post = posts[0] || defaultPost;
-  const recentPosts = posts.length ? posts.slice(0, 3) : [defaultPost];
+const BlogDetailsInner = ({ post: currentPost, posts = [] }) => {
+  const post = currentPost || posts[0] || defaultPost;
+  const otherPosts = posts.filter((p) => p.id !== post.id);
+  const recentPosts = otherPosts.length ? otherPosts.slice(0, 3) : posts.length ? posts.slice(0, 3) : [defaultPost];
+  const categories = Array.from(new Set(posts.map((p) => p.tag).filter(Boolean)));
   const paragraphs = (post.body || defaultPost.body).split(/\n\s*\n/).filter(Boolean);
 
   return (
@@ -34,7 +36,7 @@ const BlogDetailsInner = ({ posts = [] }) => {
                 data-aos-duration={1000}
                 data-aos-delay={100}
               >
-                <img src={post.image?.url || "assets/images/event/poster.png"} alt='Image_inner' />
+                <img src={post.image?.url || "/assets/images/event/poster.png"} alt='Image_inner' />
               </div>
               <div className='cm-details-meta'>
                 <p>
@@ -52,57 +54,23 @@ const BlogDetailsInner = ({ posts = [] }) => {
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
-              <div className='cm-group cta'>
-                <div className='blockquote-wrapper'>
-                  <blockquote>
-                    "When teachers feel supported, recognised, and connected
-                    to their purpose, motivation grows and classrooms
-                    thrive."
-                  </blockquote>
-                  <p>
-                    <span className='line' />
-                    <span className='quote-owner'>Ed Impact Africa Foundation</span>
-                  </p>
+              {post.excerpt ? (
+                <div className='cm-group cta'>
+                  <div className='blockquote-wrapper'>
+                    <blockquote>"{post.excerpt}"</blockquote>
+                    <p>
+                      <span className='line' />
+                      <span className='quote-owner'>Ed Impact Africa Foundation</span>
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className='cm-group cta'>
-                <h3 className='title-animation_inner'>Summary</h3>
-                <p>{post.excerpt}</p>
-                <div className='cm-details__list'>
-                  <ul>
-                    <li>
-                      <i className='icon-circle-check' />
-                      Autonomy, Mastery &amp; Purpose
-                    </li>
-                    <li>
-                      <i className='icon-circle-check' />
-                      Peer Support Networks
-                    </li>
-                    <li>
-                      <i className='icon-circle-check' />
-                      Role-Modelling Behaviour Change
-                    </li>
-                    <li>
-                      <i className='icon-circle-check' />
-                      Sustainable Behaviour Change
-                    </li>
-                    <li>
-                      <i className='icon-circle-check' />
-                      Classroom Observation Cycles
-                    </li>
-                    <li>
-                      <i className='icon-circle-check' />
-                      Reflection &amp; Action Planning
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              ) : null}
               <div className='cm-img-group cta'>
                 <div className='cm-img-single'>
-                  <img src='assets/images/event/pp-one.png' alt='Image_inner' />
+                  <img src='/assets/images/event/pp-one.png' alt='Image_inner' />
                 </div>
                 <div className='cm-img-single'>
-                  <img src='assets/images/event/pp-two.png' alt='Image_inner' />
+                  <img src='/assets/images/event/pp-two.png' alt='Image_inner' />
                 </div>
               </div>
               <div className='details-footer cta'>
@@ -112,7 +80,6 @@ const BlogDetailsInner = ({ posts = [] }) => {
                   </div>
                   <div className='tag-wrapper'>
                     <Link href='/blog-list'>{post.tag || defaultPost.tag}</Link>
-                    <Link href='/blog-list'>CPD</Link>
                   </div>
                 </div>
                 <div className='details-tag'>
@@ -231,7 +198,7 @@ const BlogDetailsInner = ({ posts = [] }) => {
                 data-aos-delay={100}
               >
                 <div className='author-thumb'>
-                  <img src='assets/images/author-two.png' alt='Image_inner' />
+                  <img src='/assets/images/author-two.png' alt='Image_inner' />
                 </div>
                 <div className='author-meta'>
                   <h6>Ed Impact Africa Foundation</h6>
@@ -317,7 +284,7 @@ const BlogDetailsInner = ({ posts = [] }) => {
                     {recentPosts.map((p, index) => (
                       <div className='single-item' key={p.id || index}>
                         <div className='thumb'>
-                          <Link href='/blog-details'>
+                          <Link href={p.id ? `/blog-details/${p.id}` : '/blog-list'}>
                             <img
                               src={p.image?.url || fallbackImages[index % fallbackImages.length]}
                               alt='Image_inner'
@@ -330,7 +297,7 @@ const BlogDetailsInner = ({ posts = [] }) => {
                             <span>{formatDate(p.publishedDate)}</span>
                           </p>
                           <p>
-                            <Link href='/blog-details'>{p.title}</Link>
+                            <Link href={p.id ? `/blog-details/${p.id}` : '/blog-list'}>{p.title}</Link>
                           </p>
                         </div>
                       </div>
@@ -347,26 +314,11 @@ const BlogDetailsInner = ({ posts = [] }) => {
                     <h5>Categories</h5>
                   </div>
                   <div className='cm-categories'>
-                    <Link href='/blog-list'>
-                      <span>Donation</span>
-                      <span>05</span>
-                    </Link>
-                    <Link href='/blog-list'>
-                      <span>Charity</span>
-                      <span>02</span>
-                    </Link>
-                    <Link href='/blog-list'>
-                      <span>Volunteer</span>
-                      <span>09</span>
-                    </Link>
-                    <Link href='/blog-list'>
-                      <span>Health</span>
-                      <span>07</span>
-                    </Link>
-                    <Link href='/blog-list'>
-                      <span>Education</span>
-                      <span>04</span>
-                    </Link>
+                    {(categories.length ? categories : ["Motivation", "Evidence", "Systems"]).map((category) => (
+                      <Link href='/blog-list' key={category}>
+                        <span>{category}</span>
+                      </Link>
+                    ))}
                   </div>
                 </div>
                 <div

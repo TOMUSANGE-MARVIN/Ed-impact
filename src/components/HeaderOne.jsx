@@ -303,7 +303,7 @@ const HeaderOne = ({ settings }) => {
           <div className='mobile-menu__header nav-fade'>
             <div className='logo'>
               <Link href='/' aria-label='home page' title='logo'>
-                <img src='assets/images/logo.png' alt='Ed Impact Africa Foundation' />
+                <img src='/assets/images/logo.png' alt='Ed Impact Africa Foundation' />
               </Link>
             </div>
             <button

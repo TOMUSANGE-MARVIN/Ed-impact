@@ -57,7 +57,7 @@ const BlogOne = ({ posts = defaultPosts }) => {
               >
                 <div className='blog__single van-tilt'>
                   <div className='blog__single-thumb'>
-                    <Link href='/blog-details'>
+                    <Link href={`/blog-details/${post.id}`}>
                       <img
                         src={post.image?.url || fallbackImages[index % fallbackImages.length]}
                         alt='Image_inner'
@@ -83,12 +83,12 @@ const BlogOne = ({ posts = defaultPosts }) => {
                     </div>
                     <div className='blog__single-content'>
                       <h5>
-                        <Link href='/blog-details'>{post.title}</Link>
+                        <Link href={`/blog-details/${post.id}`}>{post.title}</Link>
                       </h5>
                     </div>
                     <div className='blog__single-cta'>
                       <Link
-                        href='/blog-details'
+                        href={`/blog-details/${post.id}`}
                         aria-label='blog details'
                         title='blog details'
                       >
