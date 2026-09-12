@@ -7,20 +7,20 @@ const defaultTestimonials = [
   {
     quote:
       "Since the programme began, our teachers observe each other, give feedback, and take pride in their craft. It's motivation, not just training, that changed.",
-    name: "District Education Officer",
-    role: "Local Government, Uganda",
+    name: "DEO",
+    role: "District Education Officer, Uganda",
   },
   {
     quote:
       "This is not another donor project that disappears after three years. Ed Impact works through our own structures, so changes stay embedded in the school.",
-    name: "Secondary School Headteacher",
+    name: "Headteacher",
     role: "ASSHU Member School",
   },
   {
     quote:
       "Because our voice shaped how the programme was designed, it respects how our community works, and that is why the changes we made together have lasted.",
-    name: "School Management Chairperson",
-    role: "Isingiro District",
+    name: "SMC Chair",
+    role: "School Management Committee, Isingiro",
   },
 ];
 
