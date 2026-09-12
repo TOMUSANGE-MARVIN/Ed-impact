@@ -151,7 +151,7 @@ const HeaderOne = ({ settings }) => {
                         </li>
                         <li
                           className={`navbar__item navbar__item--has-children nav-fade ${
-                            ["/our-causes", "/cause-details"].includes(pathname)
+                            pathname === "/our-causes" || pathname.startsWith("/cause-details")
                               ? "active"
                               : ""
                           }`}
@@ -178,38 +178,36 @@ const HeaderOne = ({ settings }) => {
                                 Our Approach &amp; Theory Of Change
                               </Link>
                             </li>
-                            <li
-                              className={
-                                ["/cause-details"].includes(pathname)
-                                  ? "active"
-                                  : ""
-                              }
-                            >
-                              <Link href='/cause-details'>Intervention Detail</Link>
-                            </li>
                           </ul>
                         </li>
                         <li
                           className={`navbar__item navbar__item--has-children nav-fade ${
+                            pathname === "/impact" ||
+                            pathname.startsWith("/cause-details") ||
                             [
                               "/events",
                               "/event-details",
                               "/blog-list",
                               "/blog-grid",
-                              "/blog-details",
-                            ].includes(pathname)
+                            ].includes(pathname) ||
+                            pathname.startsWith("/blog-details")
                               ? "active"
                               : ""
                           }`}
                         >
                           <Link
-                            href='/events'
+                            href='/impact'
                             aria-label='dropdown menu'
                             className='navbar__dropdown-label dropdown-label-alter'
                           >
                             Impact
                           </Link>
                           <ul className='navbar__sub-menu'>
+                            <li
+                              className={pathname === "/impact" ? "active" : ""}
+                            >
+                              <Link href='/impact'>Our Impact</Link>
+                            </li>
                             <li
                               className={
                                 ["/blog-list", "/blog-grid", "/blog-details"].includes(pathname)
