@@ -54,7 +54,7 @@ const defaultAbout = {
     },
     {
       title: "Institutional Development & Sectoral Thought Leadership",
-      text: "Build a strong, credible and sustainable institution that shapes education policy and practice in Uganda through evidence, influence and effective communication — recognised nationally and across East Africa as a go-to voice on education quality, equity and systems performance.",
+      text: "Build a strong, credible and sustainable institution that shapes education policy and practice in Uganda through evidence, influence and effective communication, recognised nationally and across East Africa as a go-to voice on education quality, equity and systems performance.",
     },
   ],
 };

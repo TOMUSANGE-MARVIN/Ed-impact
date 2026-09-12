@@ -9,7 +9,7 @@ import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings } from "@/lib/payload";
 
 export const metadata = {
-  title: "Contact Us | Ed Impact Africa Foundation — Education NGO in Africa",
+  title: "Contact Us | Ed Impact Africa Foundation, Education NGO in Africa",
   description:
     "Reach out to Ed Impact Africa Foundation, an education NGO strengthening systems and teacher development across Africa, for partnerships, inquiries or support.",
 };

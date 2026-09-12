@@ -6,7 +6,7 @@ import Slider from "react-slick";
 const defaultTestimonials = [
   {
     quote:
-      "Since the programme began, our teachers show up differently — they observe each other, give feedback, and take pride in their craft. It's motivation, not just training, that changed.",
+      "Since the programme began, our teachers show up differently: they observe each other, give feedback, and take pride in their craft. It's motivation, not just training, that changed.",
     name: "District Education Officer",
     role: "Local Government, Uganda",
   },
@@ -18,7 +18,7 @@ const defaultTestimonials = [
   },
   {
     quote:
-      "Because our voice shaped how the programme was designed, it actually respects how our community works — and that is why it has lasted.",
+      "Because our voice shaped how the programme was designed, it actually respects how our community works, and that is why the changes have stayed in place long after the programme team left.",
     name: "School Management Committee Chairperson",
     role: "Isingiro District",
   },

@@ -14,7 +14,7 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668" }) => {
   const valueOneTitle = ubuntu?.valueOneTitle || "Co-Creation";
   const valueOneText =
     ubuntu?.valueOneText ||
-    "We don't have all the answers upfront — we design solutions with educators, communities and learners.";
+    "We don't have all the answers upfront, we design solutions with educators, communities and learners.";
   const valueTwoTitle = ubuntu?.valueTwoTitle || "Shared Purpose";
   const valueTwoText =
     ubuntu?.valueTwoText ||

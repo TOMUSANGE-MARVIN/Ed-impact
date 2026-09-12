@@ -46,7 +46,7 @@ export default buildConfig({
       url: process.env.DATABASE_URL || 'file:./ed-impact.db',
     },
     // Resolved from this file so it works regardless of the process working
-    // directory — production applies these instead of pushing the schema.
+    // directory, production applies these instead of pushing the schema.
     migrationDir: path.resolve(dirname, 'migrations'),
   }),
   sharp,

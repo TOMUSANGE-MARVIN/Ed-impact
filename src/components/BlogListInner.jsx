@@ -7,7 +7,7 @@ const defaultPosts = [
     tag: "Motivation",
     title: "Why Teacher Motivation Matters More Than Teacher Training",
     excerpt:
-      "When teachers feel supported, recognised, and connected to their purpose, motivation grows and classrooms thrive — a shift that outlasts any single training session.",
+      "When teachers feel supported, recognised, and connected to their purpose, motivation grows and classrooms thrive, a shift that outlasts any single training session.",
     author: "Ed Impact Team",
     readTime: "5 min read",
   },

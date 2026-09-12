@@ -5,7 +5,7 @@ const defaultPost = {
   tag: "Motivation",
   readTime: "5 min read",
   publishedDate: "2026-03-12",
-  body: "It is tempting to measure success by how many teachers we have trained. But training alone rarely changes what happens in a classroom. What changes it is motivation — a teacher's sense of autonomy, mastery and purpose in their own craft.\n\nWhen teachers feel supported, recognised, and connected to their purpose, motivation grows and classrooms thrive. That is why our model is built around role-modelling and peer networks, not one-off workshops.\n\nOver 3,000 teachers are now applying evidence-informed teaching practices, strengthening learning for thousands of children across Uganda.",
+  body: "It is tempting to measure success by how many teachers we have trained. But training alone rarely changes what happens in a classroom. What changes it is motivation, a teacher's sense of autonomy, mastery and purpose in their own craft.\n\nWhen teachers feel supported, recognised, and connected to their purpose, motivation grows and classrooms thrive. That is why our model is built around role-modelling and peer networks, not one-off workshops.\n\nOver 3,000 teachers are now applying evidence-informed teaching practices, strengthening learning for thousands of children across Uganda.",
 };
 
 const fallbackImages = ["assets/images/blog/one.png", "assets/images/blog/two.png", "assets/images/blog/three.png"];

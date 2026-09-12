@@ -30,7 +30,7 @@ import {
 export const metadata = {
   title: "Ed Impact Africa Foundation | Education System Strengthening in Africa",
   description:
-    "Ed Impact Africa Foundation partners with governments across Africa on education system strengthening, teacher professional development and teacher motivation — improving learning outcomes for every child.",
+    "Ed Impact Africa Foundation partners with governments across Africa on education system strengthening, teacher professional development and teacher motivation, improving learning outcomes for every child.",
 };
 
 const page = async () => {

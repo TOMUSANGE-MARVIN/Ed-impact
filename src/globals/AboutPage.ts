@@ -29,7 +29,7 @@ export const AboutPage: GlobalConfig = {
     {
       type: 'array',
       name: 'backgroundParagraphs',
-      label: 'Background — remaining paragraphs (revealed by Read More)',
+      label: 'Background: remaining paragraphs (revealed by Read More)',
       defaultValue: [
         {
           text: 'As part of the localisation strategic pivot, STiR Education is localising all its country operations to become local, autonomous entities that are grounded in local realities. This is in response to a gradual strategic pivot that has overtime shifted the decision making power from the UK Office to the local offices, as well as a sectoral shift in favour of localisation and shifting the power to local civil society players. As a result, the India office has successfully localised and transitioned into the Centre for Intrinsic Motivation (CIM), and currently the Uganda and Indonesia entities are in the process of mutating to local entities, with full governance and executive functions brought to the current country offices. The Uganda country office has started on its localisation journey by incorporating and rebranding into Ed Impact Africa Foundation and should be an independent local entity by August 2026.',
@@ -38,7 +38,7 @@ export const AboutPage: GlobalConfig = {
           text: 'STiR Education started its first project in Uganda in 2014 and is currently running a system led teacher continuous professional development program in all local governments in the secondary program and about a half of the local governments in the primary program. It has a staff pool of 24 team members who maintain sector relationships from the national to district level.',
         },
         {
-          text: 'This strategic plan is therefore coming in at a very critical period of transition, both in the governance and programmatic angles. During this strategic period, there will be a transition from being a branch/country office of the global entity to being an autonomous, local entity with its own brand, board of directors, independent leadership team etc. There will also be a transition from program based work to project based work, and a very strong leaning to the social enterprise model of programming. This is meant to increase the impact and organisational sustainability of the new entity — Ed Impact Africa Foundation — and hence make it a thought leader in the sector across Africa, starting with Uganda and East Africa.',
+          text: 'This strategic plan is therefore coming in at a very critical period of transition, both in the governance and programmatic angles. During this strategic period, there will be a transition from being a branch/country office of the global entity to being an autonomous, local entity with its own brand, board of directors, independent leadership team etc. There will also be a transition from program based work to project based work, and a very strong leaning to the social enterprise model of programming. This is meant to increase the impact and organisational sustainability of the new entity, Ed Impact Africa Foundation, and hence make it a thought leader in the sector across Africa, starting with Uganda and East Africa.',
         },
       ],
       fields: [{ name: 'text', type: 'textarea', required: true }],
@@ -70,7 +70,7 @@ export const AboutPage: GlobalConfig = {
     {
       type: 'array',
       name: 'whoWeAreInherits',
-      label: 'Who We Are — what we inherit',
+      label: 'Who We Are: what we inherit',
       defaultValue: [
         { text: 'A proven theory of change and education delivery model.' },
         {
@@ -98,7 +98,7 @@ export const AboutPage: GlobalConfig = {
           label: 'Theory of change explanation',
           type: 'textarea',
           defaultValue:
-            'Central to our programming is a child who loves learning and is prepared to thrive in the world after school. But we know that you cannot have a child who loves learning without having a teacher who loves teaching and is intrinsically motivated to teach. We therefore deliver a program that builds the capacity of teachers, hinged on the principles of Intrinsic Motivation — Relationships, Autonomy, Mastery and Purpose. But we also know that a teacher cannot love teaching unless the right conditions have been set at school level by the school leaders. We therefore work through the school leaders to build the capacity of the teachers, and ensure that they are setting the right environment and role modelling the right behaviours for teachers to love teaching. The school leaders also have a direct relationship with district officials — District Education Officers, Inspectors of Schools and others. The relationship that the school leaders have with the district officials will directly impact how the school leaders relate with the teachers, and hence how the teachers relate with the learners. The same applies to the relationship between the district officials and the national education leaders.',
+            'Central to our programming is a child who loves learning and is prepared to thrive in the world after school. But we know that you cannot have a child who loves learning without having a teacher who loves teaching and is intrinsically motivated to teach. We therefore deliver a program that builds the capacity of teachers, hinged on the principles of Intrinsic Motivation: Relationships, Autonomy, Mastery and Purpose. But we also know that a teacher cannot love teaching unless the right conditions have been set at school level by the school leaders. We therefore work through the school leaders to build the capacity of the teachers, and ensure that they are setting the right environment and role modelling the right behaviours for teachers to love teaching. The school leaders also have a direct relationship with district officials, District Education Officers, Inspectors of Schools and others. The relationship that the school leaders have with the district officials will directly impact how the school leaders relate with the teachers, and hence how the teachers relate with the learners. The same applies to the relationship between the district officials and the national education leaders.',
         },
         {
           name: 'anchorsIntro',
@@ -260,7 +260,7 @@ export const AboutPage: GlobalConfig = {
         },
         {
           title: 'Institutional Development & Sectoral Thought Leadership',
-          text: 'Build a strong, credible and sustainable institution that shapes education policy and practice in Uganda through evidence, influence and effective communication — recognised nationally and across East Africa as a go-to voice on education quality, equity and systems performance.',
+          text: 'Build a strong, credible and sustainable institution that shapes education policy and practice in Uganda through evidence, influence and effective communication, recognised nationally and across East Africa as a go-to voice on education quality, equity and systems performance.',
         },
       ],
       fields: [

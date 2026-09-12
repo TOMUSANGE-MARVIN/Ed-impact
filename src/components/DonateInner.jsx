@@ -30,7 +30,7 @@ const defaultFaqs = [
   {
     question: "What happens after I submit a partnership inquiry?",
     answer:
-      "Our partnerships team reviews every submission and responds within 5 business days to discuss next steps — whether that's a call, a site visit, or a formal proposal.",
+      "Our partnerships team reviews every submission and responds within 5 business days to discuss next steps, whether that's a call, a site visit, or a formal proposal.",
   },
 ];
 

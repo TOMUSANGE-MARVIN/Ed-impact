@@ -15,7 +15,7 @@ import { getSiteSettings, getPrograms } from "@/lib/payload";
 export const metadata = {
   title: "Our Work | Teacher Professional Development & System Strengthening",
   description:
-    "Ed Impact Africa Foundation's four interventions — teacher motivation, education system strengthening, continuous professional development for teachers and education research — driving learning outcomes across Africa.",
+    "Ed Impact Africa Foundation's four interventions, teacher motivation, education system strengthening, continuous professional development for teachers and education research, driving learning outcomes across Africa.",
 };
 
 const page = async () => {

@@ -21,7 +21,7 @@ import {
 export const metadata = {
   title: "About Us | Education Reform & Equity in Africa | Ed Impact Africa Foundation",
   description:
-    "The vision, mission and Ubuntu philosophy behind Ed Impact Africa Foundation's work on education system strengthening, education reform and education equity in Africa — successor to STIR Education Uganda.",
+    "The vision, mission and Ubuntu philosophy behind Ed Impact Africa Foundation's work on education system strengthening, education reform and education equity in Africa, successor to STIR Education Uganda.",
 };
 
 const page = async () => {

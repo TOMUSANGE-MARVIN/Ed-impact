@@ -169,7 +169,7 @@ async function seed() {
           'Ubuntu means "I am because we are." We act with compassion, respect and collective responsibility, knowing that a child\'s wellbeing is deeply connected to the wellbeing of their teacher, school and community.',
         valueOneTitle: 'Co-Creation',
         valueOneText:
-          "We don't have all the answers upfront — we design solutions with educators, communities and learners.",
+          "We don't have all the answers upfront. We design solutions with educators, communities and learners.",
         valueTwoTitle: 'Shared Purpose',
         valueTwoText:
           'United by one commitment: making education relevant, equitable and high quality for every African child.',
@@ -212,7 +212,7 @@ async function seed() {
           text: 'STiR Education started its first project in Uganda in 2014 and is currently running a system led teacher continuous professional development program in all local governments in the secondary program and about a half of the local governments in the primary program. It has a staff pool of 24 team members who maintain sector relationships from the national to district level.',
         },
         {
-          text: 'This strategic plan is therefore coming in at a very critical period of transition, both in the governance and programmatic angles. During this strategic period, there will be a transition from being a branch/country office of the global entity to being an autonomous, local entity with its own brand, board of directors, independent leadership team etc. There will also be a transition from program based work to project based work, and a very strong leaning to the social enterprise model of programming. This is meant to increase the impact and organisational sustainability of the new entity — Ed Impact Africa Foundation — and hence make it a thought leader in the sector across Africa, starting with Uganda and East Africa.',
+          text: 'This strategic plan is therefore coming in at a very critical period of transition, both in the governance and programmatic angles. During this strategic period, there will be a transition from being a branch/country office of the global entity to being an autonomous, local entity with its own brand, board of directors, independent leadership team etc. There will also be a transition from program based work to project based work, and a very strong leaning to the social enterprise model of programming. This is meant to increase the impact and organisational sustainability of the new entity, Ed Impact Africa Foundation, and hence make it a thought leader in the sector across Africa, starting with Uganda and East Africa.',
         },
       ],
       whoWeAre: {
@@ -235,7 +235,7 @@ async function seed() {
         intro:
           'Ed Impact is inheriting the model, program reach in Uganda, the program anchors and theory of change for STiR Education.',
         explanation:
-          'Central to our programming is a child who loves learning and is prepared to thrive in the world after school. But we know that you cannot have a child who loves learning without having a teacher who loves teaching and is intrinsically motivated to teach. We therefore deliver a program that builds the capacity of teachers, hinged on the principles of Intrinsic Motivation — Relationships, Autonomy, Mastery and Purpose. But we also know that a teacher cannot love teaching unless the right conditions have been set at school level by the school leaders. We therefore work through the school leaders to build the capacity of the teachers, and ensure that they are setting the right environment and role modelling the right behaviours for teachers to love teaching. The school leaders also have a direct relationship with district officials — District Education Officers, Inspectors of Schools and others. The relationship that the school leaders have with the district officials will directly impact how the school leaders relate with the teachers, and hence how the teachers relate with the learners. The same applies to the relationship between the district officials and the national education leaders.',
+          'Central to our programming is a child who loves learning and is prepared to thrive in the world after school. But we know that you cannot have a child who loves learning without having a teacher who loves teaching and is intrinsically motivated to teach. We therefore deliver a program that builds the capacity of teachers, hinged on the principles of Intrinsic Motivation: Relationships, Autonomy, Mastery and Purpose. But we also know that a teacher cannot love teaching unless the right conditions have been set at school level by the school leaders. We therefore work through the school leaders to build the capacity of the teachers, and ensure that they are setting the right environment and role modelling the right behaviours for teachers to love teaching. The school leaders also have a direct relationship with district officials, District Education Officers, Inspectors of Schools and others. The relationship that the school leaders have with the district officials will directly impact how the school leaders relate with the teachers, and hence how the teachers relate with the learners. The same applies to the relationship between the district officials and the national education leaders.',
         anchorsIntro:
           'In our programming therefore, we design, deliver and monitor the program through our five programme anchors:',
       },
@@ -320,7 +320,7 @@ async function seed() {
         },
         {
           title: 'Institutional Development & Sectoral Thought Leadership',
-          text: 'Build a strong, credible and sustainable institution that shapes education policy and practice in Uganda through evidence, influence and effective communication — recognised nationally and across East Africa as a go-to voice on education quality, equity and systems performance.',
+          text: 'Build a strong, credible and sustainable institution that shapes education policy and practice in Uganda through evidence, influence and effective communication, recognised nationally and across East Africa as a go-to voice on education quality, equity and systems performance.',
         },
       ],
     },
@@ -332,7 +332,7 @@ async function seed() {
     data: {
       whyWorkTitle: 'Why Work With Us',
       whyWorkText:
-        "At Ed Impact Africa Foundation, you'll work alongside governments, school leaders and teachers to strengthen education systems across Africa — reaching 199,856 teachers and 5,892,477 learners today, with more to come as we scale beyond Uganda.",
+        "At Ed Impact Africa Foundation, you'll work alongside governments, school leaders and teachers to strengthen education systems across Africa, reaching 199,856 teachers and 5,892,477 learners today, with more to come as we scale beyond Uganda.",
       reasons: [
         { text: 'Meaningful impact at national scale' },
         { text: 'Work alongside governments, schools and communities' },
@@ -344,7 +344,7 @@ async function seed() {
       internshipsText:
         "We welcome enquiries from early-career professionals and volunteers interested in education systems reform. Tell us about your interest in the form and we'll get in touch when an opportunity fits.",
       diversityText:
-        'Guided by Ubuntu, we are committed to equal opportunity and inclusive hiring — building a team as diverse as the communities we serve.',
+        'Guided by Ubuntu, we are committed to equal opportunity and inclusive hiring, building a team as diverse as the communities we serve.',
     },
   })
 
@@ -449,7 +449,7 @@ async function seed() {
   console.log('Seeding Testimonials...')
   const testimonials = [
     {
-      quote: "Since the programme began, our teachers show up differently — they observe each other, give feedback, and take pride in their craft. It's motivation, not just training, that changed.",
+      quote: "Since the programme began, our teachers show up differently: they observe each other, give feedback, and take pride in their craft. It's motivation, not just training, that changed.",
       name: 'District Education Officer',
       role: 'Local Government, Uganda',
       order: 1,
@@ -461,7 +461,7 @@ async function seed() {
       order: 2,
     },
     {
-      quote: 'Because our voice shaped how the programme was designed, it actually respects how our community works — and that is why it has lasted.',
+      quote: 'Because our voice shaped how the programme was designed, it actually respects how our community works, and that is why the changes have stayed in place long after the programme team left.',
       name: 'School Management Committee Chairperson',
       role: 'Isingiro District',
       order: 3,
@@ -479,8 +479,8 @@ async function seed() {
     {
       title: 'Why Teacher Motivation Matters More Than Teacher Training',
       tag: 'Motivation',
-      excerpt: 'When teachers feel supported, recognised, and connected to their purpose, motivation grows and classrooms thrive — a shift that outlasts any single training session.',
-      body: 'It is tempting to measure success by how many teachers we have trained. But training alone rarely changes what happens in a classroom. What changes it is motivation — a teacher\'s sense of autonomy, mastery and purpose in their own craft.\n\nWhen teachers feel supported, recognised, and connected to their purpose, motivation grows and classrooms thrive. That is why our model is built around role-modelling and peer networks, not one-off workshops.\n\nOver 3,000 teachers are now applying evidence-informed teaching practices, strengthening learning for thousands of children across Uganda.',
+      excerpt: 'When teachers feel supported, recognised, and connected to their purpose, motivation grows and classrooms thrive, a shift that outlasts any single training session.',
+      body: 'It is tempting to measure success by how many teachers we have trained. But training alone rarely changes what happens in a classroom. What changes it is motivation, a teacher\'s sense of autonomy, mastery and purpose in their own craft.\n\nWhen teachers feel supported, recognised, and connected to their purpose, motivation grows and classrooms thrive. That is why our model is built around role-modelling and peer networks, not one-off workshops.\n\nOver 3,000 teachers are now applying evidence-informed teaching practices, strengthening learning for thousands of children across Uganda.',
       image: postImages.motivation,
       readTime: '5 min read',
     },
@@ -517,7 +517,7 @@ async function seed() {
     { question: "What's the difference between partnering as a government vs a funder?", answer: 'Governments help us scale within existing systems, embedding reform into local government structures. Funders provide the financial and technical resources that enable that scale. Both roles are essential to sustainable reform.', page: 'donate', order: 1 },
     { question: 'Do you accept unrestricted or restricted funding?', answer: 'We welcome both. Unrestricted funding strengthens our core capacity, while restricted funding can support specific interventions such as CPD delivery, evidence generation, or expansion into new geographies.', page: 'donate', order: 2 },
     { question: 'How do communities get a say in how programs are designed?', answer: 'Through Co-Creation. We design solutions with educators, communities and learners rather than imposing them, and School Management Committees play an active role in how programs are delivered in their own schools.', page: 'donate', order: 3 },
-    { question: 'What happens after I submit a partnership inquiry?', answer: "Our partnerships team reviews every submission and responds within 5 business days to discuss next steps — whether that's a call, a site visit, or a formal proposal.", page: 'donate', order: 4 },
+    { question: 'What happens after I submit a partnership inquiry?', answer: "Our partnerships team reviews every submission and responds within 5 business days to discuss next steps, whether that's a call, a site visit, or a formal proposal.", page: 'donate', order: 4 },
   ] as const
   for (const faq of faqs) {
     const existing = await payload.find({ collection: 'faqs', where: { question: { equals: faq.question } }, limit: 1 })

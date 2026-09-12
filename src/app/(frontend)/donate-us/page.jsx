@@ -11,7 +11,7 @@ import { getSiteSettings, getHomePage, getFaqs, getPrograms } from "@/lib/payloa
 export const metadata = {
   title: "Partner With Us | Education Partnerships in Africa",
   description:
-    "Partner with Ed Impact Africa Foundation as a government, funder or community — advancing education development and government education partnerships across Africa.",
+    "Partner with Ed Impact Africa Foundation as a government, funder or community, advancing education development and government education partnerships across Africa.",
 };
 
 const page = async () => {

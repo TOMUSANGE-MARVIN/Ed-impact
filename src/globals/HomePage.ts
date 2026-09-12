@@ -92,7 +92,7 @@ export const HomePage: GlobalConfig = {
           name: 'valueOneText',
           type: 'textarea',
           defaultValue:
-            "We don't have all the answers upfront — we design solutions with educators, communities and learners.",
+            "We don't have all the answers upfront. We design solutions with educators, communities and learners.",
         },
         { name: 'valueTwoTitle', type: 'text', defaultValue: 'Shared Purpose' },
         {

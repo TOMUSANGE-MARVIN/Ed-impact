@@ -15,7 +15,7 @@ export const CareersPage: GlobalConfig = {
       name: 'whyWorkText',
       type: 'textarea',
       defaultValue:
-        "At Ed Impact Africa Foundation, you'll work alongside governments, school leaders and teachers to strengthen education systems across Africa — reaching 199,856 teachers and 5,892,477 learners today, with more to come as we scale beyond Uganda.",
+        "At Ed Impact Africa Foundation, you'll work alongside governments, school leaders and teachers to strengthen education systems across Africa, reaching 199,856 teachers and 5,892,477 learners today, with more to come as we scale beyond Uganda.",
     },
     {
       type: 'array',
@@ -45,7 +45,7 @@ export const CareersPage: GlobalConfig = {
       name: 'diversityText',
       type: 'textarea',
       defaultValue:
-        'Guided by Ubuntu, we are committed to equal opportunity and inclusive hiring — building a team as diverse as the communities we serve.',
+        'Guided by Ubuntu, we are committed to equal opportunity and inclusive hiring, building a team as diverse as the communities we serve.',
     },
   ],
 }
