@@ -63,6 +63,10 @@ async function seed() {
     mugenyi: 'team/nine.png',
     kibeddi: 'team/ten.png',
     lutimba: 'team/eleven.png',
+    karyeija: 'team/twelve.png',
+    muhwezi: 'team/thirteen.png',
+    ngolobe: 'team/fourteen.png',
+    placeholder: 'team/placeholder.png',
   })) {
     teamPhotos[key] = await uploadMedia(payload, file, `Photo of ${key}`)
   }
@@ -354,6 +358,14 @@ async function seed() {
     { name: 'Dr. Cleophas Mugenyi', role: 'Board Member', category: 'board', photo: teamPhotos.mugenyi, order: 6, featuredOnHome: false },
     { name: 'CPA Fredrick Kibeddi', role: 'Board Member, Finance & Risk', category: 'board', photo: teamPhotos.kibeddi, order: 7, featuredOnHome: false },
     { name: 'CPA Charles Lutimba', role: 'Board Member, Finance & Risk', category: 'board', photo: teamPhotos.lutimba, order: 8, featuredOnHome: false },
+    { name: 'Prof. Gerald Karyeija', role: 'Committee Chairperson, Governance, Strategy & HR', category: 'board', photo: teamPhotos.karyeija, order: 9, featuredOnHome: false },
+    { name: 'Dr. Martha Muhwezi', role: 'Committee Chairperson, Program Quality Assurance', category: 'board', photo: teamPhotos.muhwezi, order: 10, featuredOnHome: false },
+    { name: 'Patrick Ngolobe', role: 'Member, Governance, Strategy & HR Committee', category: 'board', photo: teamPhotos.ngolobe, order: 11, featuredOnHome: false },
+    { name: 'Jane Ssebuyungo', role: 'Head, Amplification Services / Pan African Scale', category: 'senior-leadership', photo: teamPhotos.placeholder, order: 12, featuredOnHome: false },
+    { name: 'Peace Lorna Precious Oola', role: 'Head, Social Enterprise & Experimentation', category: 'senior-leadership', photo: teamPhotos.placeholder, order: 13, featuredOnHome: false },
+    { name: 'Deric Watiti', role: 'Head, Monitoring, Evaluation, Accountability, Research & Learning', category: 'senior-leadership', photo: teamPhotos.placeholder, order: 14, featuredOnHome: false },
+    { name: 'Brenda Ayoo', role: 'Senior Manager, Design & Program Readiness', category: 'senior-leadership', photo: teamPhotos.placeholder, order: 15, featuredOnHome: false },
+    { name: 'Ephraim Wanyama', role: 'Senior Manager, Program Delivery', category: 'senior-leadership', photo: teamPhotos.placeholder, order: 16, featuredOnHome: false },
   ] as const
   for (const member of teamMembers) {
     const existing = await payload.find({ collection: 'team-members', where: { name: { equals: member.name } }, limit: 1 })
