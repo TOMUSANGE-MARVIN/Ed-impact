@@ -62,6 +62,15 @@ export const getPrograms = async () => {
   return result.docs
 }
 
+export const getProgramById = async (id) => {
+  const payload = await getPayloadClient()
+  try {
+    return await payload.findByID({ collection: 'programs', id })
+  } catch {
+    return null
+  }
+}
+
 export const getInterventions = async () => {
   const payload = await getPayloadClient()
   const result = await payload.find({
