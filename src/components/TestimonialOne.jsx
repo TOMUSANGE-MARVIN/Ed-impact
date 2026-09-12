@@ -6,20 +6,20 @@ import Slider from "react-slick";
 const defaultTestimonials = [
   {
     quote:
-      "Since the programme began, our teachers show up differently: they observe each other, give feedback, and take pride in their craft. It's motivation, not just training, that changed.",
+      "Since the programme began, our teachers observe each other, give feedback, and take pride in their craft. It's motivation, not just training, that changed.",
     name: "District Education Officer",
     role: "Local Government, Uganda",
   },
   {
     quote:
-      "This is not another donor project that disappears after three years. Ed Impact works through our own structures, so the changes stay embedded in the school long after the visits end.",
+      "This is not another donor project that disappears after three years. Ed Impact works through our own structures, so changes stay embedded in the school.",
     name: "Secondary School Headteacher",
     role: "ASSHU Member School",
   },
   {
     quote:
-      "Because our voice shaped how the programme was designed, it actually respects how our community works, and that is why the changes have stayed in place long after the programme team left.",
-    name: "School Management Committee Chairperson",
+      "Because our voice shaped how the programme was designed, it respects how our community works, and that is why the changes we made together have lasted.",
+    name: "School Management Chairperson",
     role: "Isingiro District",
   },
 ];
