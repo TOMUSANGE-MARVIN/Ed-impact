@@ -4,6 +4,7 @@ import "react-modal-video/scss/modal-video.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.scss";
 
+import ChatbotWidget from "@/components/ChatbotWidget";
 import InitializeAOS from "@/helper/InitializeAOS";
 import RouteScrollToTop from "@/helper/RouteScrollToTop";
 
@@ -69,6 +70,8 @@ export default function RootLayout({ children }) {
         <RouteScrollToTop />
 
         {children}
+
+        <ChatbotWidget />
 
         <script src="/assets/js/bootstrap.bundle.min.js"></script>
       </body>
