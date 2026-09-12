@@ -1,4 +1,8 @@
-const BreadcrumbOne = ({ title, subtitle = "Ed Impact Africa Foundation" }) => {
+const BreadcrumbOne = ({
+  title,
+  subtitle = "Ed Impact Africa Foundation",
+  bgImage = "assets/images/banner/banner-bg.png",
+}) => {
   return (
     <section className='common-banner'>
       <div className='container'>
@@ -13,7 +17,7 @@ const BreadcrumbOne = ({ title, subtitle = "Ed Impact Africa Foundation" }) => {
         </div>
       </div>
       <div className='banner-bg'>
-        <img src='assets/images/banner/banner-bg.png' alt='Image_inner' />
+        <img src={bgImage} alt='Image_inner' />
       </div>
       <div className='shape'>
         <img src='assets/images/shape.png' alt='Image_inner' />

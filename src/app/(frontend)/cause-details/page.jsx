@@ -30,7 +30,7 @@ const page = () => {
         <HeaderOne />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Intervention Detail' />
+        <BreadcrumbOne title='Intervention Detail' bgImage='assets/images/banner/banner-cause-detail.png' />
 
         {/* CauseDetailsInner */}
         <CauseDetailsInner />

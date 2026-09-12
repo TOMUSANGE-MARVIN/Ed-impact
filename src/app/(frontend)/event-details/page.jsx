@@ -30,7 +30,7 @@ const page = () => {
         <HeaderOne />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Report Detail' />
+        <BreadcrumbOne title='Report Detail' bgImage='assets/images/banner/banner-event-detail.png' />
 
         {/* EventDetailsInner */}
         <EventDetailsInner />
