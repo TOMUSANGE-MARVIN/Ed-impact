@@ -66,7 +66,7 @@ const DonateInner = ({
                 data-aos-delay={100}
               >
                 <img
-                  src='assets/images/event/poster-two.png'
+                  src='assets/images/event/poster-two.webp'
                   alt='Image_inner'
                 />
               </div>
@@ -214,7 +214,7 @@ const DonateInner = ({
                       <div className='thumb'>
                         <Link href='/reports-updates'>
                           <img
-                            src='assets/images/award/one.png'
+                            src='assets/images/award/one.webp'
                             alt='Image_inner'
                           />
                         </Link>
@@ -231,7 +231,7 @@ const DonateInner = ({
                       <div className='thumb'>
                         <Link href='/reports-updates'>
                           <img
-                            src='assets/images/award/four.png'
+                            src='assets/images/award/four.webp'
                             alt='Image_inner'
                           />
                         </Link>
@@ -248,7 +248,7 @@ const DonateInner = ({
                       <div className='thumb'>
                         <Link href='/reports-updates'>
                           <img
-                            src='assets/images/award/two.png'
+                            src='assets/images/award/two.webp'
                             alt='Image_inner'
                           />
                         </Link>
@@ -265,7 +265,7 @@ const DonateInner = ({
                       <div className='thumb'>
                         <Link href='/reports-updates'>
                           <img
-                            src='assets/images/award/three.png'
+                            src='assets/images/award/three.webp'
                             alt='Image_inner'
                           />
                         </Link>

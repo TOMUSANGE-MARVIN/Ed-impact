@@ -49,7 +49,7 @@ const page = async ({ params }) => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title={program.title} bgImage='/assets/images/banner/banner-cause-detail.png' />
+        <BreadcrumbOne title={program.title} bgImage='/assets/images/banner/banner-cause-detail.webp' />
 
         {/* CauseDetailsInner */}
         <CauseDetailsInner program={program} programs={programs} />

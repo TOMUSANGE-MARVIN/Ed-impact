@@ -90,7 +90,7 @@ const CommunityOne = ({ audienceSection = defaultAudienceSection }) => {
                   data-aos-duration={1000}
                 >
                   <img
-                    src='/assets/images/community/thumb.png'
+                    src='/assets/images/community/thumb.webp'
                     alt='Image_inner'
                   />
                 </div>
@@ -100,7 +100,7 @@ const CommunityOne = ({ audienceSection = defaultAudienceSection }) => {
         </div>
         <div className='community-bg'>
           <img
-            src='/assets/images/community/community-bg.png'
+            src='/assets/images/community/community-bg.webp'
             alt='Image_inner'
           />
         </div>

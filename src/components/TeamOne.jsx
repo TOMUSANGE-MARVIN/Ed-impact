@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const defaultTeam = [
-  { name: "Modern Karema Musiimenta", role: "Chief Executive Officer", photo: { url: "assets/images/team/one.png" } },
-  { name: "Wilber Birungi", role: "Chief Finance Officer", photo: { url: "assets/images/team/two.png" } },
-  { name: "Brenda Akite Otika", role: "Chief Program Officer", photo: { url: "assets/images/team/three.png" } },
-  { name: "Janat Namukose", role: "Chief People Officer", photo: { url: "assets/images/team/four.png" } },
+  { name: "Modern Karema Musiimenta", role: "Chief Executive Officer", photo: { url: "assets/images/team/one.webp" } },
+  { name: "Wilber Birungi", role: "Chief Finance Officer", photo: { url: "assets/images/team/two.webp" } },
+  { name: "Brenda Akite Otika", role: "Chief Program Officer", photo: { url: "assets/images/team/three.webp" } },
+  { name: "Janat Namukose", role: "Chief People Officer", photo: { url: "assets/images/team/four.webp" } },
 ];
 
 const delays = [0, 300, 600, 900];
@@ -44,7 +44,7 @@ const TeamOne = ({ teamMembers = defaultTeam }) => {
                   <div className='team__single van-tilt'>
                     <div className='team__single-thumb'>
                       <Link href='/team-details'>
-                        <img src={member.photo?.url || "assets/images/team/one.png"} alt={member.name} />
+                        <img src={member.photo?.url || "assets/images/team/one.webp"} alt={member.name} />
                       </Link>
                       <div className='team__icons'>
                         <div className='team__single-content__icon'>

@@ -80,10 +80,10 @@ function EventDetailsInner({ report: currentReport, reports = [], posts = [] }) 
               </div>
               <div className='cm-img-group cta'>
                 <div className='cm-img-single'>
-                  <img src='/assets/images/event/pp-one.png' alt='Image_inner' />
+                  <img src='/assets/images/event/pp-one.webp' alt='Image_inner' />
                 </div>
                 <div className='cm-img-single'>
-                  <img src='/assets/images/event/pp-two.png' alt='Image_inner' />
+                  <img src='/assets/images/event/pp-two.webp' alt='Image_inner' />
                 </div>
               </div>
               <div

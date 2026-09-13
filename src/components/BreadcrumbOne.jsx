@@ -1,7 +1,7 @@
 const BreadcrumbOne = ({
   title,
   subtitle = "Ed Impact Africa Foundation",
-  bgImage = "assets/images/banner/banner-bg.png",
+  bgImage = "assets/images/banner/banner-bg.webp",
 }) => {
   return (
     <section className='common-banner'>

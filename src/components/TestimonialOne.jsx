@@ -64,7 +64,7 @@ const TestimonialOne = ({ testimonials = defaultTestimonials }) => {
       <section
         className='testimonial'
         style={{
-          backgroundImage: "url(/assets/images/bg-one.png)",
+          backgroundImage: "url(/assets/images/bg-one.webp)",
         }}
       >
         <div className='container'>

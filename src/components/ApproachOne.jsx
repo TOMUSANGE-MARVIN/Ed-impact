@@ -86,7 +86,7 @@ const ApproachOne = ({ approach = defaultApproach }) => {
               data-aos-duration={1000}
             >
               <img
-                src='/assets/images/approach/theory-of-change.png'
+                src='/assets/images/approach/theory-of-change.webp'
                 alt={data.diagramAlt}
               />
               <figcaption>{data.diagramAlt}</figcaption>

@@ -13,7 +13,7 @@ const ErrorInner = () => {
               data-aos-delay={300}
             >
               <div className='thumb'>
-                <img src='assets/images/error.png' alt='Image_inner' />
+                <img src='assets/images/error.webp' alt='Image_inner' />
               </div>
               <h3 className='title-animation_inner'>Page Not Found</h3>
               <p>

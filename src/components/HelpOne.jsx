@@ -38,7 +38,7 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668" }) => {
                 <div className='help__thumb-inner'>
                   <div className='thumb-top thumb'>
                     <img
-                      src='/assets/images/help/thumb-top.png'
+                      src='/assets/images/help/thumb-top.webp'
                       alt='Image_inner'
                     />
                   </div>
@@ -48,7 +48,7 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668" }) => {
                     data-aos-duration={1000}
                   >
                     <img
-                      src='/assets/images/help/thumb-lg.png'
+                      src='/assets/images/help/thumb-lg.webp'
                       alt='Image_inner'
                     />
                     <div className='video-btn-wrapper'>
@@ -62,7 +62,7 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668" }) => {
                   </div>
                   <div className='thumb thumb-bottom'>
                     <img
-                      src='/assets/images/help/thumb-bottom.png'
+                      src='/assets/images/help/thumb-bottom.webp'
                       alt='Image_inner'
                     />
                   </div>
@@ -168,7 +168,7 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668" }) => {
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           src='/assets/videos/learner.mp4'
-          poster='/assets/images/help/thumb-lg.png'
+          poster='/assets/images/help/thumb-lg.webp'
         />
       </section>
     </>
