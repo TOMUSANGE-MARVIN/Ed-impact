@@ -163,7 +163,7 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
                   {(otherPrograms.length ? otherPrograms : programs).slice(0, 3).map((p) => (
                     <div className='single-item' key={p.id}>
                       <div className='thumb'>
-                        <Link href={`/cause-details/${p.id}`}>
+                        <Link href={`/our-work/${p.id}`}>
                           <img src={p.image?.url || "/assets/images/cause/one.png"} alt='Image_inner' />
                         </Link>
                       </div>
@@ -172,7 +172,7 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
                           <i className='fa-solid fa-tags' /> <span>{p.tag}</span>
                         </p>
                         <p>
-                          <Link href={`/cause-details/${p.id}`}>{p.title}</Link>
+                          <Link href={`/our-work/${p.id}`}>{p.title}</Link>
                         </p>
                       </div>
                     </div>
@@ -189,7 +189,7 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
                   <h5>Tags</h5>
                 </div>
                 <div className='tag-wrapper'>
-                  <Link href='/our-causes'>{program.tag || defaultProgram.tag}</Link>
+                  <Link href='/our-work'>{program.tag || defaultProgram.tag}</Link>
                 </div>
               </div>
               <div
@@ -207,7 +207,7 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
                 </div>
                 <div className='cm-cta'>
                   <Link
-                    href='/donate-us'
+                    href='/partner-with-us'
                     aria-label='partner with us'
                     title='partner with us'
                     className='btn--primary'

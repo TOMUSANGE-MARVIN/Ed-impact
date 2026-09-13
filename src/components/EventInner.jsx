@@ -35,7 +35,7 @@ const EventInner = () => {
                 <div className='event__content'>
                   <span>March 2026</span>
                   <h4>
-                    <Link href='/event-details'>
+                    <Link href='/report-detail'>
                       2025 Impact Evaluation Report: Learning Outcomes Across
                       Programme Schools
                     </Link>
@@ -60,7 +60,7 @@ const EventInner = () => {
                 <div className='event__content'>
                   <span>February 2026</span>
                   <h4>
-                    <Link href='/event-details'>
+                    <Link href='/report-detail'>
                       Annual Report 2025: Localisation &amp; Scale
                     </Link>
                   </h4>
@@ -83,7 +83,7 @@ const EventInner = () => {
                 <div className='event__content'>
                   <span>January 2026</span>
                   <h4>
-                    <Link href='/event-details'>
+                    <Link href='/report-detail'>
                       From STIR Education To Ed Impact Africa: A Transition
                       Update
                     </Link>
@@ -110,15 +110,15 @@ const EventInner = () => {
                   </button>
                 </li>
                 <li>
-                  <Link href='/blog-list'>1</Link>
+                  <Link href='/data-evidence'>1</Link>
                 </li>
                 <li>
-                  <Link href='/blog-list' className='active'>
+                  <Link href='/data-evidence' className='active'>
                     2
                   </Link>
                 </li>
                 <li>
-                  <Link href='/blog-list'>3</Link>
+                  <Link href='/data-evidence'>3</Link>
                 </li>
                 <li>
                   <button>

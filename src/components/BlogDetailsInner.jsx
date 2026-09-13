@@ -79,7 +79,7 @@ const BlogDetailsInner = ({ post: currentPost, posts = [] }) => {
                     <h6>Tags:</h6>
                   </div>
                   <div className='tag-wrapper'>
-                    <Link href='/blog-list'>{post.tag || defaultPost.tag}</Link>
+                    <Link href='/data-evidence'>{post.tag || defaultPost.tag}</Link>
                   </div>
                 </div>
                 <div className='details-tag'>
@@ -284,7 +284,7 @@ const BlogDetailsInner = ({ post: currentPost, posts = [] }) => {
                     {recentPosts.map((p, index) => (
                       <div className='single-item' key={p.id || index}>
                         <div className='thumb'>
-                          <Link href={p.id ? `/blog-details/${p.id}` : '/blog-list'}>
+                          <Link href={p.id ? `/insights/${p.id}` : '/data-evidence'}>
                             <img
                               src={p.image?.url || fallbackImages[index % fallbackImages.length]}
                               alt='Image_inner'
@@ -297,7 +297,7 @@ const BlogDetailsInner = ({ post: currentPost, posts = [] }) => {
                             <span>{formatDate(p.publishedDate)}</span>
                           </p>
                           <p>
-                            <Link href={p.id ? `/blog-details/${p.id}` : '/blog-list'}>{p.title}</Link>
+                            <Link href={p.id ? `/insights/${p.id}` : '/data-evidence'}>{p.title}</Link>
                           </p>
                         </div>
                       </div>
@@ -315,7 +315,7 @@ const BlogDetailsInner = ({ post: currentPost, posts = [] }) => {
                   </div>
                   <div className='cm-categories'>
                     {(categories.length ? categories : ["Motivation", "Evidence", "Systems"]).map((category) => (
-                      <Link href='/blog-list' key={category}>
+                      <Link href='/data-evidence' key={category}>
                         <span>{category}</span>
                       </Link>
                     ))}
@@ -331,12 +331,12 @@ const BlogDetailsInner = ({ post: currentPost, posts = [] }) => {
                     <h5>Popular Tags</h5>
                   </div>
                   <div className='tag-wrapper'>
-                    <Link href='/blog-list'>Teacher Motivation</Link>
-                  <Link href='/blog-list'>System Strengthening</Link>
-                  <Link href='/blog-list'>CPD</Link>
-                  <Link href='/blog-list'>Evidence &amp; Research</Link>
-                  <Link href='/blog-list'>Policy</Link>
-                  <Link href='/blog-list'>Ubuntu</Link>
+                    <Link href='/data-evidence'>Teacher Motivation</Link>
+                  <Link href='/data-evidence'>System Strengthening</Link>
+                  <Link href='/data-evidence'>CPD</Link>
+                  <Link href='/data-evidence'>Evidence &amp; Research</Link>
+                  <Link href='/data-evidence'>Policy</Link>
+                  <Link href='/data-evidence'>Ubuntu</Link>
                   </div>
                 </div>
               </div>

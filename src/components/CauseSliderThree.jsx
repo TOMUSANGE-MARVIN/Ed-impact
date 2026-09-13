@@ -143,19 +143,19 @@ const CauseSliderThree = ({ programs = defaultPrograms }) => {
                       <div className='cause__slider-inner'>
                         <div className='cause__slider-single'>
                           <div className='thumb'>
-                            <Link href={`/cause-details/${item.id}`}>
+                            <Link href={`/our-work/${item.id}`}>
                               <img
                                 src={item.image?.url || "/assets/images/cause/one.png"}
                                 alt='Image_inner'
                               />
                             </Link>
                             <div className='tag'>
-                              <Link href='/our-causes'>{item.tag}</Link>
+                              <Link href='/our-work'>{item.tag}</Link>
                             </div>
                           </div>
                           <div className='content'>
                             <h6>
-                              <Link href={`/cause-details/${item.id}`}>{item.title}</Link>
+                              <Link href={`/our-work/${item.id}`}>{item.title}</Link>
                             </h6>
                             <p>{item.description}</p>
                           </div>
@@ -175,7 +175,7 @@ const CauseSliderThree = ({ programs = defaultPrograms }) => {
                             </div>
                             <div className='cause__cta'>
                               <Link
-                                href={`/cause-details/${item.id}`}
+                                href={`/our-work/${item.id}`}
                                 aria-label='learn more'
                                 title='learn more'
                                 className='btn--secondary'

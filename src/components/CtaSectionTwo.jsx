@@ -21,7 +21,7 @@ const CtaSectionTwo = () => {
                 </h2>
                 <div className='banner__content-cta cta'>
                   <Link
-                    href='/our-causes'
+                    href='/our-work'
                     aria-label='our work'
                     title='our work'
                     className='btn--tertiary'
@@ -29,7 +29,7 @@ const CtaSectionTwo = () => {
                     Discover More <i className='fa-solid fa-arrow-right' />
                   </Link>
                   <Link
-                    href='/donate-us'
+                    href='/partner-with-us'
                     aria-label='partner with us'
                     title='partner with us'
                     className='btn--primary'

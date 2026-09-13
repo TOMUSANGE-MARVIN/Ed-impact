@@ -115,7 +115,7 @@ const HeaderOne = ({ settings }) => {
                         </li>
                         <li
                           className={`navbar__item navbar__item--has-children nav-fade ${
-                            ["/about-us", "/our-team", "/team-details", "/become-volunteer"].includes(pathname) ? "active" : ""
+                            ["/about-us", "/leadership-board", "/team-details", "/careers"].includes(pathname) ? "active" : ""
                           }`}
                         >
                           <Link
@@ -135,29 +135,29 @@ const HeaderOne = ({ settings }) => {
                             </li>
                             <li
                               className={
-                                ["/our-team"].includes(pathname) ? "active" : ""
+                                ["/leadership-board"].includes(pathname) ? "active" : ""
                               }
                             >
-                              <Link href='/our-team'>Leadership &amp; Board</Link>
+                              <Link href='/leadership-board'>Leadership &amp; Board</Link>
                             </li>
                             <li
                               className={
-                                ["/become-volunteer"].includes(pathname) ? "active" : ""
+                                ["/careers"].includes(pathname) ? "active" : ""
                               }
                             >
-                              <Link href='/become-volunteer'>Careers &amp; Volunteering</Link>
+                              <Link href='/careers'>Careers &amp; Volunteering</Link>
                             </li>
                           </ul>
                         </li>
                         <li
                           className={`navbar__item navbar__item--has-children nav-fade ${
-                            pathname === "/our-causes" || pathname.startsWith("/cause-details")
+                            pathname === "/our-work" || pathname.startsWith("/our-work")
                               ? "active"
                               : ""
                           }`}
                         >
                           <Link
-                            href='/our-causes'
+                            href='/our-work'
                             aria-label='dropdown menu'
                             className='navbar__dropdown-label dropdown-label-alter'
                           >
@@ -166,15 +166,15 @@ const HeaderOne = ({ settings }) => {
                           <ul className='navbar__sub-menu'>
                             <li
                               className={
-                                ["/our-causes"].includes(pathname)
+                                ["/our-work"].includes(pathname)
                                   ? "active"
                                   : ""
                               }
                             >
-                              <Link href='/our-causes'>The 4 Interventions</Link>
+                              <Link href='/our-work'>The 4 Interventions</Link>
                             </li>
                             <li>
-                              <Link href='/our-causes#our-approach'>
+                              <Link href='/our-work#our-approach'>
                                 Our Approach &amp; Theory Of Change
                               </Link>
                             </li>
@@ -183,14 +183,13 @@ const HeaderOne = ({ settings }) => {
                         <li
                           className={`navbar__item navbar__item--has-children nav-fade ${
                             pathname === "/impact" ||
-                            pathname.startsWith("/cause-details") ||
                             [
-                              "/events",
-                              "/event-details",
-                              "/blog-list",
-                              "/blog-grid",
+                              "/reports-updates",
+                              "/report-detail",
+                              "/data-evidence",
+                              "/blogs",
                             ].includes(pathname) ||
-                            pathname.startsWith("/blog-details")
+                            pathname.startsWith("/insights")
                               ? "active"
                               : ""
                           }`}
@@ -210,21 +209,21 @@ const HeaderOne = ({ settings }) => {
                             </li>
                             <li
                               className={
-                                ["/blog-list", "/blog-grid", "/blog-details"].includes(pathname)
+                                ["/data-evidence", "/blogs", "/insights"].includes(pathname)
                                   ? "active"
                                   : ""
                               }
                             >
-                              <Link href='/blog-list'>Data &amp; Evidence</Link>
+                              <Link href='/data-evidence'>Data &amp; Evidence</Link>
                             </li>
                             <li
                               className={
-                                ["/events", "/event-details"].includes(pathname)
+                                ["/reports-updates", "/report-detail"].includes(pathname)
                                   ? "active"
                                   : ""
                               }
                             >
-                              <Link href='/events'>
+                              <Link href='/reports-updates'>
                                 Annual Reports &amp; Testimonies
                               </Link>
                             </li>
@@ -232,12 +231,12 @@ const HeaderOne = ({ settings }) => {
                         </li>
                         <li
                           className={`navbar__item nav-fade ${
-                            ["/blog-grid", "/blog-list", "/blog-details"].includes(pathname)
+                            ["/blogs", "/data-evidence", "/insights"].includes(pathname)
                               ? "active"
                               : ""
                           } `}
                         >
-                          <Link href='/blog-grid'>Blogs</Link>
+                          <Link href='/blogs'>Blogs</Link>
                         </li>
                         <li
                           className={`navbar__item nav-fade ${
@@ -268,7 +267,7 @@ const HeaderOne = ({ settings }) => {
                   <div className='navbar__options'>
                     <div className='navbar__mobile-options '>
                       <Link
-                        href='/donate-us'
+                        href='/partner-with-us'
                         className='btn--primary d-none d-md-flex'
                       >
                         Partner With Us <i className='fa-solid fa-arrow-right' />
@@ -315,7 +314,7 @@ const HeaderOne = ({ settings }) => {
           <div className='mobile-menu__list' ref={mobileMenuListRef}></div>
 
           <div className='mobile-menu__cta nav-fade d-block d-md-none'>
-            <Link href='/donate-us' className='btn--primary '>
+            <Link href='/partner-with-us' className='btn--primary '>
               Partner With Us <i className='fa-solid fa-arrow-right' />
             </Link>
           </div>

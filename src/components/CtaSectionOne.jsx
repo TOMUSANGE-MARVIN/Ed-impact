@@ -34,7 +34,7 @@ const CtaSectionOne = ({ ctaSection = defaultCta }) => {
                   </div>
                   <div className='cta-s'>
                     <Link
-                      href='/become-volunteer'
+                      href='/careers'
                       aria-label='become a volunteer'
                       title='become a volunteer'
                       className='btn--tertiary'
@@ -87,7 +87,7 @@ const CtaSectionOne = ({ ctaSection = defaultCta }) => {
                   </div>
                   <div className='cta-s'>
                     <Link
-                      href='/donate-us'
+                      href='/partner-with-us'
                       aria-label='partner with us'
                       title='partner with us'
                       className='btn--primary'

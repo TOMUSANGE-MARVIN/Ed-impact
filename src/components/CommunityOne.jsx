@@ -74,7 +74,7 @@ const CommunityOne = ({ audienceSection = defaultAudienceSection }) => {
                     </div>
                     <div className='cta'>
                       <Link
-                        href='/donate-us'
+                        href='/partner-with-us'
                         aria-label='partner with us'
                         title='partner with us'
                         className='btn--primary'

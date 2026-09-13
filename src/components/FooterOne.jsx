@@ -127,13 +127,13 @@ const FooterOne = ({ settings }) => {
                       </Link>
                     </li>
                     <li>
-                      <Link href='/our-team'>
+                      <Link href='/leadership-board'>
                         <i className='fa-solid fa-arrow-right' />
                         Leadership &amp; Board
                       </Link>
                     </li>
                     <li>
-                      <Link href='/blog-list'>
+                      <Link href='/data-evidence'>
                         <i className='fa-solid fa-arrow-right' />
                         Insights
                       </Link>
@@ -145,7 +145,7 @@ const FooterOne = ({ settings }) => {
                       </Link>
                     </li>
                     <li>
-                      <Link href='/become-volunteer'>
+                      <Link href='/careers'>
                         <i className='fa-solid fa-arrow-right' />
                         Careers
                       </Link>
@@ -178,31 +178,31 @@ const FooterOne = ({ settings }) => {
                 <div className='footer-two__widget-content'>
                   <ul>
                     <li>
-                      <Link href='/our-causes'>
+                      <Link href='/our-work/1'>
                         <i className='fa-solid fa-arrow-right' />
-                        Teacher Motivation
+                        National Secondary CPD
                       </Link>
                     </li>
                     <li>
-                      <Link href='/our-causes'>
+                      <Link href='/our-work/2'>
+                        <i className='fa-solid fa-arrow-right' />
+                        Primary Teacher Colleges
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href='/our-work/3'>
+                        <i className='fa-solid fa-arrow-right' />
+                        Evidence &amp; Policy Influence
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href='/our-work/4'>
                         <i className='fa-solid fa-arrow-right' />
                         System Strengthening
                       </Link>
                     </li>
                     <li>
-                      <Link href='/our-causes'>
-                        <i className='fa-solid fa-arrow-right' />
-                        Continuous Professional Development
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='/our-causes'>
-                        <i className='fa-solid fa-arrow-right' />
-                        Evidence &amp; Research
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='/donate-us'>
+                      <Link href='/partner-with-us'>
                         <i className='fa-solid fa-arrow-right' />
                         Partner With Us
                       </Link>

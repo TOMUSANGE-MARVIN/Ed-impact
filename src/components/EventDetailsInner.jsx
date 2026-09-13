@@ -229,7 +229,7 @@ function EventDetailsInner() {
                 <div className='cm-sidebar-post'>
                   <div className='single-item'>
                     <div className='thumb'>
-                      <Link href='/blog-details'>
+                      <Link href='/insights'>
                         <img
                           src='assets/images/blog/ph-one.png'
                           alt='Image_inner'
@@ -242,7 +242,7 @@ function EventDetailsInner() {
                         <span>November 19, 2024</span>
                       </p>
                       <p>
-                        <Link href='/blog-details'>
+                        <Link href='/insights'>
                           Where Innovation Meets Foundation
                         </Link>
                       </p>
@@ -250,7 +250,7 @@ function EventDetailsInner() {
                   </div>
                   <div className='single-item'>
                     <div className='thumb'>
-                      <Link href='/blog-details'>
+                      <Link href='/insights'>
                         <img
                           src='assets/images/blog/ph-two.png'
                           alt='Image_inner'
@@ -263,7 +263,7 @@ function EventDetailsInner() {
                         <span>November 19, 2024</span>
                       </p>
                       <p>
-                        <Link href='/blog-details'>
+                        <Link href='/insights'>
                           Where Innovation Meets Foundation
                         </Link>
                       </p>
@@ -271,7 +271,7 @@ function EventDetailsInner() {
                   </div>
                   <div className='single-item'>
                     <div className='thumb'>
-                      <Link href='/blog-details'>
+                      <Link href='/insights'>
                         <img
                           src='assets/images/blog/three.png'
                           alt='Image_inner'
@@ -284,7 +284,7 @@ function EventDetailsInner() {
                         <span>November 22, 2024</span>
                       </p>
                       <p>
-                        <Link href='/blog-details'>
+                        <Link href='/insights'>
                           Structures That Stand, Dreams That Soar
                         </Link>
                       </p>
@@ -302,12 +302,12 @@ function EventDetailsInner() {
                   <h5>Tags</h5>
                 </div>
                 <div className='tag-wrapper'>
-                  <Link href='/blog-list'>Teacher Motivation</Link>
-                  <Link href='/blog-list'>System Strengthening</Link>
-                  <Link href='/blog-list'>CPD</Link>
-                  <Link href='/blog-list'>Evidence &amp; Research</Link>
-                  <Link href='/blog-list'>Policy</Link>
-                  <Link href='/blog-list'>Ubuntu</Link>
+                  <Link href='/data-evidence'>Teacher Motivation</Link>
+                  <Link href='/data-evidence'>System Strengthening</Link>
+                  <Link href='/data-evidence'>CPD</Link>
+                  <Link href='/data-evidence'>Evidence &amp; Research</Link>
+                  <Link href='/data-evidence'>Policy</Link>
+                  <Link href='/data-evidence'>Ubuntu</Link>
                 </div>
               </div>
               <div
@@ -325,7 +325,7 @@ function EventDetailsInner() {
                 </div>
                 <div className='cm-cta'>
                   <Link
-                    href='/donate-us'
+                    href='/partner-with-us'
                     aria-label='partner with us'
                     title='partner with us'
                     className='btn--primary'

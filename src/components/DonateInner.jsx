@@ -212,7 +212,7 @@ const DonateInner = ({
                       data-aos-duration={1000}
                     >
                       <div className='thumb'>
-                        <Link href='/event-details'>
+                        <Link href='/report-detail'>
                           <img
                             src='assets/images/award/one.png'
                             alt='Image_inner'
@@ -229,7 +229,7 @@ const DonateInner = ({
                       data-aos-delay={200}
                     >
                       <div className='thumb'>
-                        <Link href='/event-details'>
+                        <Link href='/report-detail'>
                           <img
                             src='assets/images/award/four.png'
                             alt='Image_inner'
@@ -246,7 +246,7 @@ const DonateInner = ({
                       data-aos-delay={100}
                     >
                       <div className='thumb'>
-                        <Link href='/event-details'>
+                        <Link href='/report-detail'>
                           <img
                             src='assets/images/award/two.png'
                             alt='Image_inner'
@@ -263,7 +263,7 @@ const DonateInner = ({
                       data-aos-delay={300}
                     >
                       <div className='thumb'>
-                        <Link href='/event-details'>
+                        <Link href='/report-detail'>
                           <img
                             src='assets/images/award/three.png'
                             alt='Image_inner'
@@ -352,7 +352,7 @@ const DonateInner = ({
                   {sidebarPrograms.map((program, index) => (
                     <div className='single-item' key={program.id || index}>
                       <div className='thumb'>
-                        <Link href='/cause-details'>
+                        <Link href='/our-work'>
                           <img
                             src={program.image?.url || "assets/images/blog/ph-one.png"}
                             alt='Image_inner'
@@ -365,7 +365,7 @@ const DonateInner = ({
                           <span>{program.statOneValue}</span>
                         </p>
                         <p>
-                          <Link href='/cause-details'>{program.title}</Link>
+                          <Link href='/our-work'>{program.title}</Link>
                         </p>
                       </div>
                     </div>
@@ -382,12 +382,12 @@ const DonateInner = ({
                   <h5>Tags</h5>
                 </div>
                 <div className='tag-wrapper'>
-                  <Link href='/blog-list'>Teacher Motivation</Link>
-                  <Link href='/blog-list'>System Strengthening</Link>
-                  <Link href='/blog-list'>CPD</Link>
-                  <Link href='/blog-list'>Evidence &amp; Research</Link>
-                  <Link href='/blog-list'>Policy</Link>
-                  <Link href='/blog-list'>Ubuntu</Link>
+                  <Link href='/data-evidence'>Teacher Motivation</Link>
+                  <Link href='/data-evidence'>System Strengthening</Link>
+                  <Link href='/data-evidence'>CPD</Link>
+                  <Link href='/data-evidence'>Evidence &amp; Research</Link>
+                  <Link href='/data-evidence'>Policy</Link>
+                  <Link href='/data-evidence'>Ubuntu</Link>
                 </div>
               </div>
               <div

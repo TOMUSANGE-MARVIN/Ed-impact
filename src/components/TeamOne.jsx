@@ -91,7 +91,7 @@ const TeamOne = ({ teamMembers = defaultTeam }) => {
             <div className='col-12'>
               <div className='section__cta cta text-center'>
                 <Link
-                  href='/our-team'
+                  href='/leadership-board'
                   aria-label='our team'
                   title='our team'
                   className='btn--primary'

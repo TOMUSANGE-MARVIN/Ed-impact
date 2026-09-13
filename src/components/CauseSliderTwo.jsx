@@ -98,7 +98,7 @@ const CauseSliderTwo = () => {
                 <div key={index} className='cause-two__slider-single'>
                   <div className='cause-thumb'>
                     <img src={img} alt={`Slide ${index}`} />
-                    <Link href='/cause-details'>
+                    <Link href='/our-work'>
                       <i className='fa-solid fa-arrow-right'></i>
                     </Link>
                   </div>

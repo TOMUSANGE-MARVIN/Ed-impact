@@ -37,14 +37,14 @@ const BlogGridInner = ({ posts = defaultPosts }) => {
                   >
                     <div className='blog__single van-tilt'>
                       <div className='blog__single-thumb'>
-                        <Link href={`/blog-details/${post.id}`}>
+                        <Link href={`/insights/${post.id}`}>
                           <img
                             src={post.image?.url || fallbackImages[index % fallbackImages.length]}
                             alt='Image_inner'
                           />
                         </Link>
                         <div className='tag'>
-                          <Link href='/blog-list'>
+                          <Link href='/data-evidence'>
                             <i className='fa-solid fa-tags' />
                             {post.tag}
                           </Link>
@@ -63,12 +63,12 @@ const BlogGridInner = ({ posts = defaultPosts }) => {
                         </div>
                         <div className='blog__single-content'>
                           <h5>
-                            <Link href={`/blog-details/${post.id}`}>{post.title}</Link>
+                            <Link href={`/insights/${post.id}`}>{post.title}</Link>
                           </h5>
                         </div>
                         <div className='blog__single-cta'>
                           <Link
-                            href={`/blog-details/${post.id}`}
+                            href={`/insights/${post.id}`}
                             aria-label='blog details'
                             title='blog details'
                           >
@@ -101,15 +101,15 @@ const BlogGridInner = ({ posts = defaultPosts }) => {
                       </button>
                     </li>
                     <li>
-                      <Link href='/blog-list'>1</Link>
+                      <Link href='/data-evidence'>1</Link>
                     </li>
                     <li>
-                      <Link href='/blog-list' className='active'>
+                      <Link href='/data-evidence' className='active'>
                         2
                       </Link>
                     </li>
                     <li>
-                      <Link href='/blog-list'>3</Link>
+                      <Link href='/data-evidence'>3</Link>
                     </li>
                     <li>
                       <button>
@@ -216,7 +216,7 @@ const BlogGridInner = ({ posts = defaultPosts }) => {
                     {recentPosts.map((post, index) => (
                       <div className='single-item' key={post.id || index}>
                         <div className='thumb'>
-                          <Link href={`/blog-details/${post.id}`}>
+                          <Link href={`/insights/${post.id}`}>
                             <img
                               src={post.image?.url || fallbackImages[index % fallbackImages.length]}
                               alt='Image_inner'
@@ -229,7 +229,7 @@ const BlogGridInner = ({ posts = defaultPosts }) => {
                             <span>{formatDate(post.publishedDate)}</span>
                           </p>
                           <p>
-                            <Link href={`/blog-details/${post.id}`}>{post.title}</Link>
+                            <Link href={`/insights/${post.id}`}>{post.title}</Link>
                           </p>
                         </div>
                       </div>
@@ -246,23 +246,23 @@ const BlogGridInner = ({ posts = defaultPosts }) => {
                     <h5>Categories</h5>
                   </div>
                   <div className='cm-categories'>
-                    <Link href='/blog-list'>
+                    <Link href='/data-evidence'>
                       <span>Donation</span>
                       <span>05</span>
                     </Link>
-                    <Link href='/blog-list'>
+                    <Link href='/data-evidence'>
                       <span>Charity</span>
                       <span>02</span>
                     </Link>
-                    <Link href='/blog-list'>
+                    <Link href='/data-evidence'>
                       <span>Volunteer</span>
                       <span>09</span>
                     </Link>
-                    <Link href='/blog-list'>
+                    <Link href='/data-evidence'>
                       <span>Health</span>
                       <span>07</span>
                     </Link>
-                    <Link href='/blog-list'>
+                    <Link href='/data-evidence'>
                       <span>Education</span>
                       <span>04</span>
                     </Link>
@@ -278,12 +278,12 @@ const BlogGridInner = ({ posts = defaultPosts }) => {
                     <h5>Popular Tags</h5>
                   </div>
                   <div className='tag-wrapper'>
-                    <Link href='/blog-list'>Teacher Motivation</Link>
-                  <Link href='/blog-list'>System Strengthening</Link>
-                  <Link href='/blog-list'>CPD</Link>
-                  <Link href='/blog-list'>Evidence &amp; Research</Link>
-                  <Link href='/blog-list'>Policy</Link>
-                  <Link href='/blog-list'>Ubuntu</Link>
+                    <Link href='/data-evidence'>Teacher Motivation</Link>
+                  <Link href='/data-evidence'>System Strengthening</Link>
+                  <Link href='/data-evidence'>CPD</Link>
+                  <Link href='/data-evidence'>Evidence &amp; Research</Link>
+                  <Link href='/data-evidence'>Policy</Link>
+                  <Link href='/data-evidence'>Ubuntu</Link>
                   </div>
                 </div>
               </div>

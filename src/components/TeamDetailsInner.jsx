@@ -132,7 +132,7 @@ const TeamDetailsInner = () => {
               </div>
               <div className='team-details__cta cta'>
                 <Link
-                  href='/donate-us'
+                  href='/partner-with-us'
                   aria-label='partner with us'
                   title='partner with us'
                   className='btn--primary'

@@ -57,14 +57,14 @@ const BlogOne = ({ posts = defaultPosts }) => {
               >
                 <div className='blog__single van-tilt'>
                   <div className='blog__single-thumb'>
-                    <Link href={`/blog-details/${post.id}`}>
+                    <Link href={`/insights/${post.id}`}>
                       <img
                         src={post.image?.url || fallbackImages[index % fallbackImages.length]}
                         alt='Image_inner'
                       />
                     </Link>
                     <div className='tag'>
-                      <Link href='/blog-list'>
+                      <Link href='/data-evidence'>
                         <i className='fa-solid fa-tags' />
                         {post.tag}
                       </Link>
@@ -83,12 +83,12 @@ const BlogOne = ({ posts = defaultPosts }) => {
                     </div>
                     <div className='blog__single-content'>
                       <h5>
-                        <Link href={`/blog-details/${post.id}`}>{post.title}</Link>
+                        <Link href={`/insights/${post.id}`}>{post.title}</Link>
                       </h5>
                     </div>
                     <div className='blog__single-cta'>
                       <Link
-                        href={`/blog-details/${post.id}`}
+                        href={`/insights/${post.id}`}
                         aria-label='blog details'
                         title='blog details'
                       >
@@ -111,7 +111,7 @@ const BlogOne = ({ posts = defaultPosts }) => {
           <div className='col-12'>
             <div className='section__cta cta text-center'>
               <Link
-                href='/blog-list'
+                href='/data-evidence'
                 aria-label='our blog'
                 title='our blog'
                 className='btn--primary'

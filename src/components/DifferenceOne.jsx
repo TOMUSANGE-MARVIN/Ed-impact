@@ -115,7 +115,7 @@ const DifferenceOne = ({
                               </div>
                               <div className='difference__single-content'>
                                 <h5>
-                                  <Link href='/our-causes'>{item.title}</Link>
+                                  <Link href='/our-work'>{item.title}</Link>
                                 </h5>
                                 <p>{item.description}</p>
                               </div>
