@@ -27,6 +27,16 @@ export const Programs: CollectionConfig = {
       name: 'description',
       type: 'textarea',
       required: true,
+      admin: {
+        description: 'Short summary shown on the program card.',
+      },
+    },
+    {
+      name: 'body',
+      type: 'textarea',
+      admin: {
+        description: 'Full intervention detail page content. Separate paragraphs with a blank line.',
+      },
     },
     {
       name: 'image',
@@ -58,6 +68,16 @@ export const Programs: CollectionConfig = {
     },
     {
       name: 'statTwoValue',
+      type: 'text',
+      defaultValue: '',
+    },
+    {
+      name: 'statThreeLabel',
+      type: 'text',
+      defaultValue: '',
+    },
+    {
+      name: 'statThreeValue',
       type: 'text',
       defaultValue: '',
     },

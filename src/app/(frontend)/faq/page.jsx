@@ -4,11 +4,10 @@ import FaqOne from "@/components/FaqOne";
 import FooterOne from "@/components/FooterOne";
 import HeaderOne from "@/components/HeaderOne";
 import Preloader from "@/components/Preloader";
-import TeamTwo from "@/components/TeamTwo";
 import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
-import { getSiteSettings, getHomePage, getFaqs, getTeamMembers } from "@/lib/payload";
+import { getSiteSettings, getHomePage, getFaqs } from "@/lib/payload";
 
 export const metadata = {
   title: "FAQs | Ed Impact Africa Foundation, Education Reform in Africa",
@@ -17,11 +16,10 @@ export const metadata = {
 };
 
 const page = async () => {
-  const [settings, home, faqs, teamMembers] = await Promise.all([
+  const [settings, home, faqs] = await Promise.all([
     getSiteSettings(),
     getHomePage(),
     getFaqs("general"),
-    getTeamMembers(),
   ]);
 
   return (
@@ -47,9 +45,6 @@ const page = async () => {
 
         {/* CtaSectionOne */}
         <CtaSectionOne ctaSection={home?.ctaSection} />
-
-        {/* TeamTwo */}
-        <TeamTwo teamMembers={teamMembers} />
 
         {/* FooterOne */}
         <FooterOne settings={settings} />

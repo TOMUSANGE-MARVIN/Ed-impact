@@ -13,6 +13,7 @@ const defaultProgram = {
 const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
   const program = currentProgram || programs[0] || defaultProgram;
   const otherPrograms = programs.filter((p) => p.id !== program.id);
+  const paragraphs = (program.body || "").split(/\n\s*\n/).filter(Boolean);
 
   return (
     <div className='cm-details'>
@@ -41,6 +42,9 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
               <div className='cm-group cta'>
                 <h3 className='title-animation_inner'>{program.title || defaultProgram.title}</h3>
                 <p>{program.description || defaultProgram.description}</p>
+                {paragraphs.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
               </div>
               <div className='cm-group cta'>
                 <h3 className='title-animation_inner'>At A Glance</h3>
@@ -54,6 +58,12 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
                       <i className='icon-circle-check' />
                       {program.statTwoLabel || defaultProgram.statTwoLabel}: {program.statTwoValue || defaultProgram.statTwoValue}
                     </li>
+                    {program.statThreeValue ? (
+                      <li>
+                        <i className='icon-circle-check' />
+                        {program.statThreeLabel}: {program.statThreeValue}
+                      </li>
+                    ) : null}
                   </ul>
                 </div>
               </div>
