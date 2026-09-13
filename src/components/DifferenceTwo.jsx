@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import ModalVideo from "react-modal-video";
+import VideoModal from "./VideoModal";
 
 const toPercent = (value, fallback) => {
   const n = parseFloat(String(value || "").replace("%", ""));
@@ -357,13 +357,11 @@ const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats }) => {
           <img src='assets/images/spade-green-two.png' alt='Image_inner' />
         </div>
       </section>
-      <ModalVideo
-        channel='youtube'
-        autoplay
+      <VideoModal
         isOpen={isOpen}
-        videoId='XxVg_s8xAms'
         onClose={() => setIsOpen(false)}
-        allowFullScreen
+        src='/assets/videos/headteacher.mp4'
+        poster='/assets/images/difference/thumb-sm.png'
       />
     </>
   );

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import ModalVideo from "react-modal-video";
+import VideoModal from "./VideoModal";
 
 const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668" }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -164,13 +164,11 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668" }) => {
           <img src='/assets/images/help/spade.png' alt='Image_inner' />
         </div>
 
-        <ModalVideo
-          channel='youtube'
-          autoplay
+        <VideoModal
           isOpen={isOpen}
-          videoId='XxVg_s8xAms'
           onClose={() => setIsOpen(false)}
-          allowFullScreen
+          src='/assets/videos/learner.mp4'
+          poster='/assets/images/help/thumb-lg.png'
         />
       </section>
     </>

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import ModalVideo from "react-modal-video";
+import VideoModal from "./VideoModal";
 const defaultCta = {
   careersLabel: "Careers, internships & volunteering",
   careersTitle: "Want to join our team?",
@@ -104,13 +104,11 @@ const CtaSectionOne = ({ ctaSection = defaultCta }) => {
           </div>
         </div>
 
-        <ModalVideo
-          channel='youtube'
-          autoplay
+        <VideoModal
           isOpen={isOpen}
-          videoId='XxVg_s8xAms'
           onClose={() => setIsOpen(false)}
-          allowFullScreen
+          src='/assets/videos/commissioner.mp4'
+          poster='/assets/images/cta/two.png'
         />
       </section>
     </>
