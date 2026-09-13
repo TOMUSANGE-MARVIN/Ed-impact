@@ -34,6 +34,10 @@ const ProgressBar = ({ percent = "0%", label = "Reach" }) => {
       let current = 0;
 
       const interval = setInterval(() => {
+        if (!barRef.current || !valueRef.current) {
+          clearInterval(interval);
+          return;
+        }
         if (current <= target) {
           barRef.current.style.width = `${current}%`;
           valueRef.current.textContent = `${current}%`;
@@ -42,6 +46,8 @@ const ProgressBar = ({ percent = "0%", label = "Reach" }) => {
           clearInterval(interval);
         }
       }, 15);
+
+      return () => clearInterval(interval);
     }
   }, [inView, percent]);
 
