@@ -520,6 +520,65 @@ async function seed() {
     }
   }
 
+  console.log('Seeding Reports...')
+  const reports = [
+    {
+      title: '2025 Impact Evaluation Report: Learning Outcomes Across Programme Schools',
+      excerpt: 'Our 2025 impact evaluation demonstrates measurable improvements in learning outcomes and instructional practice in programme schools compared with control schools, evidence that our system-led model works at scale.',
+      body: 'This report presents the findings of our independent 2025 impact evaluation, comparing learning outcomes and teaching practice in programme schools against a matched set of comparison schools that had not yet received the intervention.\n\nLiteracy performance was 73.1% in programme schools compared with 57.0% in comparison schools, and numeracy performance was 66.7% compared with 54.1%. Girls in programme schools achieved literacy results comparable to boys, 73.3% against 72.9%, although a gender gap remains in numeracy that will inform how we design gender-responsive pedagogy going forward.\n\nBeyond test scores, the evaluation found classrooms in programme schools becoming calmer and more collaborative: constructive conflict resolution was reported by 71.7% of programme schools compared with 61.3% in comparison schools, while conflict escalation was lower, 4.6% against 7.5%. Teachers reported greater use of varied teaching methods, more student questioning, more peer feedback, and more classroom observation and coaching.\n\nThe estimated social return on this work is £3.12 for every £1 invested. More importantly to us, over 3,000 teachers are now applying evidence-informed teaching practices in their own classrooms, strengthening learning for thousands of children across Uganda.',
+      highlights: [
+        { text: 'Improved Foundational Learning' },
+        { text: 'Stronger Teaching Practice' },
+        { text: 'Girls Matching Boys In Literacy' },
+        { text: 'Greater Government Ownership' },
+        { text: 'Peer Learning & Mentoring Embedded' },
+        { text: '£3.12 Return Per £1 Invested' },
+      ],
+      tags: 'Evidence, Learning Outcomes, Impact Evaluation',
+      image: postImages.impact,
+      publishedDate: '2026-03-01',
+      order: 1,
+    },
+    {
+      title: 'Annual Report 2025: Localisation & Scale',
+      excerpt: 'A look back at a defining year: our transition toward a locally governed entity, and continued national-scale delivery across Uganda\'s education system.',
+      body: '2025 was a year of consolidation and preparation. Our programme reached 199,856 teachers and 5,892,477 learners across Uganda, sustaining a footprint across all local governments in the secondary education subsector and more than half of local governments in the primary subsector.\n\nWe deepened delivery partnerships that make this scale possible: with the Association of Secondary School Headteachers of Uganda for secondary schools, and with the National Association of Municipal, District and City Education Officers and the Uganda National Inspectors of Schools Association for primary, reaching 22 of Uganda\'s 23 core Primary Teacher Colleges.\n\nAlongside delivery, we laid the groundwork for localisation, building the governance structures, local board, and financial independence needed to transition from a branch office of a global NGO into an autonomous Ugandan institution. This report sets out that scale of delivery and the foundation built for the transition completed in early 2026.',
+      highlights: [
+        { text: '199,856 Teachers Reached' },
+        { text: '5,892,477 Learners Reached' },
+        { text: 'National Secondary Coverage' },
+        { text: '22 of 23 Core Primary Teacher Colleges' },
+        { text: 'Localisation Governance Structures Established' },
+      ],
+      tags: 'Systems Strengthening, Localisation, Scale',
+      image: postImages.localisation,
+      publishedDate: '2026-02-01',
+      order: 2,
+    },
+    {
+      title: 'From STIR Education To Ed Impact Africa: A Transition Update',
+      excerpt: 'As STIR Education Uganda transitions into a locally governed entity, we explain what changes, what stays the same, and why it matters for sustainable reform.',
+      body: 'STIR Education is an international NGO, headquartered in the UK, that has worked since 2012 to help education systems reignite intrinsic motivation, so that every child, teacher and official is motivated to learn and improve. Over that time it built country programmes in Uganda, India, Ethiopia and Indonesia, and supported further education interventions in Ghana, Brazil and Kenya.\n\nAs part of a deliberate localisation strategy, STIR Education has spent the last several years helping its country chapters become independent, locally governed entities. STIR Education India localised first, becoming the Centre for Intrinsic Motivation in 2024. STIR Education Uganda started its own localisation journey in January 2026 to become Ed Impact Africa Foundation, and STIR Education Indonesia is scheduled to begin its transition in 2027.\n\nEd Impact Africa Foundation inherits STIR Education Uganda\'s theory of change, its national-scale programme reach, and the government and school relationships built over a decade of implementation. What changes is governance, not substance: we are moving from being a branch office of a global entity to an autonomous local organisation with our own board of directors and leadership team, and from programme-based work to a stronger social enterprise model that can sustain this work locally. What stays the same is the commitment behind it, teachers and learners already reached, and a model built to keep working long after any single programme cycle ends.',
+      highlights: [
+        { text: 'Locally Registered Ugandan NGO' },
+        { text: 'Own Board Of Directors & Leadership Team' },
+        { text: 'Same Theory Of Change, Local Governance' },
+        { text: 'Decade Of Government Relationships Retained' },
+        { text: 'Moving Toward A Sustainable Social Enterprise Model' },
+      ],
+      tags: 'Systems Strengthening, Localisation',
+      image: postImages.motivation,
+      publishedDate: '2026-01-01',
+      order: 3,
+    },
+  ]
+  for (const report of reports) {
+    const existing = await payload.find({ collection: 'reports', where: { title: { equals: report.title } }, limit: 1 })
+    if (!existing.docs.length) {
+      await payload.create({ collection: 'reports', data: { ...report, image: report.image.id } })
+    }
+  }
+
   console.log('Seeding FAQs...')
   const faqs = [
     { question: 'What does Ed Impact Africa Foundation actually do?', answer: 'We partner with governments and communities to strengthen education systems across Africa. Our work centers on four interventions: teacher motivation, continuous professional development, system strengthening, and evidence & research.', page: 'general', order: 1 },

@@ -212,7 +212,7 @@ const DonateInner = ({
                       data-aos-duration={1000}
                     >
                       <div className='thumb'>
-                        <Link href='/report-detail'>
+                        <Link href='/reports-updates'>
                           <img
                             src='assets/images/award/one.png'
                             alt='Image_inner'
@@ -229,7 +229,7 @@ const DonateInner = ({
                       data-aos-delay={200}
                     >
                       <div className='thumb'>
-                        <Link href='/report-detail'>
+                        <Link href='/reports-updates'>
                           <img
                             src='assets/images/award/four.png'
                             alt='Image_inner'
@@ -246,7 +246,7 @@ const DonateInner = ({
                       data-aos-delay={100}
                     >
                       <div className='thumb'>
-                        <Link href='/report-detail'>
+                        <Link href='/reports-updates'>
                           <img
                             src='assets/images/award/two.png'
                             alt='Image_inner'
@@ -263,7 +263,7 @@ const DonateInner = ({
                       data-aos-delay={300}
                     >
                       <div className='thumb'>
-                        <Link href='/report-detail'>
+                        <Link href='/reports-updates'>
                           <img
                             src='assets/images/award/three.png'
                             alt='Image_inner'

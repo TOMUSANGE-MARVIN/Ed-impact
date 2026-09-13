@@ -110,6 +110,25 @@ export const getPostById = async (id) => {
   }
 }
 
+export const getReports = async () => {
+  const payload = await getPayloadClient()
+  const result = await payload.find({
+    collection: 'reports',
+    sort: '-publishedDate',
+    limit: 100,
+  })
+  return result.docs
+}
+
+export const getReportById = async (id) => {
+  const payload = await getPayloadClient()
+  try {
+    return await payload.findByID({ collection: 'reports', id })
+  } catch {
+    return null
+  }
+}
+
 export const getFaqs = async (page) => {
   const payload = await getPayloadClient()
   const result = await payload.find({

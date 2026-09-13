@@ -1,6 +1,39 @@
 import Link from "next/link";
 
-const EventInner = () => {
+const fallbackImages = ["assets/images/event/one.png", "assets/images/event/two.png", "assets/images/event/three.png"];
+
+const defaultReports = [
+  {
+    id: "1",
+    title: "2025 Impact Evaluation Report: Learning Outcomes Across Programme Schools",
+    location: "Uganda",
+    publishedDate: "2026-03-01",
+  },
+  {
+    id: "2",
+    title: "Annual Report 2025: Localisation & Scale",
+    location: "Uganda",
+    publishedDate: "2026-02-01",
+  },
+  {
+    id: "3",
+    title: "From STIR Education To Ed Impact Africa: A Transition Update",
+    location: "Uganda",
+    publishedDate: "2026-01-01",
+  },
+];
+
+const formatDate = (dateValue) => {
+  if (!dateValue) return "";
+  const d = new Date(dateValue);
+  if (Number.isNaN(d.getTime())) return "";
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "long" });
+};
+
+const EventInner = ({ reports = defaultReports }) => {
+  const list = reports.length ? reports : defaultReports;
+  const [featured, ...rest] = list;
+
   return (
     <section className='event event-alt'>
       <div className='container'>
@@ -23,110 +56,57 @@ const EventInner = () => {
         </div>
         <div className='row gutter-30'>
           <div className='col-12 col-lg-6 col-xl-7'>
-            <div
-              className='event__single-wrapper'
-              data-aos='fade-up'
-              data-aos-duration={1000}
-            >
-              <div className='event__single van-tilt'>
-                <div className='event__single-thumb'>
-                  <img src='assets/images/event/one.png' alt='Image_inner' />
-                </div>
-                <div className='event__content'>
-                  <span>March 2026</span>
-                  <h4>
-                    <Link href='/report-detail'>
-                      2025 Impact Evaluation Report: Learning Outcomes Across
-                      Programme Schools
-                    </Link>
-                  </h4>
-                  <p>
-                    <i className='fa-solid fa-location-dot' /> Uganda
-                  </p>
+            {featured && (
+              <div
+                className='event__single-wrapper'
+                data-aos='fade-up'
+                data-aos-duration={1000}
+              >
+                <div className='event__single van-tilt'>
+                  <div className='event__single-thumb'>
+                    <img src={featured.image?.url || fallbackImages[0]} alt='Image_inner' />
+                  </div>
+                  <div className='event__content'>
+                    <span>{formatDate(featured.publishedDate)}</span>
+                    <h4>
+                      <Link href={`/reports-updates/${featured.id}`}>{featured.title}</Link>
+                    </h4>
+                    <p>
+                      <i className='fa-solid fa-location-dot' /> {featured.location || "Uganda"}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
           <div className='col-12 col-lg-6 col-xl-5'>
-            <div
-              className='event__single-wrapper'
-              data-aos='fade-left'
-              data-aos-duration={1000}
-            >
-              <div className='event__single event-single-alt van-tilt'>
-                <div className='event__single-thumb'>
-                  <img src='assets/images/event/two.png' alt='Image_inner' />
-                </div>
-                <div className='event__content'>
-                  <span>February 2026</span>
-                  <h4>
-                    <Link href='/report-detail'>
-                      Annual Report 2025: Localisation &amp; Scale
-                    </Link>
-                  </h4>
-                  <p>
-                    <i className='fa-solid fa-location-dot' /> Uganda
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              className='event__single-wrapper'
-              data-aos='fade-left'
-              data-aos-duration={1000}
-              data-aos-delay={300}
-            >
-              <div className='event__single  event-single-alt van-tilt'>
-                <div className='event__single-thumb'>
-                  <img src='assets/images/event/three.png' alt='Image_inner' />
-                </div>
-                <div className='event__content'>
-                  <span>January 2026</span>
-                  <h4>
-                    <Link href='/report-detail'>
-                      From STIR Education To Ed Impact Africa: A Transition
-                      Update
-                    </Link>
-                  </h4>
-                  <p>
-                    <i className='fa-solid fa-location-dot' /> Uganda
-                  </p>
+            {rest.map((report, index) => (
+              <div
+                className='event__single-wrapper'
+                data-aos='fade-left'
+                data-aos-duration={1000}
+                data-aos-delay={index === 0 ? 0 : 300}
+                key={report.id}
+              >
+                <div className='event__single event-single-alt van-tilt'>
+                  <div className='event__single-thumb'>
+                    <img
+                      src={report.image?.url || fallbackImages[(index + 1) % fallbackImages.length]}
+                      alt='Image_inner'
+                    />
+                  </div>
+                  <div className='event__content'>
+                    <span>{formatDate(report.publishedDate)}</span>
+                    <h4>
+                      <Link href={`/reports-updates/${report.id}`}>{report.title}</Link>
+                    </h4>
+                    <p>
+                      <i className='fa-solid fa-location-dot' /> {report.location || "Uganda"}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col-12'>
-            <div
-              className='pagination-wrapper'
-              data-aos='fade-up'
-              data-aos-duration={1000}
-            >
-              <ul className='pagination main-pagination'>
-                <li>
-                  <button>
-                    <i className='fa-solid fa-angles-left' />
-                  </button>
-                </li>
-                <li>
-                  <Link href='/data-evidence'>1</Link>
-                </li>
-                <li>
-                  <Link href='/data-evidence' className='active'>
-                    2
-                  </Link>
-                </li>
-                <li>
-                  <Link href='/data-evidence'>3</Link>
-                </li>
-                <li>
-                  <button>
-                    <i className='fa-solid fa-angles-right' />
-                  </button>
-                </li>
-              </ul>
-            </div>
+            ))}
           </div>
         </div>
       </div>

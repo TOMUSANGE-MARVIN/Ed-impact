@@ -183,13 +183,9 @@ const HeaderOne = ({ settings }) => {
                         <li
                           className={`navbar__item navbar__item--has-children nav-fade ${
                             pathname === "/impact" ||
-                            [
-                              "/reports-updates",
-                              "/report-detail",
-                              "/data-evidence",
-                              "/blogs",
-                            ].includes(pathname) ||
-                            pathname.startsWith("/insights")
+                            ["/data-evidence", "/blogs"].includes(pathname) ||
+                            pathname.startsWith("/insights") ||
+                            pathname.startsWith("/reports-updates")
                               ? "active"
                               : ""
                           }`}
@@ -218,9 +214,7 @@ const HeaderOne = ({ settings }) => {
                             </li>
                             <li
                               className={
-                                ["/reports-updates", "/report-detail"].includes(pathname)
-                                  ? "active"
-                                  : ""
+                                pathname.startsWith("/reports-updates") ? "active" : ""
                               }
                             >
                               <Link href='/reports-updates'>
