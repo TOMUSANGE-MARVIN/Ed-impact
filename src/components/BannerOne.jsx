@@ -4,10 +4,10 @@ import { useRef } from "react";
 import Slider from "react-slick";
 
 const fallbackBgs = [
-  "banner-one-bg.png",
-  "banner-two-bg.png",
-  "banner-three-bg.png",
-  "banner-four-bg.png",
+  "banner-one-bg.webp",
+  "banner-two-bg.webp",
+  "banner-three-bg.webp",
+  "banner-four-bg.webp",
 ];
 
 const defaultSlides = [
