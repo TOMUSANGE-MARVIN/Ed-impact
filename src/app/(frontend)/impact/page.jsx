@@ -11,9 +11,9 @@ import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getTestimonials } from "@/lib/payload";
 
 export const metadata = {
-  title: "Impact | Ed Impact Africa Foundation",
+  title: "Our Impact | Education Impact Evaluation & Learning Outcomes Africa",
   description:
-    "See the statistics, outcomes and stakeholder testimonials behind Ed Impact Africa Foundation's education system strengthening work across Uganda.",
+    "Evidence-based education impact evaluation results from Ed Impact Africa Foundation: learning outcomes, teacher motivation research and stakeholder testimonials from education system strengthening work across Uganda and Africa.",
 };
 
 const page = async () => {

@@ -41,6 +41,15 @@ export const getTeamMembers = async (category) => {
   return result.docs
 }
 
+export const getTeamMemberById = async (id) => {
+  const payload = await getPayloadClient()
+  try {
+    return await payload.findByID({ collection: 'team-members', id })
+  } catch {
+    return null
+  }
+}
+
 export const getFeaturedTeamMembers = async () => {
   const payload = await getPayloadClient()
   const result = await payload.find({

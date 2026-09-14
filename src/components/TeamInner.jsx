@@ -39,7 +39,7 @@ const TeamGroup = ({ label, members }) => (
           >
             <div className='team__single van-tilt'>
               <div className='team__single-thumb'>
-                <Link href='/team-details'>
+                <Link href={`/leadership-board/${member.id}`}>
                   <img src={member.photo?.url || "assets/images/team/placeholder.png"} alt={member.name} />
                 </Link>
                 <div className='team__icons'>
@@ -74,7 +74,7 @@ const TeamGroup = ({ label, members }) => (
               </div>
               <div className='team__single-content'>
                 <h6>
-                  <Link href='/team-details'>{member.name}</Link>
+                  <Link href={`/leadership-board/${member.id}`}>{member.name}</Link>
                 </h6>
                 <p>{member.role}</p>
               </div>

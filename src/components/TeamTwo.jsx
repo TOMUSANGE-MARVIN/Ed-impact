@@ -47,7 +47,7 @@ const TeamTwo = ({ teamMembers = defaultTeam }) => {
               >
                 <div className='team__single van-tilt'>
                   <div className='team__single-thumb'>
-                    <Link href='/team-details'>
+                    <Link href={`/leadership-board/${member.id}`}>
                       <img src={member.photo?.url || "assets/images/team/one.png"} alt={member.name} />
                     </Link>
                     <div className='team__icons'>
@@ -82,7 +82,7 @@ const TeamTwo = ({ teamMembers = defaultTeam }) => {
                   </div>
                   <div className='team__single-content'>
                     <h6>
-                      <Link href='/team-details'>{member.name}</Link>
+                      <Link href={`/leadership-board/${member.id}`}>{member.name}</Link>
                     </h6>
                     <p>{member.role}</p>
                   </div>

@@ -9,9 +9,9 @@ import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getCareersPage } from "@/lib/payload";
 
 export const metadata = {
-  title: "Careers & Volunteering | Ed Impact Africa Foundation",
+  title: "Careers & Volunteering | Education Development Jobs in Africa",
   description:
-    "Open roles, internships and volunteering opportunities at Ed Impact Africa Foundation.",
+    "Open roles, internships and volunteering opportunities at Ed Impact Africa Foundation, an education development organisation strengthening education systems and teacher professional development across Africa.",
 };
 
 const page = async () => {

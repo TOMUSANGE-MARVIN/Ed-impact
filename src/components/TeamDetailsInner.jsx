@@ -1,6 +1,18 @@
 import Link from "next/link";
 
-const TeamDetailsInner = () => {
+const defaultMember = {
+  name: "Modern Karema Musiimenta",
+  role: "Chief Executive Officer",
+  photo: { url: "assets/images/team/one.png" },
+  bio: "Modern leads Ed Impact Africa Foundation's transition from STIR Education Uganda, drawing on his experience as Uganda Country Director-STIR Education and Head of National Programs. He is a Board Member and Chairperson of the Membership Committee at the Regional Education Learning Initiative (RELI Africa).\n\nBefore joining Ed Impact Africa Foundation, Modern held leadership roles across the education and development sector in Uganda, including General Manager at Jobconnect Ltd and Branch Operations Supervisor at NSSF Uganda. His career reflects a consistent thread: building institutions that outlast any single project, and putting local ownership at the centre of reform. Today, he leads Ed Impact Africa Foundation through its transition from a country office of a global INGO into an independent, locally governed Pan-African organisation.",
+};
+
+const TeamDetailsInner = ({ member: currentMember }) => {
+  const member = currentMember || defaultMember;
+  const paragraphs = (member.bio || defaultMember.bio).split(/\n\s*\n/).filter(Boolean);
+  const intro = paragraphs[0] || defaultMember.bio;
+  const rest = paragraphs.slice(1);
+
   return (
     <section className='team-details'>
       <div className='container'>
@@ -11,7 +23,7 @@ const TeamDetailsInner = () => {
               data-aos='zoom-in'
               data-aos-duration={1000}
             >
-              <img src='assets/images/team/one.png' alt='Modern Karema Musiimenta' />
+              <img src={member.photo?.url || "assets/images/team/one.png"} alt={member.name} />
             </div>
           </div>
           <div className='col-12 col-lg-6 col-xl-7'>
@@ -22,61 +34,28 @@ const TeamDetailsInner = () => {
               data-aos-delay={100}
             >
               <div className='team-details__meta'>
-                <h4 className='title-animation_inner'>Modern Karema Musiimenta</h4>
-                <p className='designation'>Chief Executive Officer</p>
+                <h4 className='title-animation_inner'>{member.name}</h4>
+                <p className='designation'>{member.role}</p>
                 <div className='social'>
                   <a
-                    href='https://www.facebook.com/'
+                    href={member.linkedinUrl || "https://www.linkedin.com/"}
                     target='_blank'
-                    aria-label='share us on facebook'
-                    title='facebook'
-                    rel='noreferrer'
-                  >
-                    <i className='fa-brands fa-facebook-f' />
-                  </a>
-                  <a
-                    href='https://www.youtube.com/'
-                    target='_blank'
-                    aria-label='share us on youtube'
-                    title='youtube'
-                    rel='noreferrer'
-                  >
-                    <i className='fa-brands fa-youtube' />
-                  </a>
-                  <a
-                    href='https://x.com/'
-                    target='_blank'
-                    aria-label='share us on twitter'
-                    title='twitter'
-                    rel='noreferrer'
-                  >
-                    <i className='fa-brands fa-x-twitter' />
-                  </a>
-                  <a
-                    href='https://www.linkedin.com/'
-                    target='_blank'
-                    aria-label='share us on linkedin'
+                    aria-label='connect on linkedin'
                     title='linkedin'
                     rel='noreferrer'
                   >
                     <i className='fa-brands fa-linkedin-in' />
                   </a>
+                  <a
+                    href={member.email ? `mailto:${member.email}` : "#"}
+                    aria-label='email'
+                    title='email'
+                    rel='noreferrer'
+                  >
+                    <i className='fa-solid fa-envelope' />
+                  </a>
                 </div>
-                <p>
-                  Modern leads Ed Impact Africa Foundation's transition from
-                  STIR Education Uganda, drawing on his experience as
-                  Uganda Country Director-STIR Education and Head of
-                  National Programs. He is a Board Member and Chairperson
-                  of the Membership Committee at the Regional Education
-                  Learning Initiative (RELI Africa).
-                </p>
-              </div>
-              <div className='my-word'>
-                <h5>
-                  "We Strengthen What Already Exists, Aligning With
-                  National Policy To Ensure Scalable, Sustainable
-                  Educational Development."
-                </h5>
+                <p>{intro}</p>
               </div>
               <div className='progress-wrapper'>
                 <div className='cause__progress progress-bar-single'>
@@ -110,26 +89,6 @@ const TeamDetailsInner = () => {
                   </div>
                 </div>
               </div>
-              <div className='team-details__list'>
-                <ul>
-                  <li>
-                    <i className='icon-circle-check' />
-                    Former Uganda Country Director, STIR Education
-                  </li>
-                  <li>
-                    <i className='icon-circle-check' />
-                    Head of National Programs &amp; Strategic Partnerships
-                  </li>
-                  <li>
-                    <i className='icon-circle-check' />
-                    Board Member &amp; Chairperson, RELI Africa
-                  </li>
-                  <li>
-                    <i className='icon-circle-check' />
-                    Chairperson, School Management Committee, Isingiro
-                  </li>
-                </ul>
-              </div>
               <div className='team-details__cta cta'>
                 <Link
                   href='/partner-with-us'
@@ -143,28 +102,21 @@ const TeamDetailsInner = () => {
               </div>
             </div>
           </div>
-          <div className='col-12'>
-            <div
-              className='about-me'
-              data-aos='fade-up'
-              data-aos-duration={1000}
-              data-aos-delay={100}
-            >
-              <h4 className='title-animation_inner'>About Me</h4>
-              <p>
-                Before joining Ed Impact Africa Foundation, Modern held
-                leadership roles across the education and development
-                sector in Uganda, including General Manager at Jobconnect
-                Ltd and Branch Operations Supervisor at NSSF Uganda. His
-                career reflects a consistent thread: building institutions
-                that outlast any single project, and putting local
-                ownership at the centre of reform. Today, he leads Ed
-                Impact Africa Foundation through its transition from a
-                country office of a global INGO into an independent,
-                locally governed Pan-African organisation.
-              </p>
+          {rest.length > 0 && (
+            <div className='col-12'>
+              <div
+                className='about-me'
+                data-aos='fade-up'
+                data-aos-duration={1000}
+                data-aos-delay={100}
+              >
+                <h4 className='title-animation_inner'>About Me</h4>
+                {rest.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>
