@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const fallbackImages = ["assets/images/event/one.webp", "assets/images/event/two.webp", "assets/images/event/three.webp"];
+const fallbackImages = ["assets/images/event/one.png", "assets/images/event/two.png", "assets/images/event/three.png"];
 
 const defaultReports = [
   {

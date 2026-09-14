@@ -39,7 +39,7 @@ const AboutBackground = ({ background, backgroundParagraphs }) => {
               data-aos-duration={1000}
             >
               <img
-                src='/assets/images/about/uganda-coverage-map.webp'
+                src='/assets/images/about/uganda-coverage-map.png'
                 alt='Ed Impact Africa Foundation programme coverage across Uganda'
               />
             </div>

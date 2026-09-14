@@ -33,7 +33,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Insights & Policy Briefs' bgImage='assets/images/banner/banner-insights.webp' />
+        <BreadcrumbOne title='Insights & Policy Briefs' bgImage='assets/images/banner/banner-insights.png' />
 
         {/* BlogGridInner */}
         <BlogGridInner posts={posts} />

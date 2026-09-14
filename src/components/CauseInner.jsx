@@ -3,7 +3,7 @@ import ProgressBar from "../helper/ProgressBar";
 
 const defaultPrograms = [
   {
-    image: { url: "/assets/images/cause/one.webp" },
+    image: { url: "/assets/images/cause/one.png" },
     tag: "Motivation",
     title: "Teacher Motivation",
     description: "Instilling autonomy, mastery and purpose so teachers rediscover the love of teaching.",
@@ -14,7 +14,7 @@ const defaultPrograms = [
     statTwoValue: "National",
   },
   {
-    image: { url: "/assets/images/cause/two.webp" },
+    image: { url: "/assets/images/cause/two.png" },
     tag: "Systems",
     title: "System Strengthening",
     description: "Working through local government structures to build ownership that outlasts our involvement.",
@@ -25,7 +25,7 @@ const defaultPrograms = [
     statTwoValue: "Secondary Education",
   },
   {
-    image: { url: "/assets/images/cause/three.webp" },
+    image: { url: "/assets/images/cause/three.png" },
     tag: "CPD",
     title: "Continuous Professional Development",
     description: "Peer-led feedback and classroom observation that builds lasting instructional practice.",
@@ -36,7 +36,7 @@ const defaultPrograms = [
     statTwoValue: "Primary Education",
   },
   {
-    image: { url: "/assets/images/cause/four.webp" },
+    image: { url: "/assets/images/cause/four.png" },
     tag: "Evidence",
     title: "Evidence & Research",
     description: "Generating rigorous, locally grounded data that informs policy design and proves what works.",
@@ -82,7 +82,7 @@ const CauseInner = ({ programs = defaultPrograms }) => {
                   <div className='thumb'>
                     <Link href={`/our-work/${item.id}`}>
                       <img
-                        src={item.image?.url || "/assets/images/cause/one.webp"}
+                        src={item.image?.url || "/assets/images/cause/one.png"}
                         alt='Image_inner'
                       />
                     </Link>

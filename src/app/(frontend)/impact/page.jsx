@@ -35,7 +35,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Impact' bgImage='/assets/images/banner/banner-events.webp' />
+        <BreadcrumbOne title='Impact' bgImage='/assets/images/banner/banner-events.png' />
 
         {/* ImpactInner */}
         <ImpactInner stats={settings?.stats} />

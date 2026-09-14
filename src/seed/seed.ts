@@ -131,25 +131,25 @@ async function seed() {
       heroSlides: [
         {
           subtitle: "Africa's Systems Reform Partner",
-          headingBeforeAccent: 'Turning Policy Into',
+          headingBeforeAccent: 'Strengthening Education Systems, Building',
           headingAccent: 'Belonging',
           headingAfterAccent: '.',
         },
         {
           subtitle: 'Co-Creating Scalable Solutions',
-          headingBeforeAccent: 'Every Child Deserves A',
+          headingBeforeAccent: "Better Learning Outcomes For Every Child's",
           headingAccent: 'Future',
           headingAfterAccent: '.',
         },
         {
           subtitle: '199,856 Teachers. 5.9M Learners.',
-          headingBeforeAccent: 'Strengthening',
-          headingAccent: 'Systems',
-          headingAfterAccent: ' Across Africa.',
+          headingBeforeAccent: 'Education System Strengthening Across',
+          headingAccent: 'Africa',
+          headingAfterAccent: '.',
         },
         {
           subtitle: 'Successor To STIR Education Uganda',
-          headingBeforeAccent: 'Reigniting The Love Of',
+          headingBeforeAccent: 'Restoring Teacher Motivation And Joy In',
           headingAccent: 'Teaching',
           headingAfterAccent: '.',
         },
@@ -467,7 +467,7 @@ async function seed() {
       order: 1,
     },
     {
-      quote: 'This is not another donor project that disappears after three years. Ed Impact works through our own structures, so changes stay embedded in the school.',
+      quote: "This isn't a donor project that disappears after three years. Ed Impact works through our structures, changes stay embedded in the school.",
       name: 'Headteacher',
       role: 'ASSHU Member School',
       order: 2,
@@ -475,7 +475,7 @@ async function seed() {
     {
       quote: 'Because our voice shaped how the programme was designed, it respects how our community works, and that is why the changes we made together have lasted.',
       name: 'SMC Chair',
-      role: 'School Management Committee, Isingiro',
+      role: 'SMC, Isingiro',
       order: 3,
     },
   ]

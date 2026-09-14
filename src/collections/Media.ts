@@ -18,11 +18,5 @@ export const Media: CollectionConfig = {
   ],
   upload: {
     staticDir: path.resolve(dirname, '../../public/media'),
-    // Every upload (team photos, program/blog images) gets re-encoded to WebP
-    // so pages that pull images from the CMS aren't serving raw multi-hundred-KB PNGs.
-    formatOptions: {
-      format: 'webp',
-      options: { quality: 80 },
-    },
   },
 }

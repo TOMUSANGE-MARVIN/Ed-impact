@@ -44,7 +44,7 @@ const CtaSectionOne = ({ ctaSection = defaultCta }) => {
                   </div>
                 </div>
                 <div className='cta-img'>
-                  <img src='assets/images/cta/one.webp' alt='Image_inner' />
+                  <img src='assets/images/cta/one.png' alt='Image_inner' />
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@ const CtaSectionOne = ({ ctaSection = defaultCta }) => {
                 </div>
                 <div className='cta-img'>
                   <img
-                    src='assets/images/cta/two.webp'
+                    src='assets/images/cta/two.png'
                     alt='Image_inner'
                     className='parallax-image'
                   />
@@ -97,7 +97,7 @@ const CtaSectionOne = ({ ctaSection = defaultCta }) => {
                   </div>
                 </div>
                 <div className='cta-img'>
-                  <img src='assets/images/cta/three.webp' alt='Image_inner' />
+                  <img src='assets/images/cta/three.png' alt='Image_inner' />
                 </div>
               </div>
             </div>
@@ -108,7 +108,7 @@ const CtaSectionOne = ({ ctaSection = defaultCta }) => {
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           src='/assets/videos/commissioner.mp4'
-          poster='/assets/images/cta/two.webp'
+          poster='/assets/images/cta/two.png'
         />
       </section>
     </>

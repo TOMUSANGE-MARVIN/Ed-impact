@@ -11,7 +11,7 @@ const TeamDetailsInner = () => {
               data-aos='zoom-in'
               data-aos-duration={1000}
             >
-              <img src='assets/images/team/one.webp' alt='Modern Karema Musiimenta' />
+              <img src='assets/images/team/one.png' alt='Modern Karema Musiimenta' />
             </div>
           </div>
           <div className='col-12 col-lg-6 col-xl-7'>

@@ -123,7 +123,7 @@ const BlogOne = ({ posts = defaultPosts }) => {
         </div>
       </div>
       <div className='blog-bg'>
-        <img src='assets/images/blog/blog-bg.webp' alt='Image_inner' />
+        <img src='assets/images/blog/blog-bg.png' alt='Image_inner' />
       </div>
       <div className='spade'>
         <img

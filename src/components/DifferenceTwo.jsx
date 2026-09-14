@@ -100,7 +100,7 @@ const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats }) => {
                     data-aos-duration={1000}
                   >
                     <img
-                      src='assets/images/difference/thumb-sm.webp'
+                      src='assets/images/difference/thumb-sm.png'
                       alt='Image_inner'
                     />
                     <div className='grid-line'>
@@ -126,7 +126,7 @@ const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats }) => {
                     data-aos-delay={300}
                   >
                     <img
-                      src='assets/images/difference/thumb-lg.webp'
+                      src='assets/images/difference/thumb-lg.png'
                       alt='Image_inner'
                     />
                   </div>
@@ -361,7 +361,7 @@ const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats }) => {
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
         src='/assets/videos/headteacher.mp4'
-        poster='/assets/images/difference/thumb-sm.webp'
+        poster='/assets/images/difference/thumb-sm.png'
       />
     </>
   );

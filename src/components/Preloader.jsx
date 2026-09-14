@@ -12,7 +12,11 @@ const Preloader = () => {
     <>
       {active ? (
         <div className='preloader'>
-          <i className='icon-education' />
+          <img
+            src='/assets/images/logo-icon.png'
+            alt='Ed Impact Africa Foundation'
+            style={{ width: 64, height: 64 }}
+          />
           <p>ED IMPACT AFRICA</p>
         </div>
       ) : (

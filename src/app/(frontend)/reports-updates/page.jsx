@@ -33,7 +33,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Reports & Updates' bgImage='assets/images/banner/banner-events.webp' />
+        <BreadcrumbOne title='Reports & Updates' bgImage='assets/images/banner/banner-events.png' />
 
         {/* EventInner */}
         <EventInner reports={reports} />

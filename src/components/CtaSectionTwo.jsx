@@ -44,7 +44,7 @@ const CtaSectionTwo = () => {
       </div>
       <div className='cta-bg'>
         <img
-          src='assets/images/cta/cta-bg.webp'
+          src='assets/images/cta/cta-bg.png'
           alt='Image_inner'
           className='parallax-image'
         />

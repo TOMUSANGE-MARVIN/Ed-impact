@@ -38,7 +38,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Partner With Us' bgImage='assets/images/banner/banner-donate.webp' />
+        <BreadcrumbOne title='Partner With Us' bgImage='assets/images/banner/banner-donate.png' />
 
         {/* DonateInner */}
         <DonateInner audienceSection={home?.audienceSection} faqs={faqs} programs={programs} />

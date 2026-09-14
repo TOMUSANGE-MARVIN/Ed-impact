@@ -69,10 +69,10 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
               </div>
               <div className='cm-img-group cta'>
                 <div className='cm-img-single'>
-                  <img src='/assets/images/event/pp-one.webp' alt='Image_inner' />
+                  <img src='/assets/images/event/pp-one.png' alt='Image_inner' />
                 </div>
                 <div className='cm-img-single'>
-                  <img src='/assets/images/event/pp-two.webp' alt='Image_inner' />
+                  <img src='/assets/images/event/pp-two.png' alt='Image_inner' />
                 </div>
               </div>
               <div
@@ -174,7 +174,7 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
                     <div className='single-item' key={p.id}>
                       <div className='thumb'>
                         <Link href={`/our-work/${p.id}`}>
-                          <img src={p.image?.url || "/assets/images/cause/one.webp"} alt='Image_inner' />
+                          <img src={p.image?.url || "/assets/images/cause/one.png"} alt='Image_inner' />
                         </Link>
                       </div>
                       <div className='content'>

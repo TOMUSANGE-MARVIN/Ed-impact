@@ -1,12 +1,12 @@
 import Link from "next/link";
 
 const images = [
-  { file: "one.webp", alt: "Students seated at desks during a lesson" },
-  { file: "two.webp", alt: "Classroom of learners in Uganda" },
-  { file: "three.webp", alt: "A learner focused on classwork" },
-  { file: "four.webp", alt: "A learner smiling at the chalkboard" },
-  { file: "five.webp", alt: "Learners writing in their notebooks" },
-  { file: "six.webp", alt: "Learners working together at their desks" },
+  { file: "one.png", alt: "Students seated at desks during a lesson" },
+  { file: "two.png", alt: "Classroom of learners in Uganda" },
+  { file: "three.png", alt: "A learner focused on classwork" },
+  { file: "four.png", alt: "A learner smiling at the chalkboard" },
+  { file: "five.png", alt: "Learners writing in their notebooks" },
+  { file: "six.png", alt: "Learners working together at their desks" },
 ];
 
 const GalleryOne = () => {

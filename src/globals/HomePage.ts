@@ -21,25 +21,25 @@ export const HomePage: GlobalConfig = {
       defaultValue: [
         {
           subtitle: "Africa's Systems Reform Partner",
-          headingBeforeAccent: 'Turning Policy Into',
+          headingBeforeAccent: 'Strengthening Education Systems, Building',
           headingAccent: 'Belonging',
           headingAfterAccent: '.',
         },
         {
           subtitle: 'Co-Creating Scalable Solutions',
-          headingBeforeAccent: 'Every Child Deserves A',
+          headingBeforeAccent: "Better Learning Outcomes For Every Child's",
           headingAccent: 'Future',
           headingAfterAccent: '.',
         },
         {
           subtitle: '199,856 Teachers. 5.9M Learners.',
-          headingBeforeAccent: 'Strengthening',
-          headingAccent: 'Systems',
-          headingAfterAccent: ' Across Africa.',
+          headingBeforeAccent: 'Education System Strengthening Across',
+          headingAccent: 'Africa',
+          headingAfterAccent: '.',
         },
         {
           subtitle: 'Successor To STIR Education Uganda',
-          headingBeforeAccent: 'Reigniting The Love Of',
+          headingBeforeAccent: 'Restoring Teacher Motivation And Joy In',
           headingAccent: 'Teaching',
           headingAfterAccent: '.',
         },

@@ -12,7 +12,7 @@ const defaultTestimonials = [
   },
   {
     quote:
-      "This is not another donor project that disappears after three years. Ed Impact works through our own structures, so changes stay embedded in the school.",
+      "This isn't a donor project that disappears after three years. Ed Impact works through our structures, changes stay embedded in the school.",
     name: "Headteacher",
     role: "ASSHU Member School",
   },
@@ -20,7 +20,7 @@ const defaultTestimonials = [
     quote:
       "Because our voice shaped how the programme was designed, it respects how our community works, and that is why the changes we made together have lasted.",
     name: "SMC Chair",
-    role: "School Management Committee, Isingiro",
+    role: "SMC, Isingiro",
   },
 ];
 
@@ -64,7 +64,7 @@ const TestimonialOne = ({ testimonials = defaultTestimonials }) => {
       <section
         className='testimonial'
         style={{
-          backgroundImage: "url(/assets/images/bg-one.webp)",
+          backgroundImage: "url(/assets/images/bg-one.png)",
         }}
       >
         <div className='container'>
