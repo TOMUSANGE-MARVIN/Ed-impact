@@ -2,8 +2,12 @@
 export default function Loading() {
   return (
     <div className='preloader'>
-      <i className='icon-education' />
-      <p>ED IMPACT AFRICA</p>
+      <img
+        src='/assets/images/logo-icon.png'
+        alt='Ed Impact Africa Foundation'
+        style={{ width: 64, height: 64 }}
+      />
+      <p>ED IMPACT AFRICA FOUNDATION</p>
     </div>
   );
 }

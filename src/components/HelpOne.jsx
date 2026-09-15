@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import VideoModal from "./VideoModal";
 
-const HelpOne = ({ ubuntu, stats, phone = "+256 414 696609" }) => {
+const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668" }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const subtitle = ubuntu?.subtitle || "The Ubuntu Philosophy";

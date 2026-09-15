@@ -1,8 +1,8 @@
 const ContactUsInner = ({ settings }) => {
   const email = settings?.contact?.email || "info@edimpactafricafoundation.org";
   const partnershipsEmail = settings?.contact?.partnershipsEmail || "partnerships@edimpactafricafoundation.org";
-  const phoneOne = settings?.contact?.phoneOne || "+256 414 696609";
-  const phoneTwo = settings?.contact?.phoneTwo || "+256 782 891 322";
+  const phoneOne = settings?.contact?.phoneOne || "+256 781 064 668";
+  const phoneTwo = settings?.contact?.phoneTwo || "+256 414 696609";
   const location = settings?.contact?.location || "Kampala, Uganda";
   const mapQuery = settings?.contact?.mapQuery || location;
   const social = settings?.social || {};
@@ -119,6 +119,13 @@ const ContactUsInner = ({ settings }) => {
                     </div>
                   </div>
                 </div>
+              </div>
+              <div style={{ margin: "24px 0" }}>
+                <img
+                  src='/assets/images/social-initiative-logo.png'
+                  alt='Social Initiative'
+                  style={{ maxWidth: "220px", height: "auto" }}
+                />
               </div>
               <div className='contact-main__thumb cta' style={{ overflow: "hidden", borderRadius: "16px" }}>
                 <iframe

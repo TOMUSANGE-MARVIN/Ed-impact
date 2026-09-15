@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const HeaderOne = ({ settings }) => {
   const logoUrl = settings?.logo?.url || "/assets/images/logo.png";
-  const phone = settings?.contact?.phoneOne || "+256 414 696609";
+  const phone = settings?.contact?.phoneOne || "+256 781 064 668";
   const social = settings?.social || {};
   let pathname = usePathname();
   let [mobileMenu, setMobileMenu] = useState(false);

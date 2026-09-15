@@ -99,8 +99,8 @@ async function seed() {
       contact: {
         email: 'info@edimpactafricafoundation.org',
         partnershipsEmail: 'partnerships@edimpactafricafoundation.org',
-        phoneOne: '+256 414 696609',
-        phoneTwo: '+256 782 891 322',
+        phoneOne: '+256 781 064 668',
+        phoneTwo: '+256 414 696609',
         location: 'Kampala, Uganda',
         mapQuery: 'Kampala, Uganda',
       },
