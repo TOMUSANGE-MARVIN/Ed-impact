@@ -21,7 +21,7 @@ const defaultPosts = [
   },
   {
     tag: "Systems",
-    title: "Localisation In Practice: From STIR Education To Ed Impact Africa",
+    title: "Localisation In Practice: From STIR Education To Ed Impact Africa Foundation",
     excerpt:
       "As STIR Education Uganda transitions into a locally governed entity, we explain what changes, what stays the same, and why it matters for sustainable reform.",
     author: "Ed Impact Team",

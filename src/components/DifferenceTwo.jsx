@@ -66,7 +66,7 @@ const defaultStats = {
   learnersReached: "5,892,477",
 };
 
-const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats }) => {
+const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats, showVideo = true }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("mission");
 
@@ -110,14 +110,16 @@ const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats }) => {
                         className='base-img'
                       />
                     </div>
-                    <div className='video-btn-wrapper'>
-                      <button
-                        onClick={() => setIsOpen(true)}
-                        className='open-video-popup'
-                      >
-                        <i className='icon-play' />
-                      </button>
-                    </div>
+                    {showVideo && (
+                      <div className='video-btn-wrapper'>
+                        <button
+                          onClick={() => setIsOpen(true)}
+                          className='open-video-popup'
+                        >
+                          <i className='icon-play' />
+                        </button>
+                      </div>
+                    )}
                   </div>
                   <div
                     className='thumb-sm'

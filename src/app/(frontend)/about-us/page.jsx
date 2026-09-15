@@ -62,7 +62,7 @@ const page = async () => {
         />
 
         {/* 3. Vision, Mission & Core Values */}
-        <DifferenceTwo about={about} stats={settings?.stats} />
+        <DifferenceTwo about={about} stats={settings?.stats} showVideo={false} />
 
         {/* 4. What We Do */}
         <WhatWeDo

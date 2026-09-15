@@ -6,7 +6,7 @@ const delays = [0, 300, 600, 900];
 const defaultPosts = [
   { tag: "Motivation", title: "Why Teacher Motivation Matters More Than Teacher Training", author: "Ed Impact Team", readTime: "5 min read" },
   { tag: "Evidence", title: "What The 2025 Impact Evaluation Tells Us About Learning Outcomes", author: "Ed Impact Team", readTime: "6 min read" },
-  { tag: "Systems", title: "Localisation In Practice: From STIR Education To Ed Impact Africa", author: "Ed Impact Team", readTime: "5 min read" },
+  { tag: "Systems", title: "Localisation In Practice: From STIR Education To Ed Impact Africa Foundation", author: "Ed Impact Team", readTime: "5 min read" },
 ];
 
 const formatDate = (dateValue) => {

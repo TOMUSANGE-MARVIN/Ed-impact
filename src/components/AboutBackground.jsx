@@ -32,7 +32,7 @@ const AboutBackground = ({ background, backgroundParagraphs }) => {
     <section className='about-background'>
       <div className='container'>
         <div className='row gutter-40 align-items-center'>
-          <div className='col-12 col-lg-6'>
+          <div className='col-12 col-lg-7'>
             <div
               className='about-background__thumb'
               data-aos='fade-right'
@@ -45,7 +45,7 @@ const AboutBackground = ({ background, backgroundParagraphs }) => {
             </div>
           </div>
 
-          <div className='col-12 col-lg-6'>
+          <div className='col-12 col-lg-5'>
             <div
               className='about-background__content'
               data-aos='fade-left'

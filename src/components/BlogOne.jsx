@@ -18,7 +18,7 @@ const defaultPosts = [
   },
   {
     tag: "Systems",
-    title: "Localisation In Practice: From STIR Education To Ed Impact Africa",
+    title: "Localisation In Practice: From STIR Education To Ed Impact Africa Foundation",
     author: "Ed Impact Team",
     readTime: "6 min read",
   },

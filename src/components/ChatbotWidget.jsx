@@ -6,7 +6,7 @@ const GREETING =
   "Hi! I'm the Ed Impact Africa Foundation assistant (demo). Ask me about our programs, impact, or how to get in touch.";
 
 const FALLBACK =
-  "I don't have a specific answer for that yet. You can reach our team directly at info@edimpactafricafoundation.org or +256 781 064 668, or visit our Contact Us page.";
+  "I don't have a specific answer for that yet. You can reach our team directly at info@edimpactafricafoundation.org or +256 414 696609, or visit our Contact Us page.";
 
 const STOP_WORDS = new Set([
   "the", "a", "an", "is", "are", "do", "does", "how", "what", "when", "where", "why",

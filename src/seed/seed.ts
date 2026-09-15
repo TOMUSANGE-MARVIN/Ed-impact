@@ -99,7 +99,7 @@ async function seed() {
       contact: {
         email: 'info@edimpactafricafoundation.org',
         partnershipsEmail: 'partnerships@edimpactafricafoundation.org',
-        phoneOne: '+256 781 064 668',
+        phoneOne: '+256 414 696609',
         phoneTwo: '+256 782 891 322',
         location: 'Kampala, Uganda',
         mapQuery: 'Kampala, Uganda',
@@ -160,7 +160,7 @@ async function seed() {
         subtitle: 'How We Create Change',
         title: 'Our Model: Four Interventions',
         description:
-          'A child cannot love learning without a teacher who loves teaching. We build the capacity of teachers, school leaders and officials together, so motivation and quality take root and stay embedded in the system.',
+          'A child cannot love learning without a teacher who loves teaching. We build the capacity of teachers, school leaders and officials together across both primary and secondary education, so motivation and quality take root and stay embedded in the system.',
       },
       ubuntuSection: {
         subtitle: 'The Ubuntu Philosophy',
@@ -340,9 +340,9 @@ async function seed() {
         { text: 'A collaborative, Ubuntu-driven culture' },
       ],
       openPositionsText:
-        "We don't have any open positions right now. Check back soon, or send us your CV using the form and we'll reach out when a role matching your experience opens up.",
+        "We don't have any open positions right now. Check back soon, or email us your CV and we'll reach out when a role matching your experience opens up.",
       internshipsText:
-        "We welcome enquiries from early-career professionals and volunteers interested in education systems reform. Tell us about your interest in the form and we'll get in touch when an opportunity fits.",
+        "We welcome enquiries from early-career professionals and volunteers interested in education systems reform. Get in touch and we'll reach out when an opportunity fits.",
       diversityText:
         'Guided by Ubuntu, we are committed to equal opportunity and inclusive hiring, building a team as diverse as the communities we serve.',
     },
@@ -507,7 +507,7 @@ async function seed() {
       readTime: '7 min read',
     },
     {
-      title: 'Localisation In Practice: From STIR Education To Ed Impact Africa',
+      title: 'Localisation In Practice: From STIR Education To Ed Impact Africa Foundation',
       tag: 'Systems',
       excerpt: 'As STIR Education Uganda transitions into a locally governed entity, we explain what changes, what stays the same, and why it matters for sustainable reform.',
       body: 'STIR Education is an international NGO, headquartered in the UK, that has worked since 2012 to help education systems reignite intrinsic motivation, so that every child, teacher and official is motivated to learn and improve. Over that time it built country programmes in Uganda, India, Ethiopia and Indonesia, and supported further education interventions in Ghana, Brazil and Kenya, learning and adapting its model across very different contexts.\n\nAs part of a deliberate localisation strategy, STIR Education has spent the last several years helping its country chapters become independent, locally governed entities. STIR Education India localised first, becoming the Centre for Intrinsic Motivation in 2024. STIR Education Uganda started its own localisation journey in January 2026 to become Ed Impact Africa Foundation, and STIR Education Indonesia is scheduled to begin its transition in 2027.\n\nEd Impact Africa Foundation inherits STIR Education Uganda\'s theory of change, its national-scale programme reach, and the government and school relationships built over a decade of implementation. Concretely, that means a footprint across all local governments in the secondary education subsector and more than half of local governments in the primary subsector, delivered through our partnership with the Association of Secondary School Headteachers of Uganda for secondary schools, and through the National Association of Municipal, District and City Education Officers and the Uganda National Inspectors of Schools Association for primary, reaching 22 of Uganda\'s 23 core Primary Teacher Colleges.\n\nWhat changes is governance, not substance. We are moving from being a branch office of a global entity to an autonomous local organisation with our own board of directors and leadership team, and from programme-based work to a stronger social enterprise model that can sustain this work locally. What stays the same is the commitment behind it: 199,856 teachers and 5,892,477 learners already reached, and a model built to keep working long after any single programme cycle ends.',
@@ -558,7 +558,7 @@ async function seed() {
       order: 2,
     },
     {
-      title: 'From STIR Education To Ed Impact Africa: A Transition Update',
+      title: 'From STIR Education To Ed Impact Africa Foundation: A Transition Update',
       excerpt: 'As STIR Education Uganda transitions into a locally governed entity, we explain what changes, what stays the same, and why it matters for sustainable reform.',
       body: 'STIR Education is an international NGO, headquartered in the UK, that has worked since 2012 to help education systems reignite intrinsic motivation, so that every child, teacher and official is motivated to learn and improve. Over that time it built country programmes in Uganda, India, Ethiopia and Indonesia, and supported further education interventions in Ghana, Brazil and Kenya.\n\nAs part of a deliberate localisation strategy, STIR Education has spent the last several years helping its country chapters become independent, locally governed entities. STIR Education India localised first, becoming the Centre for Intrinsic Motivation in 2024. STIR Education Uganda started its own localisation journey in January 2026 to become Ed Impact Africa Foundation, and STIR Education Indonesia is scheduled to begin its transition in 2027.\n\nEd Impact Africa Foundation inherits STIR Education Uganda\'s theory of change, its national-scale programme reach, and the government and school relationships built over a decade of implementation. What changes is governance, not substance: we are moving from being a branch office of a global entity to an autonomous local organisation with our own board of directors and leadership team, and from programme-based work to a stronger social enterprise model that can sustain this work locally. What stays the same is the commitment behind it, teachers and learners already reached, and a model built to keep working long after any single programme cycle ends.',
       highlights: [

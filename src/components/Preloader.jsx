@@ -17,7 +17,7 @@ const Preloader = () => {
             alt='Ed Impact Africa Foundation'
             style={{ width: 64, height: 64 }}
           />
-          <p>ED IMPACT AFRICA</p>
+          <p>ED IMPACT AFRICA FOUNDATION</p>
         </div>
       ) : (
         <div></div>

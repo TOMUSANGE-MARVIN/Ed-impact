@@ -3,6 +3,19 @@ import Link from "next/link";
 import { useRef } from "react";
 import Slider from "react-slick";
 
+const renderSubtitle = (subtitle) => {
+  const parts = subtitle.split(/(STIR Education)/i);
+  return parts.map((part, index) =>
+    /^STIR Education$/i.test(part) ? (
+      <span key={index} style={{ color: "#E52026" }}>
+        {part}
+      </span>
+    ) : (
+      part
+    )
+  );
+};
+
 const fallbackBgs = [
   "banner-one-bg.png",
   "banner-two-bg.png",
@@ -79,7 +92,7 @@ const BannerOne = ({
                         <div className='banner-two__slider-content'>
                           <span className='sub-title'>
                             <i className='icon-education' />
-                            {slide.subtitle}
+                            {renderSubtitle(slide.subtitle)}
                           </span>
                           <h1>
                             {slide.headingBeforeAccent}{" "}

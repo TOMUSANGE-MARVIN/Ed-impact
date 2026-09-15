@@ -7,6 +7,7 @@ const cardStyles = [
   { bg: "bg-one.png", variant: "difference__single-first" },
   { bg: "bg-two.png", variant: "difference__single-second" },
   { bg: "bg-three.png", variant: "difference__single-third" },
+  { bg: "bg-four.png", variant: "difference__single-fourth" },
 ];
 
 const defaultInterventions = [
@@ -36,7 +37,7 @@ const DifferenceOne = ({
   interventions = defaultInterventions,
   subtitle = "How We Create Change",
   title = "Our Model: Four Interventions",
-  description = "A child cannot love learning without a teacher who loves teaching. We build the capacity of teachers, school leaders and officials together, so motivation and quality take root and stay embedded in the system.",
+  description = "A child cannot love learning without a teacher who loves teaching. We build the capacity of teachers, school leaders and officials together across both primary and secondary education, so motivation and quality take root and stay embedded in the system.",
 }) => {
   const sliderRef = useRef(null);
   const settings = {

@@ -66,7 +66,7 @@ export const HomePage: GlobalConfig = {
           name: 'description',
           type: 'textarea',
           defaultValue:
-            'A child cannot love learning without a teacher who loves teaching. We build the capacity of teachers, school leaders and officials together, so motivation and quality take root and stay embedded in the system.',
+            'A child cannot love learning without a teacher who loves teaching. We build the capacity of teachers, school leaders and officials together across both primary and secondary education, so motivation and quality take root and stay embedded in the system.',
         },
       ],
     },

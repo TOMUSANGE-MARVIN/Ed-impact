@@ -33,13 +33,13 @@ export const CareersPage: GlobalConfig = {
       name: 'openPositionsText',
       type: 'textarea',
       defaultValue:
-        "We don't have any open positions right now. Check back soon, or send us your CV using the form and we'll reach out when a role matching your experience opens up.",
+        "We don't have any open positions right now. Check back soon, or email us your CV and we'll reach out when a role matching your experience opens up.",
     },
     {
       name: 'internshipsText',
       type: 'textarea',
       defaultValue:
-        "We welcome enquiries from early-career professionals and volunteers interested in education systems reform. Tell us about your interest in the form and we'll get in touch when an opportunity fits.",
+        "We welcome enquiries from early-career professionals and volunteers interested in education systems reform. Get in touch and we'll reach out when an opportunity fits.",
     },
     {
       name: 'diversityText',

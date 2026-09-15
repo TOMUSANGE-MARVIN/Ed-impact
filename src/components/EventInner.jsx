@@ -17,7 +17,7 @@ const defaultReports = [
   },
   {
     id: "3",
-    title: "From STIR Education To Ed Impact Africa: A Transition Update",
+    title: "From STIR Education To Ed Impact Africa Foundation: A Transition Update",
     location: "Uganda",
     publishedDate: "2026-01-01",
   },
