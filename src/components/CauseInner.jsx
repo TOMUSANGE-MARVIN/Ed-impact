@@ -20,7 +20,7 @@ const defaultPrograms = [
     description: "Working through local government structures to build ownership that outlasts our involvement.",
     percent: 88,
     statOneLabel: "Coverage",
-    statOneValue: "155/176 LGs",
+    statOneValue: "176 LGs",
     statTwoLabel: "Focus",
     statTwoValue: "Secondary Education",
   },

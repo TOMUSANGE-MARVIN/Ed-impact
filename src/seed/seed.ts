@@ -386,7 +386,7 @@ async function seed() {
       image: programImages.secondary,
       percent: 100,
       statOneLabel: 'Coverage',
-      statOneValue: '155/176 LGs',
+      statOneValue: '176 LGs',
       statTwoLabel: 'Reach',
       statTwoValue: '199,856 teachers',
       statThreeLabel: 'Delivery Partner',

@@ -22,7 +22,7 @@ const ImpactInner = ({ stats = defaultStats }) => {
   const counters = [
     { icon: "icon-education", label: "Teachers Reached", value: s.teachersReached },
     { icon: "icon-user", label: "Learners Reached", value: s.learnersReached },
-    { icon: "icon-documents", label: "Secondary LG Coverage", value: "155/176" },
+    { icon: "icon-documents", label: "Secondary LG Coverage", value: "176" },
     { icon: "icon-support", label: "Primary LG Coverage", value: "105/176" },
     { icon: "icon-award", label: "Core Teacher Colleges", value: "22/23" },
     { icon: "icon-make-donation", label: "Social Return", value: s.socialReturn },

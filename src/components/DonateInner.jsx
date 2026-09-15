@@ -35,7 +35,7 @@ const defaultFaqs = [
 ];
 
 const defaultPrograms = [
-  { title: "National Secondary CPD", statOneValue: "155/176 Local Governments", image: { url: "assets/images/blog/ph-one.png" } },
+  { title: "National Secondary CPD", statOneValue: "176 Local Governments", image: { url: "assets/images/blog/ph-one.png" } },
   { title: "Primary Teacher Colleges", statOneValue: "22/23 Core PTCs", image: { url: "assets/images/blog/ph-two.png" } },
   { title: "Evidence & Policy Influence", statOneValue: "£3.12 return per £1", image: { url: "assets/images/blog/three.png" } },
 ];

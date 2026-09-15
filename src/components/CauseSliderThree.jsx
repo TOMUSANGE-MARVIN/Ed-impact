@@ -12,7 +12,7 @@ const defaultPrograms = [
     description: "Delivered with the Association of Secondary School Headteachers of Uganda, reaching secondary schools nationwide.",
     percent: 100,
     statOneLabel: "Coverage",
-    statOneValue: "155/176 LGs",
+    statOneValue: "176 LGs",
     statTwoLabel: "Reach",
     statTwoValue: "199,856 teachers",
   },
