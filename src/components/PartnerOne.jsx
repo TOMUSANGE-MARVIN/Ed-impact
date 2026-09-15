@@ -19,6 +19,7 @@ const PartnerOne = () => {
                   src={`/assets/images/sponsor/${partner.file}`}
                   alt={partner.name}
                   title={partner.name}
+                  style={{ height: "110px", width: "auto", maxWidth: "260px", objectFit: "contain" }}
                 />
               </div>
             </div>
