@@ -29,6 +29,7 @@ export const TeamMembers: CollectionConfig = {
         { label: 'Executive Team', value: 'executive' },
         { label: 'Board of Directors', value: 'board' },
         { label: 'Senior Leadership Team', value: 'senior-leadership' },
+        { label: 'Our Wider Team', value: 'staff' },
       ],
     },
     {

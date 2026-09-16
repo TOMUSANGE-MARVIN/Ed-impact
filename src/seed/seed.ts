@@ -40,11 +40,11 @@ async function seed() {
     await payload.create({
       collection: 'users',
       data: {
-        email: 'admin@edimpactafricafoundation.org',
+        email: 'admin@edimpactafrica.org',
         password: 'EdImpact2026!',
       },
     })
-    console.log('Created admin user: admin@edimpactafricafoundation.org / EdImpact2026!')
+    console.log('Created admin user: admin@edimpactafrica.org / EdImpact2026!')
   } else {
     console.log('Admin user already exists, skipping.')
   }
@@ -97,8 +97,8 @@ async function seed() {
       siteName: 'Ed Impact Africa Foundation',
       tagline: 'Because every African child deserves an education system that unlocks their potential.',
       contact: {
-        email: 'info@edimpactafricafoundation.org',
-        partnershipsEmail: 'partnerships@edimpactafricafoundation.org',
+        email: 'info@edimpactafrica.org',
+        partnershipsEmail: 'partnerships@edimpactafrica.org',
         phoneOne: '+256 781 064 668',
         phoneTwo: '+256 414 696609',
         location: 'Kampala, Uganda',
@@ -184,6 +184,8 @@ async function seed() {
           'Your investment translates into measurable, scalable reform, generating a high return on social impact.',
         communitiesText:
           'Your voice shapes the solution, ensuring our programs respect the principle of Ubuntu and reflect local realities.',
+        knowledgePartnerText:
+          'Your research and technical expertise strengthen the evidence behind our work, co-authoring studies, shaping policy dialogue, and helping translate evidence into practice across Africa.',
       },
       ctaSection: {
         careersLabel: 'Careers, internships & volunteering',

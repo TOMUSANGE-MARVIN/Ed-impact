@@ -20,8 +20,8 @@ export const SiteSettings: GlobalConfig = {
       type: 'group',
       name: 'contact',
       fields: [
-        { name: 'email', type: 'text', defaultValue: 'info@edimpactafricafoundation.org' },
-        { name: 'partnershipsEmail', type: 'text', defaultValue: 'partnerships@edimpactafricafoundation.org' },
+        { name: 'email', type: 'text', defaultValue: 'info@edimpactafrica.org' },
+        { name: 'partnershipsEmail', type: 'text', defaultValue: 'partnerships@edimpactafrica.org' },
         { name: 'phoneOne', type: 'text', defaultValue: '+256 781 064 668' },
         { name: 'phoneTwo', type: 'text', defaultValue: '+256 414 696609' },
         { name: 'location', type: 'text', defaultValue: 'Kampala, Uganda' },

@@ -1,6 +1,6 @@
 const ContactUsInner = ({ settings }) => {
-  const email = settings?.contact?.email || "info@edimpactafricafoundation.org";
-  const partnershipsEmail = settings?.contact?.partnershipsEmail || "partnerships@edimpactafricafoundation.org";
+  const email = settings?.contact?.email || "info@edimpactafrica.org";
+  const partnershipsEmail = settings?.contact?.partnershipsEmail || "partnerships@edimpactafrica.org";
   const phoneOne = settings?.contact?.phoneOne || "+256 781 064 668";
   const phoneTwo = settings?.contact?.phoneTwo || "+256 414 696609";
   const location = settings?.contact?.location || "Kampala, Uganda";

@@ -101,6 +101,25 @@
       color: var(--secondary-color);
       transition: var(--transition);
     }
+
+    .team__read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--base-color);
+      transition: var(--transition);
+
+      i {
+        font-size: 11px;
+      }
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
   }
 
   .team__single-content__icon {

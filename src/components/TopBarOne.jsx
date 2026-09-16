@@ -1,7 +1,7 @@
 "use client";
 
 const TopBarOne = ({ settings }) => {
-  const email = settings?.contact?.email || "info@edimpactafricafoundation.org";
+  const email = settings?.contact?.email || "info@edimpactafrica.org";
   const phone = settings?.contact?.phoneOne || "+256 781 064 668";
   const tagline =
     settings?.tagline ||

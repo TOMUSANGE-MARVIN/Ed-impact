@@ -12,12 +12,13 @@ const defaultTeam = [
 ];
 
 const categoryLabels = {
-  executive: "Executive Team",
   board: "Board Of Directors",
+  executive: "Executive Team",
   "senior-leadership": "Senior Leadership Team",
+  staff: "Our Wider Team",
 };
 
-const categoryOrder = ["executive", "board", "senior-leadership"];
+const categoryOrder = ["board", "executive", "senior-leadership", "staff"];
 
 const delays = [0, 300, 600, 900];
 
@@ -77,6 +78,9 @@ const TeamGroup = ({ label, members }) => (
                   <Link href={`/leadership-board/${member.id}`}>{member.name}</Link>
                 </h6>
                 <p>{member.role}</p>
+                <Link href={`/leadership-board/${member.id}`} className='team__read-more'>
+                  Read More <i className='fa-solid fa-arrow-right' />
+                </Link>
               </div>
             </div>
           </div>
@@ -110,8 +114,8 @@ const TeamInner = ({ teamMembers = defaultTeam }) => {
                 Governance &amp; Leadership
               </span>
               <h2 className='title-animation_inner'>
-                Our Executive Team
-                <span>&amp; Board</span>
+                Our Board, Leadership
+                <span>&amp; Team</span>
               </h2>
             </div>
           </div>

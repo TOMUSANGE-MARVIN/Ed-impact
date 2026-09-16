@@ -409,7 +409,7 @@ div {
 
 .section__header-light {
   margin-bottom: 40px;
-  span {
+  .sub-title {
     font-size: 18px;
     font-weight: 700;
     color: var(--white);
@@ -420,6 +420,10 @@ div {
     color: var(--white);
     font-weight: 600;
     margin: 16px 0px 30px;
+
+    span {
+      color: var(--base-color);
+    }
   }
 
   .icon-thumb {

@@ -9,6 +9,8 @@ const defaultAudienceSection = {
     "Your investment translates into measurable, scalable reform, generating a high return on social impact. Track verifiable, continental impact, reducing the risk of fragmented, unsustainable short-term projects.",
   communitiesText:
     "Your voice shapes the solution, ensuring our programs respect the principle of Ubuntu and reflect local realities. Actively participate in school-based leadership and ensure relevant learning for children.",
+  knowledgePartnerText:
+    "Your research and technical expertise strengthen the evidence behind our work. Co-author studies, shape policy dialogue, and help translate evidence into practice across Africa.",
 };
 
 const defaultFaqs = [
@@ -49,6 +51,7 @@ const DonateInner = ({
     governments: { label: "Governments", text: audienceSection.governmentsText || defaultAudienceSection.governmentsText },
     funders: { label: "Funders", text: audienceSection.fundersText || defaultAudienceSection.fundersText },
     communities: { label: "Communities", text: audienceSection.communitiesText || defaultAudienceSection.communitiesText },
+    knowledgePartner: { label: "Knowledge Partner", text: audienceSection.knowledgePartnerText || defaultAudienceSection.knowledgePartnerText },
   };
   let [audience, setAudience] = useState("governments");
   const sidebarPrograms = programs.slice(0, 3);

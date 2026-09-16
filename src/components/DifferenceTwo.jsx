@@ -66,7 +66,7 @@ const defaultStats = {
   learnersReached: "5,892,477",
 };
 
-const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats, showVideo = true }) => {
+const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats, showVideo = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("mission");
 

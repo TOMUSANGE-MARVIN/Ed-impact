@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const FooterOne = ({ settings }) => {
   const logoLightUrl = "/assets/images/logo-icon.png";
-  const email = settings?.contact?.email || "info@edimpactafricafoundation.org";
+  const email = settings?.contact?.email || "info@edimpactafrica.org";
   const phone = settings?.contact?.phoneOne || "+256 781 064 668";
   const location = settings?.contact?.location || "Kampala, Uganda";
   const mapQuery = settings?.contact?.mapQuery || location;

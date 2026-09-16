@@ -129,6 +129,12 @@ export const HomePage: GlobalConfig = {
           defaultValue:
             'Your voice shapes the solution, ensuring our programs respect the principle of Ubuntu and reflect local realities.',
         },
+        {
+          name: 'knowledgePartnerText',
+          type: 'textarea',
+          defaultValue:
+            'Your research and technical expertise strengthen the evidence behind our work, co-authoring studies, shaping policy dialogue, and helping translate evidence into practice across Africa.',
+        },
       ],
     },
     {

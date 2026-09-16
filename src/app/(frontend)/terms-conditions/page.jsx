@@ -14,7 +14,7 @@ export const metadata = {
 
 const page = async () => {
   const settings = await getSiteSettings();
-  const email = settings?.contact?.email || "info@edimpactafricafoundation.org";
+  const email = settings?.contact?.email || "info@edimpactafrica.org";
   const siteName = settings?.siteName || "Ed Impact Africa Foundation";
 
   return (

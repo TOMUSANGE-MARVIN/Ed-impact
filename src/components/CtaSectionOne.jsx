@@ -9,7 +9,7 @@ const defaultCta = {
   partnerTitle: "Ready to partner with us?",
 };
 
-const CtaSectionOne = ({ ctaSection = defaultCta }) => {
+const CtaSectionOne = ({ ctaSection = defaultCta, showVideo = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
@@ -50,15 +50,17 @@ const CtaSectionOne = ({ ctaSection = defaultCta }) => {
             </div>
             <div className='col-12 col-xxl-4'>
               <div className='cta-section__center cta-section__single'>
-                <div className='video-btn-wrapper'>
-                  <button
-                    onClick={() => setIsOpen(true)}
-                    title='video Player'
-                    className='open-video-popup'
-                  >
-                    <i className='icon-play' />
-                  </button>
-                </div>
+                {showVideo && (
+                  <div className='video-btn-wrapper'>
+                    <button
+                      onClick={() => setIsOpen(true)}
+                      title='video Player'
+                      className='open-video-popup'
+                    >
+                      <i className='icon-play' />
+                    </button>
+                  </div>
+                )}
                 <div className='cta-img'>
                   <img
                     src='assets/images/cta/two.png'

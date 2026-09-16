@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import VideoModal from "./VideoModal";
 
-const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668" }) => {
+const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668", showVideo = false }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const subtitle = ubuntu?.subtitle || "The Ubuntu Philosophy";
@@ -51,14 +51,16 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668" }) => {
                       src='/assets/images/help/thumb-lg.png'
                       alt='Image_inner'
                     />
-                    <div className='video-btn-wrapper'>
-                      <span
-                        onClick={() => setIsOpen(true)}
-                        className='open-video-popup'
-                      >
-                        <i className='icon-play' />
-                      </span>
-                    </div>
+                    {showVideo && (
+                      <div className='video-btn-wrapper'>
+                        <span
+                          onClick={() => setIsOpen(true)}
+                          className='open-video-popup'
+                        >
+                          <i className='icon-play' />
+                        </span>
+                      </div>
+                    )}
                   </div>
                   <div className='thumb thumb-bottom'>
                     <img
