@@ -13,7 +13,7 @@ export const generateMetadata = async ({ params }) => {
   const { id } = await params;
   const program = await getProgramById(id);
   if (!program) {
-    return { title: "Intervention Detail | Ed Impact Africa Foundation" };
+    return { title: "Programme Detail | Ed Impact Africa Foundation" };
   }
   return {
     title: `${program.title} | Ed Impact Africa Foundation`,

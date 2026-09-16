@@ -29,7 +29,26 @@
     margin-top: 35px;
   }
 
+  .slick-track {
+    display: flex !important;
+    align-items: stretch;
+  }
+
+  .slick-slide {
+    height: auto;
+    > div {
+      height: 100%;
+    }
+  }
+
+  .cause__slider-inner {
+    height: 100%;
+  }
+
   .cause__slider-single {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     padding: 12px;
     background-color: var(--white);
     box-shadow: var(--shadow);
@@ -95,6 +114,7 @@
 
   .content {
     padding-inline: 20px;
+    flex-grow: 1;
     h6 {
       margin-top: -8px;
       margin-bottom: 8px;

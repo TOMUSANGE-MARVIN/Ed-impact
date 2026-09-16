@@ -154,7 +154,9 @@ const HeaderOne = ({ settings }) => {
                         </li>
                         <li
                           className={`navbar__item navbar__item--has-children nav-fade ${
-                            pathname === "/our-work" || pathname.startsWith("/our-work")
+                            pathname === "/our-work" ||
+                            pathname.startsWith("/our-work") ||
+                            pathname.startsWith("/programmes")
                               ? "active"
                               : ""
                           }`}
@@ -180,6 +182,13 @@ const HeaderOne = ({ settings }) => {
                               <Link href='/our-work#our-approach'>
                                 Our Approach &amp; Theory Of Change
                               </Link>
+                            </li>
+                            <li
+                              className={
+                                pathname.startsWith("/programmes") ? "active" : ""
+                              }
+                            >
+                              <Link href='/programmes'>Programmes</Link>
                             </li>
                           </ul>
                         </li>

@@ -173,7 +173,7 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
                   {(otherPrograms.length ? otherPrograms : programs).slice(0, 3).map((p) => (
                     <div className='single-item' key={p.id}>
                       <div className='thumb'>
-                        <Link href={`/our-work/${p.id}`}>
+                        <Link href={`/programmes/${p.id}`}>
                           <img src={p.image?.url || "/assets/images/cause/one.png"} alt='Image_inner' />
                         </Link>
                       </div>
@@ -182,7 +182,7 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
                           <i className='fa-solid fa-tags' /> <span>{p.tag}</span>
                         </p>
                         <p>
-                          <Link href={`/our-work/${p.id}`}>{p.title}</Link>
+                          <Link href={`/programmes/${p.id}`}>{p.title}</Link>
                         </p>
                       </div>
                     </div>
@@ -199,7 +199,7 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
                   <h5>Tags</h5>
                 </div>
                 <div className='tag-wrapper'>
-                  <Link href='/our-work'>{program.tag || defaultProgram.tag}</Link>
+                  <Link href='/programmes'>{program.tag || defaultProgram.tag}</Link>
                 </div>
               </div>
               <div
