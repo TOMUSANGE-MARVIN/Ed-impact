@@ -43,14 +43,26 @@ const DifferenceOne = ({
   const settings = {
     infinite: true,
     speed: 1000,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
     responsive: [
       {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
         breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 992,
         settings: {
           slidesToShow: 2,
         },
