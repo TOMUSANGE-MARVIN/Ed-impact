@@ -169,7 +169,7 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668", showVideo = false 
         <VideoModal
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
-          src='/assets/videos/learner.mp4'
+          youtubeId='pSwSX-TuiPE'
           poster='/assets/images/help/thumb-lg.png'
         />
       </section>

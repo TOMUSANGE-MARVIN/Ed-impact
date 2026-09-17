@@ -362,7 +362,7 @@ const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats, showVideo =
       <VideoModal
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
-        src='/assets/videos/headteacher.mp4'
+        youtubeId='1fGna8SwI8I'
         poster='/assets/images/difference/thumb-sm.png'
       />
     </>

@@ -109,7 +109,7 @@ const CtaSectionOne = ({ ctaSection = defaultCta, showVideo = false }) => {
         <VideoModal
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
-          src='/assets/videos/commissioner.mp4'
+          youtubeId='vLtWUDtanmI'
           poster='/assets/images/cta/two.png'
         />
       </section>

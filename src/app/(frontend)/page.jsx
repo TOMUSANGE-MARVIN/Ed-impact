@@ -80,13 +80,13 @@ const page = async () => {
         />
 
         {/* HelpOne */}
-        <HelpOne ubuntu={home?.ubuntuSection} stats={settings?.stats} phone={settings?.contact?.phoneOne} />
+        <HelpOne ubuntu={home?.ubuntuSection} stats={settings?.stats} phone={settings?.contact?.phoneOne} showVideo />
 
         {/* CauseOne */}
         <CauseOne programs={programs} />
 
         {/* CtaSectionOne */}
-        <CtaSectionOne ctaSection={home?.ctaSection} />
+        <CtaSectionOne ctaSection={home?.ctaSection} showVideo />
 
         {/* TeamOne */}
         <TeamOne teamMembers={teamMembers} />
@@ -101,7 +101,7 @@ const page = async () => {
         <CauseSliderTwo />
 
         {/* DifferenceTwo */}
-        <DifferenceTwo about={about} stats={settings?.stats} />
+        <DifferenceTwo about={about} stats={settings?.stats} showVideo />
 
         {/* BlogOne */}
         <BlogOne posts={posts} />
