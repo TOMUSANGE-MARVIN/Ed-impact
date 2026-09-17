@@ -69,9 +69,9 @@ const CauseInner = ({ programs = defaultPrograms }) => {
             </div>
           </div>
         </div>
-        <div className='row gutter-30'>
-          {[...programs, ...programs].map((item, index) => (
-            <div className='col-12 col-md-6 col-xl-4 col-xxl-3' key={item.id ? `${item.id}-${index}` : index}>
+        <div className='row gutter-30 justify-content-center'>
+          {programs.map((item, index) => (
+            <div className='col-12 col-md-6 col-xl-4 col-xxl-3' key={item.id ?? index}>
               <div
                 className='cause__slider-inner'
                 data-aos='fade-up'

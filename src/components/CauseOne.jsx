@@ -120,7 +120,10 @@ const CauseOne = ({ programs = defaultPrograms }) => {
             </div>
           </div>
           <div className='col-12 col-md-4 col-xl-5'>
-            <div className='slider-navigation'>
+            <div className='slider-navigation cause__nav-with-cta'>
+              <Link href='/programmes' className='btn--secondary cause__view-all'>
+                View All Programmes <i className='fa-solid fa-arrow-right' />
+              </Link>
               <button
                 onClick={() => sliderRef.current.slickPrev()}
                 type='button'
