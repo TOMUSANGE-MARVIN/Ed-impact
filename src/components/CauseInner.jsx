@@ -61,10 +61,10 @@ const CauseInner = ({ programs = defaultPrograms }) => {
             >
               <span className='sub-title'>
                 <i className='icon-education' />
-                Our Model
+                Program Reach &amp; Impact
               </span>
               <h2 className='title-animation_inner'>
-                The Four <span>Interventions</span> Behind Our Work
+                Explore Our <span>Programmes</span>
               </h2>
             </div>
           </div>
