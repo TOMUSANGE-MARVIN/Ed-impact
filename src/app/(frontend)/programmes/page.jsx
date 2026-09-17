@@ -1,5 +1,6 @@
 import BreadcrumbOne from "@/components/BreadcrumbOne";
 import CauseInner from "@/components/CauseInner";
+import CtaSectionTwo from "@/components/CtaSectionTwo";
 import FooterOne from "@/components/FooterOne";
 import HeaderOne from "@/components/HeaderOne";
 import Preloader from "@/components/Preloader";
@@ -37,6 +38,9 @@ const page = async () => {
 
         {/* CauseInner */}
         <CauseInner programs={programs} />
+
+        {/* CtaSectionTwo */}
+        <CtaSectionTwo />
 
         {/* FooterOne */}
         <FooterOne settings={settings} />
