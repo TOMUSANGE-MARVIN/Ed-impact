@@ -18,6 +18,16 @@ export const metadata = {
   title: "Ed Impact Africa Foundation | Transforming Education Systems Across Africa",
   description:
     "Ed Impact Africa Foundation partners with governments and communities to strengthen education systems across Africa, so every learner receives equitable, high-quality and relevant teaching and learning.",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
