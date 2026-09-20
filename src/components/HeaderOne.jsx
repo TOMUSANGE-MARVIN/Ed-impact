@@ -143,6 +143,9 @@ const HeaderOne = ({ settings }) => {
                             >
                               <Link href='/leadership-board'>Leadership &amp; Board</Link>
                             </li>
+                            <li>
+                              <Link href='/leadership-board#wider-team'>Team</Link>
+                            </li>
                             <li
                               className={
                                 ["/careers"].includes(pathname) ? "active" : ""

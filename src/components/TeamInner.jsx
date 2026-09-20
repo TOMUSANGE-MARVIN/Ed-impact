@@ -22,8 +22,8 @@ const categoryOrder = ["board", "executive", "senior-leadership", "staff"];
 
 const delays = [0, 300, 600, 900];
 
-const TeamGroup = ({ label, members }) => (
-  <div className='team__group'>
+const TeamGroup = ({ label, members, anchorId }) => (
+  <div className='team__group' id={anchorId}>
     <div className='row justify-content-center'>
       <div className='col-12'>
         <h3 className='team__group-title'>{label}</h3>
@@ -121,7 +121,13 @@ const TeamInner = ({ teamMembers = defaultTeam }) => {
           </div>
         </div>
         {groups.map((group, index) => (
-          <TeamGroup key={group.category} label={group.label} members={group.members} isFirst={index === 0} />
+          <TeamGroup
+            key={group.category}
+            label={group.label}
+            members={group.members}
+            isFirst={index === 0}
+            anchorId={group.category === "staff" ? "wider-team" : undefined}
+          />
         ))}
       </div>
       <div className='spade'>
