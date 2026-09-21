@@ -148,6 +148,16 @@ export const getLegacyDocuments = async () => {
   return result.docs
 }
 
+export const getPartners = async () => {
+  const payload = await getPayloadClient()
+  const result = await payload.find({
+    collection: 'partners',
+    sort: 'order',
+    limit: 100,
+  })
+  return result.docs
+}
+
 export const getFaqs = async (page) => {
   const payload = await getPayloadClient()
   const result = await payload.find({

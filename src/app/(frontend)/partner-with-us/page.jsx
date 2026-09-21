@@ -2,11 +2,12 @@ import BreadcrumbOne from "@/components/BreadcrumbOne";
 import DonateInner from "@/components/DonateInner";
 import FooterOne from "@/components/FooterOne";
 import HeaderOne from "@/components/HeaderOne";
+import PartnersGridInner from "@/components/PartnersGridInner";
 import Preloader from "@/components/Preloader";
 import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
-import { getSiteSettings, getHomePage, getFaqs, getPrograms } from "@/lib/payload";
+import { getSiteSettings, getHomePage, getFaqs, getPrograms, getPartners } from "@/lib/payload";
 
 export const metadata = {
   title: "Partner With Us | Education Partnerships in Africa",
@@ -15,11 +16,12 @@ export const metadata = {
 };
 
 const page = async () => {
-  const [settings, home, faqs, programs] = await Promise.all([
+  const [settings, home, faqs, programs, partners] = await Promise.all([
     getSiteSettings(),
     getHomePage(),
     getFaqs("donate"),
     getPrograms(),
+    getPartners(),
   ]);
 
   return (
@@ -42,6 +44,9 @@ const page = async () => {
 
         {/* DonateInner */}
         <DonateInner audienceSection={home?.audienceSection} faqs={faqs} programs={programs} />
+
+        {/* PartnersGridInner */}
+        <PartnersGridInner partners={partners} />
 
         {/* FooterOne */}
         <FooterOne settings={settings} />

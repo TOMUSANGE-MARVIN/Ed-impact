@@ -14,6 +14,7 @@ import { Posts } from './collections/Posts'
 import { Faqs } from './collections/Faqs'
 import { Reports } from './collections/Reports'
 import { LegacyDocuments } from './collections/LegacyDocuments'
+import { Partners } from './collections/Partners'
 import { SiteSettings } from './globals/SiteSettings'
 import { HomePage } from './globals/HomePage'
 import { AboutPage } from './globals/AboutPage'
@@ -37,7 +38,7 @@ export default buildConfig({
       titleSuffix: '- Ed Impact Africa Foundation CMS',
     },
   },
-  collections: [Users, Media, TeamMembers, Programs, Interventions, Testimonials, Posts, Faqs, Reports, LegacyDocuments],
+  collections: [Users, Media, TeamMembers, Programs, Interventions, Testimonials, Posts, Faqs, Reports, LegacyDocuments, Partners],
   globals: [SiteSettings, HomePage, AboutPage, CareersPage],
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
