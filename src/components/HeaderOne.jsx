@@ -159,7 +159,8 @@ const HeaderOne = ({ settings }) => {
                           className={`navbar__item navbar__item--has-children nav-fade ${
                             pathname === "/our-work" ||
                             pathname.startsWith("/our-work") ||
-                            pathname.startsWith("/programmes")
+                            pathname.startsWith("/programmes") ||
+                            pathname.startsWith("/legacy-documents")
                               ? "active"
                               : ""
                           }`}
@@ -192,6 +193,13 @@ const HeaderOne = ({ settings }) => {
                               }
                             >
                               <Link href='/programmes'>Programmes</Link>
+                            </li>
+                            <li
+                              className={
+                                pathname.startsWith("/legacy-documents") ? "active" : ""
+                              }
+                            >
+                              <Link href='/legacy-documents'>Legacy Documents</Link>
                             </li>
                           </ul>
                         </li>
@@ -246,13 +254,6 @@ const HeaderOne = ({ settings }) => {
                           } `}
                         >
                           <Link href='/blogs'>Blogs</Link>
-                        </li>
-                        <li
-                          className={`navbar__item nav-fade ${
-                            ["/legacy-documents"].includes(pathname) ? "active" : ""
-                          } `}
-                        >
-                          <Link href='/legacy-documents'>Legacy Documents</Link>
                         </li>
                         <li
                           className={`navbar__item nav-fade ${
