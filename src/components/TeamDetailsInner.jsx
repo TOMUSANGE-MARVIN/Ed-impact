@@ -9,8 +9,11 @@ const defaultMember = {
 
 const TeamDetailsInner = ({ member: currentMember }) => {
   const member = currentMember || defaultMember;
-  const paragraphs = (member.bio || defaultMember.bio).split(/\n\s*\n/).filter(Boolean);
-  const intro = paragraphs[0] || defaultMember.bio;
+  const fallbackBio = currentMember
+    ? `${member.name} is a valued member of the Ed Impact Africa Foundation team, serving as ${member.role}. Full biography coming soon.`
+    : defaultMember.bio;
+  const paragraphs = (member.bio || fallbackBio).split(/\n\s*\n/).filter(Boolean);
+  const intro = paragraphs[0] || fallbackBio;
   const rest = paragraphs.slice(1);
 
   return (
