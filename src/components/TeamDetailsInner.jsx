@@ -60,38 +60,6 @@ const TeamDetailsInner = ({ member: currentMember }) => {
                 </div>
                 <p>{intro}</p>
               </div>
-              <div className='progress-wrapper'>
-                <div className='cause__progress progress-bar-single'>
-                  <div className='cause-progress__bar'>
-                    <p>Literacy Improvement</p>
-                    <div className='progress-bar-wrapper' data-percent='73%'>
-                      <div className='progress-bar'>
-                        <div
-                          className='progress-bar-percent'
-                          style={{ width: "73%" }}
-                        >
-                          <span className='percent-value'>73%</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className='cause__progress progress-bar-single'>
-                  <div className='cause-progress__bar'>
-                    <p>Numeracy Improvement</p>
-                    <div className='progress-bar-wrapper' data-percent='67%'>
-                      <div className='progress-bar'>
-                        <div
-                          className='progress-bar-percent'
-                          style={{ width: "67%" }}
-                        >
-                          <span className='percent-value'>67%</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div className='team-details__cta cta'>
                 <Link
                   href='/partner-with-us'
