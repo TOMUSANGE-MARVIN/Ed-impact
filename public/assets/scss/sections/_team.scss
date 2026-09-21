@@ -456,6 +456,10 @@
     p {
       color: #747474;
       font-size: 18px;
+      margin-bottom: 18px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
     }
   }
 }

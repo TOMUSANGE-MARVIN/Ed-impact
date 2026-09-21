@@ -2,6 +2,7 @@ import * as migration_20260911_115357_initial from './20260911_115357_initial';
 import * as migration_20260913_102457_add_program_body_and_stat_three from './20260913_102457_add_program_body_and_stat_three';
 import * as migration_20260913_110143_add_reports_collection from './20260913_110143_add_reports_collection';
 import * as migration_20260916_144812_add_knowledge_partner_text from './20260916_144812_add_knowledge_partner_text';
+import * as migration_20260921_110219_add_legacy_documents from './20260921_110219_add_legacy_documents';
 
 export const migrations = [
   {
@@ -22,6 +23,11 @@ export const migrations = [
   {
     up: migration_20260916_144812_add_knowledge_partner_text.up,
     down: migration_20260916_144812_add_knowledge_partner_text.down,
-    name: '20260916_144812_add_knowledge_partner_text'
+    name: '20260916_144812_add_knowledge_partner_text',
+  },
+  {
+    up: migration_20260921_110219_add_legacy_documents.up,
+    down: migration_20260921_110219_add_legacy_documents.down,
+    name: '20260921_110219_add_legacy_documents'
   },
 ];

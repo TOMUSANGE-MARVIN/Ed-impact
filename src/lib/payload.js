@@ -138,6 +138,16 @@ export const getReportById = async (id) => {
   }
 }
 
+export const getLegacyDocuments = async () => {
+  const payload = await getPayloadClient()
+  const result = await payload.find({
+    collection: 'legacy-documents',
+    sort: 'order',
+    limit: 100,
+  })
+  return result.docs
+}
+
 export const getFaqs = async (page) => {
   const payload = await getPayloadClient()
   const result = await payload.find({

@@ -1,0 +1,70 @@
+/* ====
+ --------- legacy documents section styles start ---------
+ ==== */
+.legacy-documents {
+  padding: 100px 0px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  .legacy-documents__single {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 15px;
+    transition: var(--transition);
+    &:hover {
+      transform: translateY(-6px);
+    }
+  }
+
+  .legacy-documents__icon {
+    @include box(64px);
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-radius: 50%;
+    margin-bottom: 24px;
+    i {
+      font-size: 26px;
+    }
+  }
+
+  .legacy-documents__content {
+    flex-grow: 1;
+    h5 {
+      font-weight: 800;
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+    }
+
+    .source {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--base-color);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+      color: #6a6a6a;
+    }
+  }
+
+  .legacy-documents__cta {
+    margin-top: 24px;
+    a {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+/* ====
+ --------- legacy documents section styles end ---------
+ ==== */

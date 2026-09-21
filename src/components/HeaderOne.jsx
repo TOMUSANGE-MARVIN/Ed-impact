@@ -249,6 +249,13 @@ const HeaderOne = ({ settings }) => {
                         </li>
                         <li
                           className={`navbar__item nav-fade ${
+                            ["/legacy-documents"].includes(pathname) ? "active" : ""
+                          } `}
+                        >
+                          <Link href='/legacy-documents'>Legacy Documents</Link>
+                        </li>
+                        <li
+                          className={`navbar__item nav-fade ${
                             ["/faq"].includes(pathname) ? "active" : ""
                           } `}
                         >

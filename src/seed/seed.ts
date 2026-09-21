@@ -6,18 +6,26 @@ import config from '../payload.config.js'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 const publicImages = path.resolve(dirname, '../../public/assets/images')
+const publicDocuments = path.resolve(dirname, '../../public/assets/documents')
 
-const readFile = (relPath: string) => {
-  const filePath = path.join(publicImages, relPath)
+const mimetypeFor = (filePath: string) => {
+  const ext = path.extname(filePath).toLowerCase()
+  if (ext === '.png') return 'image/png'
+  if (ext === '.jpg' || ext === '.jpeg') return 'image/jpeg'
+  if (ext === '.pdf') return 'application/pdf'
+  return 'application/octet-stream'
+}
+
+const readFile = (relPath: string, baseDir: string = publicImages) => {
+  const filePath = path.join(baseDir, relPath)
   const data = fs.readFileSync(filePath)
   const name = path.basename(filePath)
-  const ext = path.extname(filePath).toLowerCase()
-  const mimetype = ext === '.png' ? 'image/png' : ext === '.jpg' || ext === '.jpeg' ? 'image/jpeg' : 'application/octet-stream'
+  const mimetype = mimetypeFor(filePath)
   return { data, mimetype, name, size: data.length }
 }
 
-async function uploadMedia(payload: any, relPath: string, alt: string) {
-  const file = readFile(relPath)
+async function uploadMedia(payload: any, relPath: string, alt: string, baseDir: string = publicImages) {
+  const file = readFile(relPath, baseDir)
   const existing = await payload.find({
     collection: 'media',
     where: { filename: { equals: file.name } },
@@ -621,6 +629,45 @@ async function seed() {
     const existing = await payload.find({ collection: 'reports', where: { title: { equals: report.title } }, limit: 1 })
     if (!existing.docs.length) {
       await payload.create({ collection: 'reports', data: { ...report, image: report.image.id } })
+    }
+  }
+
+  console.log('Seeding Legacy Documents...')
+  const legacyFiles: Record<string, any> = {}
+  for (const [key, file] of Object.entries({
+    teacherWorkforce: 'teacher-workforce-2018.pdf',
+    ugandaYear1: 'uganda-year1-impact-2020.pdf',
+    ugandaFinalEvaluation: 'uganda-final-impact-evaluation-2025.pdf',
+  })) {
+    legacyFiles[key] = await uploadMedia(payload, file, `${key} legacy document`, publicDocuments)
+  }
+  const legacyDocuments = [
+    {
+      title: 'Securing the 21st Century Teacher Workforce',
+      description: 'Global perspectives on teacher motivation and retention.',
+      source: 'STiR Education, 2018',
+      file: legacyFiles.teacherWorkforce,
+      order: 1,
+    },
+    {
+      title: 'STiR Uganda Impact Evaluation - Year 1 Visual Report',
+      description: "Findings of STiR Education's programme in Uganda.",
+      source: 'STiR Education, 2020',
+      file: legacyFiles.ugandaYear1,
+      order: 2,
+    },
+    {
+      title: 'STiR Education Uganda - Final Impact Evaluation Report',
+      description: 'Independent final impact evaluation of the Uganda programme.',
+      source: 'Deloitte Touche Tohmatsu India LLP, 2025',
+      file: legacyFiles.ugandaFinalEvaluation,
+      order: 3,
+    },
+  ]
+  for (const doc of legacyDocuments) {
+    const existing = await payload.find({ collection: 'legacy-documents', where: { title: { equals: doc.title } }, limit: 1 })
+    if (!existing.docs.length) {
+      await payload.create({ collection: 'legacy-documents', data: { ...doc, file: doc.file.id } })
     }
   }
 
