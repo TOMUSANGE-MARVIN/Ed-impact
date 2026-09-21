@@ -114,7 +114,7 @@ const TeamInner = ({ teamMembers = defaultTeam }) => {
                 Governance &amp; Leadership
               </span>
               <h2 className='title-animation_inner'>
-                Our Board, Leadership
+                Our Board, Leadership{" "}
                 <span>&amp; Team</span>
               </h2>
             </div>

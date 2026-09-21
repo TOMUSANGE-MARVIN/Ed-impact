@@ -30,7 +30,7 @@ const TeamTwo = ({ teamMembers = defaultTeam }) => {
                 Leadership You Can Trust
               </span>
               <h2 className='title-animation_inner'>
-                Meet Our Executive
+                Meet Our Executive{" "}
                 <span>Team</span>
               </h2>
             </div>
