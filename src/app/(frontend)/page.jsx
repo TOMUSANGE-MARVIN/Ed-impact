@@ -25,6 +25,7 @@ import {
   getFeaturedTeamMembers,
   getTestimonials,
   getPosts,
+  getPartners,
 } from "@/lib/payload";
 
 export const metadata = {
@@ -34,7 +35,7 @@ export const metadata = {
 };
 
 const page = async () => {
-  const [settings, home, about, interventions, programs, teamMembers, testimonials, posts] =
+  const [settings, home, about, interventions, programs, teamMembers, testimonials, posts, partners] =
     await Promise.all([
       getSiteSettings(),
       getHomePage(),
@@ -44,7 +45,9 @@ const page = async () => {
       getFeaturedTeamMembers(),
       getTestimonials(),
       getPosts(),
+      getPartners(),
     ]);
+  const fundingPartners = partners.filter((p) => (p.category || "funding") === "funding");
 
   return (
     <AOSWrap>
@@ -69,7 +72,7 @@ const page = async () => {
         />
 
         {/* PartnerOne */}
-        <PartnerOne />
+        <PartnerOne partners={fundingPartners} />
 
         {/* DifferenceOne */}
         <DifferenceOne

@@ -676,6 +676,9 @@ async function seed() {
   console.log('Seeding Partners...')
   const partnerLogos: Record<string, any> = {}
   for (const [key, file] of Object.entries({
+    mastercard: 'sponsor/mastercard.png',
+    socialInitiative: 'sponsor/social-initiative.png',
+    echidna: 'sponsor/echidna.png',
     tTel: 'sponsor/partners/t-tel.png',
     rti: 'sponsor/partners/rti-international.png',
     jacobs: 'sponsor/partners/jacobs-foundation.png',
@@ -703,34 +706,39 @@ async function seed() {
     partnerLogos[key] = await uploadMedia(payload, file, `${key} partner logo`)
   }
   const partners = [
-    { name: 'T-TEL', logo: partnerLogos.tTel, category: 'funding', order: 1 },
-    { name: 'RTI International', logo: partnerLogos.rti, category: 'funding', order: 2 },
-    { name: 'Jacobs Foundation', logo: partnerLogos.jacobs, category: 'funding', order: 3 },
-    { name: 'The Foretell Foundation', logo: partnerLogos.foretell, category: 'funding', order: 4 },
-    { name: 'Deloitte', logo: partnerLogos.deloitte, category: 'funding', order: 5 },
-    { name: "People's Postcode Lottery", logo: partnerLogos.ppl, category: 'funding', order: 6 },
-    { name: 'Postcode Education Trust', logo: partnerLogos.postcodeEducation, category: 'funding', order: 7 },
-    { name: 'The Marple Charitable Trust', logo: partnerLogos.marple, category: 'funding', order: 8 },
-    { name: 'Issroff Family Foundation', logo: partnerLogos.issroff, category: 'funding', order: 9 },
-    { name: 'Vitol Foundation', logo: partnerLogos.vitol, category: 'funding', order: 10 },
-    { name: 'The ELMA Foundation', logo: partnerLogos.elma, category: 'funding', order: 11 },
-    { name: 'Segal Family Foundation', logo: partnerLogos.segal, category: 'funding', order: 12 },
-    { name: 'MacArthur Foundation', logo: partnerLogos.macarthur, category: 'funding', order: 13 },
-    { name: 'IKEA Foundation', logo: partnerLogos.ikea, category: 'funding', order: 14 },
-    { name: 'Dubai Cares', logo: partnerLogos.dubaiCares, category: 'funding', order: 15 },
-    { name: 'Douglas B. Marshall, Jr. Family Foundation', logo: partnerLogos.douglasMarshall, category: 'funding', order: 16 },
-    { name: 'British Council', logo: partnerLogos.britishCouncil, category: 'funding', order: 17 },
-    { name: 'The Headley Trust', logo: partnerLogos.headley, category: 'funding', order: 18 },
-    { name: 'Education Development Trust (EDT)', logo: partnerLogos.edt, category: 'research', order: 19 },
-    { name: 'Ichuli', logo: partnerLogos.ichuli, category: 'research', order: 20 },
-    { name: 'Inspiring Teachers', logo: partnerLogos.inspiringTeachers, category: 'research', order: 21 },
-    { name: 'Mighty Ally', logo: partnerLogos.mightyAlly, category: 'research', order: 22 },
-    { name: 'RISE', logo: partnerLogos.rise, category: 'research', order: 23 },
+    { name: 'Mastercard Foundation', logo: partnerLogos.mastercard, category: 'funding', order: 1 },
+    { name: 'Social Initiative', logo: partnerLogos.socialInitiative, category: 'funding', order: 2 },
+    { name: 'Echidna Giving', logo: partnerLogos.echidna, category: 'funding', order: 3 },
+    { name: 'T-TEL', logo: partnerLogos.tTel, category: 'funding', order: 4 },
+    { name: 'RTI International', logo: partnerLogos.rti, category: 'funding', order: 5 },
+    { name: 'Jacobs Foundation', logo: partnerLogos.jacobs, category: 'funding', order: 6 },
+    { name: 'The Foretell Foundation', logo: partnerLogos.foretell, category: 'funding', order: 7 },
+    { name: 'Deloitte', logo: partnerLogos.deloitte, category: 'funding', order: 8 },
+    { name: "People's Postcode Lottery", logo: partnerLogos.ppl, category: 'funding', order: 9 },
+    { name: 'Postcode Education Trust', logo: partnerLogos.postcodeEducation, category: 'funding', order: 10 },
+    { name: 'The Marple Charitable Trust', logo: partnerLogos.marple, category: 'funding', order: 11 },
+    { name: 'Issroff Family Foundation', logo: partnerLogos.issroff, category: 'funding', order: 12 },
+    { name: 'Vitol Foundation', logo: partnerLogos.vitol, category: 'funding', order: 13 },
+    { name: 'The ELMA Foundation', logo: partnerLogos.elma, category: 'funding', order: 14 },
+    { name: 'Segal Family Foundation', logo: partnerLogos.segal, category: 'funding', order: 15 },
+    { name: 'MacArthur Foundation', logo: partnerLogos.macarthur, category: 'funding', order: 16 },
+    { name: 'IKEA Foundation', logo: partnerLogos.ikea, category: 'funding', order: 17 },
+    { name: 'Dubai Cares', logo: partnerLogos.dubaiCares, category: 'funding', order: 18 },
+    { name: 'Douglas B. Marshall, Jr. Family Foundation', logo: partnerLogos.douglasMarshall, category: 'funding', order: 19 },
+    { name: 'British Council', logo: partnerLogos.britishCouncil, category: 'funding', order: 20 },
+    { name: 'The Headley Trust', logo: partnerLogos.headley, category: 'funding', order: 21 },
+    { name: 'Education Development Trust (EDT)', logo: partnerLogos.edt, category: 'research', order: 22 },
+    { name: 'Ichuli', logo: partnerLogos.ichuli, category: 'research', order: 23 },
+    { name: 'Inspiring Teachers', logo: partnerLogos.inspiringTeachers, category: 'research', order: 24 },
+    { name: 'Mighty Ally', logo: partnerLogos.mightyAlly, category: 'research', order: 25 },
+    { name: 'RISE', logo: partnerLogos.rise, category: 'research', order: 26 },
   ]
   for (const partner of partners) {
     const existing = await payload.find({ collection: 'partners', where: { name: { equals: partner.name } }, limit: 1 })
     if (!existing.docs.length) {
       await payload.create({ collection: 'partners', data: { ...partner, logo: partner.logo.id } })
+    } else if (existing.docs[0].order !== partner.order) {
+      await payload.update({ collection: 'partners', id: existing.docs[0].id, data: { order: partner.order } })
     }
   }
 
