@@ -76,7 +76,7 @@ async function seed() {
     ngolobe: 'team/board-ngolobe-2026.jpg',
     watiti: 'team/senior-watiti-2026.jpg',
     oola: 'team/senior-oola-2026.jpg',
-    wanyama: 'team/senior-wanyama-2026.jpg',
+    wanyama: 'team/senior-wanyama-2027.jpg',
     agwang: 'team/staff-agwang-2026.jpg',
     odeke: 'team/staff-odeke-2026.jpg',
     oroma: 'team/staff-oroma-2026.jpg',
