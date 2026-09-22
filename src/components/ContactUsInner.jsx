@@ -120,13 +120,6 @@ const ContactUsInner = ({ settings }) => {
                   </div>
                 </div>
               </div>
-              <div style={{ margin: "24px 0" }}>
-                <img
-                  src='/assets/images/social-initiative-logo.png'
-                  alt='Social Initiative'
-                  style={{ maxWidth: "220px", height: "auto" }}
-                />
-              </div>
               <div className='contact-main__thumb cta' style={{ overflow: "hidden", borderRadius: "16px" }}>
                 <iframe
                   src={`https://maps.google.com/maps?q=${encodeURIComponent(mapQuery)}&output=embed`}
