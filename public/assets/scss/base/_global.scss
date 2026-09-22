@@ -1116,6 +1116,9 @@ div {
   font-size: 20px;
   line-height: 34px;
   margin-top: -8px;
+  span {
+    color: inherit;
+  }
   font-weight: 800;
 }
 

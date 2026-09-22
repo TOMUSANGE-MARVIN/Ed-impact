@@ -92,7 +92,7 @@ const BannerOne = ({
                         <div className='banner-two__slider-content'>
                           <span className='sub-title'>
                             <i className='icon-education' />
-                            {renderSubtitle(slide.subtitle)}
+                            <span>{renderSubtitle(slide.subtitle)}</span>
                           </span>
                           <h1>
                             {slide.headingBeforeAccent}{" "}
