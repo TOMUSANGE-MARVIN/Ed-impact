@@ -50,16 +50,6 @@ const TeamGroup = ({ label, members, anchorId }) => (
                   <div className='team__single__thumb-social'>
                     <ul>
                       <li>
-                        <Link href='/'>
-                          <i className='fa-brands fa-facebook-f' />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href='/'>
-                          <i className='fa-brands fa-x-twitter' />
-                        </Link>
-                      </li>
-                      <li>
                         <Link href={member.linkedinUrl || '/'}>
                           <i className='fa-brands fa-linkedin-in' />
                         </Link>

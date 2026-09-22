@@ -40,6 +40,16 @@ export const TeamMembers: CollectionConfig = {
     {
       name: 'bio',
       type: 'textarea',
+      admin: {
+        description: 'Shown alongside the photo. Separate paragraphs with a blank line.',
+      },
+    },
+    {
+      name: 'aboutMe',
+      type: 'textarea',
+      admin: {
+        description: '"About Me" section further down the detail page. Separate paragraphs with a blank line.',
+      },
     },
     {
       name: 'linkedinUrl',

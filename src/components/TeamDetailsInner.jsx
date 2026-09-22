@@ -12,9 +12,14 @@ const TeamDetailsInner = ({ member: currentMember }) => {
   const fallbackBio = currentMember
     ? `${member.name} is a valued member of the Ed Impact Africa Foundation team, serving as ${member.role}. Full biography coming soon.`
     : defaultMember.bio;
-  const paragraphs = (member.bio || fallbackBio).split(/\n\s*\n/).filter(Boolean);
-  const intro = paragraphs[0] || fallbackBio;
-  const rest = paragraphs.slice(1);
+  const bioParagraphs = (member.bio || fallbackBio).split(/\n\s*\n/).filter(Boolean);
+  const aboutMeParagraphs = (member.aboutMe || "").split(/\n\s*\n/).filter(Boolean);
+
+  // When aboutMe is set, bio is shown in full alongside the photo and aboutMe
+  // is the separate "About Me" section. Otherwise fall back to treating the
+  // first bio paragraph as the intro and the rest as "About Me".
+  const sideParagraphs = aboutMeParagraphs.length ? bioParagraphs : bioParagraphs.slice(0, 1);
+  const rest = aboutMeParagraphs.length ? aboutMeParagraphs : bioParagraphs.slice(1);
 
   return (
     <section className='team-details'>
@@ -58,18 +63,9 @@ const TeamDetailsInner = ({ member: currentMember }) => {
                     <i className='fa-solid fa-envelope' />
                   </a>
                 </div>
-                <p>{intro}</p>
-              </div>
-              <div className='team-details__cta cta'>
-                <Link
-                  href='/partner-with-us'
-                  aria-label='partner with us'
-                  title='partner with us'
-                  className='btn--primary'
-                >
-                  {" "}
-                  Partner With Us <i className='fa-solid fa-arrow-right' />
-                </Link>
+                {sideParagraphs.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
               </div>
             </div>
           </div>

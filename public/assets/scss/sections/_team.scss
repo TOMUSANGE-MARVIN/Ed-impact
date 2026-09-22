@@ -343,6 +343,13 @@
       color: #747474;
       margin-top: 4px;
     }
+
+    p:not(.designation) {
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
   }
 
   .social {
