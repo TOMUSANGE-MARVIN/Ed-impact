@@ -644,7 +644,7 @@ async function seed() {
   for (const [key, file] of Object.entries({
     teacherWorkforce: 'teacher-workforce-2018.pdf',
     ugandaYear1: 'uganda-year1-impact-2020.pdf',
-    ugandaFinalEvaluation: 'uganda-final-impact-evaluation-2025.pdf',
+    ugandaFinalEvaluation: 'uganda-final-impact-evaluation-2025-v2.pdf',
   })) {
     legacyFiles[key] = await uploadMedia(payload, file, `${key} legacy document`, publicDocuments)
   }
@@ -675,6 +675,12 @@ async function seed() {
     const existing = await payload.find({ collection: 'legacy-documents', where: { title: { equals: doc.title } }, limit: 1 })
     if (!existing.docs.length) {
       await payload.create({ collection: 'legacy-documents', data: { ...doc, file: doc.file.id } })
+    } else {
+      const current = existing.docs[0]
+      const currentFileId = typeof current.file === 'object' ? current.file?.id : current.file
+      if (doc.file?.id && currentFileId !== doc.file.id) {
+        await payload.update({ collection: 'legacy-documents', id: current.id, data: { file: doc.file.id } })
+      }
     }
   }
 
