@@ -23,7 +23,7 @@ const defaultInterventions = [
   },
   {
     icon: "icon-education",
-    title: "Continuous Professional Development",
+    title: "Professional Development",
     description: "Peer-led feedback and classroom observation that builds lasting instructional practice.",
   },
   {

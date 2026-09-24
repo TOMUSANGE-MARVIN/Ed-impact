@@ -508,7 +508,7 @@ async function seed() {
   const interventions = [
     { title: 'Teacher Motivation', description: 'Instilling autonomy, mastery and purpose so teachers rediscover the love of teaching.', icon: 'icon-support-heart', order: 1 },
     { title: 'System Strengthening', description: 'Working through local government structures to build ownership that outlasts our involvement.', icon: 'icon-support', order: 2 },
-    { title: 'Continuous Professional Development', description: 'Peer-led feedback and classroom observation that builds lasting instructional practice.', icon: 'icon-education', order: 3 },
+    { title: 'Professional Development', description: 'Peer-led feedback and classroom observation that builds lasting instructional practice.', icon: 'icon-education', order: 3 },
     { title: 'Evidence & Research', description: 'Generating rigorous, locally grounded data that informs policy design and proves what works.', icon: 'icon-documents', order: 4 },
   ] as const
   for (const item of interventions) {
