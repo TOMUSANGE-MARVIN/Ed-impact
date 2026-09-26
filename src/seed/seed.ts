@@ -97,6 +97,12 @@ async function seed() {
     teamPhotos[key] = await uploadMedia(payload, file, `Photo of ${key}`)
   }
 
+  const programAlts: Record<string, string> = {
+    secondary: 'Secondary school teachers in a continuous professional development session in Uganda',
+    primary: 'Primary teacher trainees at a Core Primary Teacher College in Uganda',
+    evidence: 'Education research team reviewing learning outcomes evidence',
+    systems: 'District education officials and school leaders strengthening the education system',
+  }
   const programImages: Record<string, any> = {}
   for (const [key, file] of Object.entries({
     secondary: 'cause/program-secondary.png',
@@ -104,16 +110,21 @@ async function seed() {
     evidence: 'cause/program-evidence.png',
     systems: 'cause/program-systems.png',
   })) {
-    programImages[key] = await uploadMedia(payload, file, `${key} program photo`)
+    programImages[key] = await uploadMedia(payload, file, programAlts[key])
   }
 
+  const postAlts: Record<string, string> = {
+    motivation: 'Motivated teacher leading a lesson in a Ugandan classroom',
+    impact: 'Learners in a programme school, part of the 2025 education impact evaluation',
+    localisation: 'Ed Impact Africa Foundation team, successor to STiR Education Uganda',
+  }
   const postImages: Record<string, any> = {}
   for (const [key, file] of Object.entries({
     motivation: 'blog/insight-motivation.png',
     impact: 'blog/insight-evidence.png',
     localisation: 'blog/insight-localisation.png',
   })) {
-    postImages[key] = await uploadMedia(payload, file, `${key} article image`)
+    postImages[key] = await uploadMedia(payload, file, postAlts[key])
   }
 
   console.log('Seeding Site Settings...')
@@ -184,9 +195,9 @@ async function seed() {
       heroCtaSecondaryLabel: 'Invest In Systemic Change',
       modelSection: {
         subtitle: 'How We Create Change',
-        title: 'Our Model: Four Interventions',
+        title: 'Four Interventions That Strengthen Education Systems',
         description:
-          'A child cannot love learning without a teacher who loves teaching. We build the capacity of teachers, school leaders and officials together across both primary and secondary education, so motivation and quality take root and stay embedded in the system.',
+          'A child cannot love learning without a teacher who loves teaching. Through teacher motivation and teacher capacity development, we build the capacity of teachers, school leaders and officials together across primary and secondary education, so motivation and education quality take root and stay embedded in the system.',
       },
       ubuntuSection: {
         subtitle: 'The Ubuntu Philosophy',
@@ -205,9 +216,9 @@ async function seed() {
         title: 'Partner With Us, However You Show Up',
         introTitle: 'Because Every Partner Plays A Different Role.',
         governmentsText:
-          'We strengthen what already exists, aligning with your national policies to ensure scalable, sustainable educational development.',
+          'We strengthen what already exists, aligning with your national education policy so education system strengthening is scalable and sustainable.',
         fundersText:
-          'Your investment translates into measurable, scalable reform, generating a high return on social impact.',
+          'Your investment translates into measurable, scalable education reform and better learning outcomes, generating a high return on social impact.',
         communitiesText:
           'Your voice shapes the solution, ensuring our programs respect the principle of Ubuntu and reflect local realities.',
         knowledgePartnerText:
@@ -439,7 +450,7 @@ async function seed() {
     {
       title: 'National Secondary CPD',
       tag: 'Secondary',
-      description: 'Delivered with the Association of Secondary School Headteachers of Uganda, reaching secondary schools nationwide.',
+      description: 'Continuous professional development for secondary school teachers, delivered nationwide with the Association of Secondary School Headteachers of Uganda.',
       body: 'We deliver this programme in partnership with the Association of Secondary School Headteachers of Uganda (ASSHU), reaching secondary schools across all local governments in the secondary education subsector nationally.\n\nThe programme is built around five interconnected anchors: teacher intrinsic motivation, continuous professional development training, a system-led programming model, impact sustainability, and national scale. Rather than one-off workshops, it runs through peer networks and role-modelling, so teachers build the skills and confidence to keep improving their own practice long after any single training session ends.\n\nOur 2025 impact evaluation found that teachers in programme schools reported a greater use of varied teaching methods, more student questioning, more peer feedback, and more classroom observation and coaching, evidence that the model changes what actually happens inside the classroom, not just what teachers know.',
       image: programImages.secondary,
       percent: 100,
@@ -454,7 +465,7 @@ async function seed() {
     {
       title: 'Primary Teacher Colleges',
       tag: 'Primary',
-      description: 'Delivered through 22 of 23 Core Primary Teacher Colleges, with NAMDEO and UNISA strengthening classroom instruction.',
+      description: 'Teacher professional development through 22 of 23 Core Primary Teacher Colleges, with NAMDEO and UNISA strengthening classroom instruction.',
       body: "This intervention is delivered through 22 of Uganda's 23 Core Primary Teacher Colleges, in partnership with the National Association of Municipal, District and City Education Officers (NAMDEO) and the Uganda National Inspectors of Schools Association (UNISA).\n\nWorking at the teacher-college level means we reach primary teachers earlier, before they enter the classroom, embedding the same principles of intrinsic motivation and reflective practice that anchor our secondary work. It also builds a direct line between teacher colleges and the district officials who inspect and support schools day to day.\n\nAcross the primary education subsector, our programming currently reaches more than half of Uganda's local governments, with district education officers and inspectors of schools acting as key partners in sustaining what is taught at college level once teachers reach real classrooms.",
       image: programImages.primary,
       percent: 96,
@@ -469,7 +480,7 @@ async function seed() {
     {
       title: 'Evidence & Policy Influence',
       tag: 'Evidence',
-      description: 'Our 2025 impact evaluation shows measurably stronger learning outcomes in programme schools.',
+      description: 'Evidence-based education research: our 2025 impact evaluation shows measurably stronger learning outcomes in programme schools.',
       body: 'Evidence is not an afterthought in our model, it is one of our four core program anchors. Our 2025 impact evaluation compared programme schools directly against comparison schools that had not yet received the intervention.\n\nLiteracy performance was 73.1% in programme schools compared with 57.0% in comparison schools, and numeracy performance was 66.7% compared with 54.1%. Girls in programme schools achieved literacy results comparable to boys, 73.3% against 72.9%, though a gender gap remains in numeracy, a finding that is now shaping how we design gender-responsive pedagogy.\n\nBeyond test scores, programme schools reported stronger alignment with government teacher-development priorities and had begun establishing peer learning, mentoring and network meetings as standard practice. The estimated social return on this work is £3.12 for every £1 invested, evidence we use to inform policy dialogue with the Ministry of Education and Sports and our funding partners.',
       image: programImages.evidence,
       percent: 73,
@@ -484,7 +495,7 @@ async function seed() {
     {
       title: 'System Strengthening',
       tag: 'Systems',
-      description: 'Building institutional capacity so schools and districts own implementation long after we exit.',
+      description: 'Education system strengthening that builds institutional capacity, so schools and districts own implementation long after we exit.',
       body: 'Our approach is deliberately system-led rather than project-led. Instead of running programmes in parallel to government structures, we work through them, with school leaders, District Education Officers, Centre Coordinating Tutors and national officials, so that improvements are owned locally rather than dependent on our continued presence.\n\nThis means embedding routines into official systems already in use: school leaders creating the conditions for teacher practice improvement, district local governments owning and sustaining those improvements, and national policy, such as the National Teachers Policy and the roll-out of Competence Based Education, providing the framework everything else aligns to.\n\nSchools and districts are visibly taking greater ownership of the model as a result, though we are candid that limited local financing remains a real risk to sustaining these gains without continued support, which is part of why our strategic plan includes building a social enterprise arm to fund this work locally over time.',
       image: programImages.systems,
       percent: 67,
@@ -506,10 +517,10 @@ async function seed() {
 
   console.log('Seeding Interventions...')
   const interventions = [
-    { title: 'Teacher Motivation', description: 'Instilling autonomy, mastery and purpose so teachers rediscover the love of teaching.', icon: 'icon-support-heart', order: 1 },
-    { title: 'System Strengthening', description: 'Working through local government structures to build ownership that outlasts our involvement.', icon: 'icon-support', order: 2 },
-    { title: 'Professional Development', description: 'Peer-led feedback and classroom observation that builds lasting instructional practice.', icon: 'icon-education', order: 3 },
-    { title: 'Evidence & Research', description: 'Generating rigorous, locally grounded data that informs policy design and proves what works.', icon: 'icon-documents', order: 4 },
+    { title: 'Teacher Motivation', description: 'Building intrinsic motivation through autonomy, mastery and purpose, so teachers rediscover the love of teaching.', icon: 'icon-support-heart', order: 1 },
+    { title: 'System Strengthening', description: 'Education system strengthening through local government structures, building ownership that outlasts our involvement.', icon: 'icon-support', order: 2 },
+    { title: 'Professional Development', description: 'Continuous professional development for teachers: peer learning, classroom observation and coaching that last.', icon: 'icon-education', order: 3 },
+    { title: 'Evidence & Research', description: 'Rigorous, locally grounded education research and evidence that informs policy and shows what works in education.', icon: 'icon-documents', order: 4 },
   ] as const
   for (const item of interventions) {
     const existing = await payload.find({ collection: 'interventions', where: { title: { equals: item.title } }, limit: 1 })
@@ -755,7 +766,7 @@ async function seed() {
 
   console.log('Seeding FAQs...')
   const faqs = [
-    { question: 'What does Ed Impact Africa Foundation actually do?', answer: 'We partner with governments and communities to strengthen education systems across Africa. Our work centers on four interventions: teacher motivation, continuous professional development, system strengthening, and evidence & research.', page: 'general', order: 1 },
+    { question: 'What does Ed Impact Africa Foundation actually do?', answer: 'We partner with governments and communities to strengthen education systems across Africa. Our work centers on four interventions: teacher motivation, continuous professional development for teachers, education system strengthening, and education research and evidence, all aimed at improving learning outcomes.', page: 'general', order: 1 },
     { question: 'Is this the same organisation as STIR Education?', answer: 'Yes. Ed Impact Africa Foundation is the local successor to STIR Education Uganda, inheriting its proven theory of change, government relationships and institutional capacity while deepening our work in Uganda and expanding across Africa.', page: 'general', order: 2 },
     { question: 'How can my organisation or government partner with you?', answer: "We welcome partnerships with governments, funders and communities. Visit our Partner With Us page to find the option that fits how you'd like to work with us, or reach out directly via our contact page.", page: 'general', order: 3 },
     { question: 'How do you measure impact?', answer: 'Through rigorous, independent evaluations. Our 2025 impact evaluation showed programme schools significantly outperforming comparison schools in literacy and numeracy, with an estimated social return of £3.12 for every £1 invested.', page: 'general', order: 4 },

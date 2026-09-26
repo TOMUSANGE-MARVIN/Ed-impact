@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { getPrograms } from "@/lib/payload";
 
-const FooterOne = ({ settings }) => {
+const FooterOne = async ({ settings }) => {
+  const programs = await getPrograms().catch(() => []);
   const logoLightUrl = "/assets/images/logo-icon.webp";
   const email = settings?.contact?.email || "info@edimpactafrica.org";
   const phone = settings?.contact?.phoneOne || "+256 781 064 668";
@@ -135,7 +137,7 @@ const FooterOne = ({ settings }) => {
                     <li>
                       <Link href='/data-evidence'>
                         <i className='fa-solid fa-arrow-right' />
-                        Insights
+                        Research &amp; Evidence
                       </Link>
                     </li>
                     <li>
@@ -168,7 +170,7 @@ const FooterOne = ({ settings }) => {
                 data-aos-delay={400}
               >
                 <div className='footer-two__widget-intro'>
-                  <h5>Our Programs</h5>
+                  <h5>Our Programmes</h5>
                   <div className='line'>
                     <span className='large-line' />
                     <span className='small-line' />
@@ -177,30 +179,14 @@ const FooterOne = ({ settings }) => {
                 </div>
                 <div className='footer-two__widget-content'>
                   <ul>
-                    <li>
-                      <Link href='/our-work/1'>
-                        <i className='fa-solid fa-arrow-right' />
-                        National Secondary CPD
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='/our-work/2'>
-                        <i className='fa-solid fa-arrow-right' />
-                        Primary Teacher Colleges
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='/our-work/3'>
-                        <i className='fa-solid fa-arrow-right' />
-                        Evidence &amp; Policy Influence
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='/our-work/4'>
-                        <i className='fa-solid fa-arrow-right' />
-                        System Strengthening
-                      </Link>
-                    </li>
+                    {programs.map((program) => (
+                      <li key={program.id}>
+                        <Link href={`/programmes/${program.id}`}>
+                          <i className='fa-solid fa-arrow-right' />
+                          {program.title}
+                        </Link>
+                      </li>
+                    ))}
                     <li>
                       <Link href='/partner-with-us'>
                         <i className='fa-solid fa-arrow-right' />
@@ -289,7 +275,7 @@ const FooterOne = ({ settings }) => {
         <div className='sprade' data-aos='zoom-in' data-aos-duration={1000}>
           <img
             src='/assets/images/sprade.webp'
-            alt='Image_inner'
+            alt=''
             className='base-img'
           />
         </div>
@@ -298,7 +284,7 @@ const FooterOne = ({ settings }) => {
           data-aos='zoom-in'
           data-aos-duration={1000}
         >
-          <img src='/assets/images/sprade-light.webp' alt='Image_inner' />
+          <img src='/assets/images/sprade-light.webp' alt='' />
         </div>
       </footer>
     </>

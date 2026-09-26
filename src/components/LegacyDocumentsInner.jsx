@@ -32,9 +32,9 @@ const LegacyDocumentsInner = ({ documents = defaultDocuments }) => {
                 STIR <span>Legacy</span> Documents
               </h2>
               <p>
-                Research, evaluations and reports from our journey as STIR
-                Education Uganda, the organisation Ed Impact Africa
-                Foundation continues and builds on.
+                Teacher motivation research, impact evaluations and reports
+                from our journey as STIR Education Uganda, the organisation
+                Ed Impact Africa Foundation continues and builds on.
               </p>
             </div>
           </div>

@@ -71,7 +71,7 @@ const DonateInner = ({
               >
                 <img
                   src='assets/images/event/poster-two.webp'
-                  alt='Image_inner'
+                  alt='Education partners and government officials at a programme meeting in Uganda'
                 />
               </div>
               <div
@@ -219,7 +219,7 @@ const DonateInner = ({
                         <Link href='/reports-updates'>
                           <img
                             src='assets/images/award/one.webp'
-                            alt='Image_inner'
+                            alt=''
                           />
                         </Link>
                       </div>
@@ -236,7 +236,7 @@ const DonateInner = ({
                         <Link href='/reports-updates'>
                           <img
                             src='assets/images/award/four.webp'
-                            alt='Image_inner'
+                            alt=''
                           />
                         </Link>
                       </div>
@@ -253,7 +253,7 @@ const DonateInner = ({
                         <Link href='/reports-updates'>
                           <img
                             src='assets/images/award/two.webp'
-                            alt='Image_inner'
+                            alt=''
                           />
                         </Link>
                       </div>
@@ -270,7 +270,7 @@ const DonateInner = ({
                         <Link href='/reports-updates'>
                           <img
                             src='assets/images/award/three.webp'
-                            alt='Image_inner'
+                            alt=''
                           />
                         </Link>
                       </div>
@@ -359,7 +359,7 @@ const DonateInner = ({
                         <Link href='/our-work'>
                           <img
                             src={mediaSrc(program.image?.url) || "assets/images/blog/ph-one.webp"}
-                            alt='Image_inner'
+                            alt={program.image?.alt || program.title}
                           />
                         </Link>
                       </div>
@@ -401,7 +401,7 @@ const DonateInner = ({
                 data-aos-delay={100}
               >
                 <div className='cm-logo'>
-                  <img src='assets/images/event/logo.webp' alt='Image_inner' />
+                  <img src='assets/images/event/logo.webp' alt='' />
                 </div>
                 <div className='cm-content'>
                   <p>Africa's Systems Reform Partner</p>
@@ -424,7 +424,7 @@ const DonateInner = ({
                   <div className='parallax-image-inner'>
                     <img
                       src='assets/images/event/overview.webp'
-                      alt='Image_inner'
+                      alt=''
                       className='parallax-image'
                     />
                   </div>

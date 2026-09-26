@@ -8,12 +8,14 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getHomePage, getFaqs, getPrograms, getPartners } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Partner With Us | Education Partnerships in Africa",
+export const metadata = pageMetadata({
+  title: "Partner With Us: Education Partnerships Africa",
   description:
-    "Partner with Ed Impact Africa Foundation as a government, funder or community, advancing education development and government education partnerships across Africa.",
-};
+    "Governments, funders, NGOs and researchers: partner with us on education development in Africa, from government education partnerships to programme delivery.",
+  path: "/partner-with-us",
+});
 
 const page = async () => {
   const [settings, home, faqs, programs, partners] = await Promise.all([
@@ -40,7 +42,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Partner With Us' bgImage='assets/images/banner/banner-donate.webp' />
+        <BreadcrumbOne subtitle='Partner With Us' title='Education Partnerships Across Africa' bgImage='assets/images/banner/banner-donate.webp' />
 
         {/* DonateInner */}
         <DonateInner audienceSection={home?.audienceSection} faqs={faqs} programs={programs} />

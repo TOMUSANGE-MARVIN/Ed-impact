@@ -682,9 +682,16 @@
     margin-top: 0px;
   }
 
+  h1,
   h2 {
     color: var(--white);
     font-weight: 800;
+  }
+
+  // The page title is an h1 for SEO but keeps the h2 scale below 1200px.
+  h1 {
+    font-size: 30px;
+    line-height: 40px;
   }
 
   .banner-bg {
@@ -745,6 +752,12 @@
     transform: scale(1);
     opacity: 0.5;
   }
+}
+
+// Hero slides after the first render their heading as a <p> so the page has a
+// single h1; they must look identical to it.
+.banner-two__title {
+  @extend h1;
 }
 
 /* ==== 

@@ -7,12 +7,14 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getTeamMembers } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Leadership & Board | Education Leadership in Africa",
+export const metadata = pageMetadata({
+  title: "Education Leadership: Our Board & Team",
   description:
-    "Meet the Board of Directors and Executive Team leading Ed Impact Africa Foundation's education leadership and system strengthening work across Africa.",
-};
+    "Meet the board and executive team of Ed Impact Africa Foundation, education leaders with decades of experience in teacher development and education reform.",
+  path: "/leadership-board",
+});
 
 const page = async () => {
   const [settings, teamMembers] = await Promise.all([getSiteSettings(), getTeamMembers()]);
@@ -33,7 +35,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Leadership & Board' bgImage='assets/images/banner/banner-team.webp' />
+        <BreadcrumbOne subtitle='Leadership & Board' title="Education Leadership For Africa's Schools" bgImage='assets/images/banner/banner-team.webp' />
 
         {/* TeamInner */}
         <TeamInner teamMembers={teamMembers} />

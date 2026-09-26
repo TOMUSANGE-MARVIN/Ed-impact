@@ -91,7 +91,7 @@ const CommunityOne = ({ audienceSection = defaultAudienceSection }) => {
                 >
                   <img
                     src='/assets/images/community/thumb.webp'
-                    alt='Image_inner'
+                    alt='Teacher leading an engaged secondary school class'
                   />
                 </div>
               </div>
@@ -101,7 +101,7 @@ const CommunityOne = ({ audienceSection = defaultAudienceSection }) => {
         <div className='community-bg'>
           <img
             src='/assets/images/community/community-bg.webp'
-            alt='Image_inner'
+            alt=''
           />
         </div>
         <div
@@ -110,12 +110,12 @@ const CommunityOne = ({ audienceSection = defaultAudienceSection }) => {
           data-aos-duration={1000}
           data-aos-delay={200}
         >
-          <img src='/assets/images/community/gift.webp' alt='Image_inner' />
+          <img src='/assets/images/community/gift.webp' alt='' />
         </div>
         <div className='spade'>
           <img
             src='/assets/images/community/spade.webp'
-            alt='Image_inner'
+            alt=''
             className='base-img'
           />
         </div>

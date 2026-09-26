@@ -7,12 +7,14 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Contact Us | Ed Impact Africa Foundation, Education NGO in Africa",
+export const metadata = pageMetadata({
+  title: "Contact Our Education NGO in Kampala, Uganda",
   description:
-    "Reach out to Ed Impact Africa Foundation, an education NGO strengthening systems and teacher development across Africa, for partnerships, inquiries or support.",
-};
+    "Contact Ed Impact Africa Foundation, an education NGO in Kampala, Uganda, about education partnerships, teacher development programmes, research or careers.",
+  path: "/contact-us",
+});
 
 const page = async () => {
   const settings = await getSiteSettings();
@@ -33,7 +35,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Contact Us' bgImage='assets/images/banner/banner-contact.webp' />
+        <BreadcrumbOne subtitle='Contact Us' title='Get In Touch With Our Team' bgImage='assets/images/banner/banner-contact.webp' />
 
         {/* ContactUsInner */}
         <ContactUsInner settings={settings} />

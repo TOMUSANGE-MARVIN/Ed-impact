@@ -6,11 +6,14 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Privacy Policy | Ed Impact Africa Foundation",
-  description: "How Ed Impact Africa Foundation handles information submitted through this website.",
-};
+export const metadata = pageMetadata({
+  title: "Privacy Policy",
+  description:
+    "How Ed Impact Africa Foundation handles information submitted through this website.",
+  path: "/privacy-policy",
+});
 
 const page = async () => {
   const settings = await getSiteSettings();

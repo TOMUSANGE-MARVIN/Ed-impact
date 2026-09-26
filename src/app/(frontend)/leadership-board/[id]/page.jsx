@@ -8,17 +8,23 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getTeamMemberById } from "@/lib/payload";
+import JsonLd from "@/components/JsonLd";
+import { mediaSrc } from "@/lib/image";
+import { SITE_URL, absoluteUrl, breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 
 export const generateMetadata = async ({ params }) => {
   const { id } = await params;
   const member = await getTeamMemberById(id);
   if (!member) {
-    return { title: "Team Member | Ed Impact Africa Foundation" };
+    return { title: "Team Member" };
   }
-  return {
-    title: `${member.name} | ${member.role} | Education Leadership Africa`,
-    description: `${member.name}, ${member.role} at Ed Impact Africa Foundation, driving education system strengthening and education leadership across Africa.`,
-  };
+  return pageMetadata({
+    title: `${member.name}, ${member.role}`,
+    description: `${member.name}, ${member.role} at Ed Impact Africa Foundation, working on education system strengthening and education leadership across Africa.`,
+    path: `/leadership-board/${id}`,
+    image: mediaSrc(member.photo?.url, 1200) || undefined,
+    type: "profile",
+  });
 };
 
 const page = async ({ params }) => {
@@ -45,7 +51,20 @@ const page = async ({ params }) => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title={member.name} bgImage='assets/images/banner/banner-team-detail.webp' />
+        <BreadcrumbOne subtitle={member.role} title={member.name} bgImage='assets/images/banner/banner-team-detail.webp' />
+
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: member.name,
+            jobTitle: member.role,
+            image: absoluteUrl(mediaSrc(member.photo?.url, 640)),
+            worksFor: { "@id": `${SITE_URL}/#organization` },
+            url: `${SITE_URL}/leadership-board/${member.id}`,
+            ...(member.linkedinUrl ? { sameAs: [member.linkedinUrl] } : {}),
+          }}
+        />
 
         {/* TeamDetailsInner */}
         <TeamDetailsInner member={member} />

@@ -8,12 +8,14 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getPrograms } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Programmes | Ed Impact Africa Foundation",
+export const metadata = pageMetadata({
+  title: "Teacher Development Programmes in Uganda",
   description:
-    "Explore Ed Impact Africa Foundation's programmes, National Secondary CPD, Primary Teacher Colleges, Evidence & Policy Influence, and System Strengthening, driving learning outcomes across Uganda and Africa.",
-};
+    "Teacher professional development programmes in Uganda: secondary CPD, Primary Teacher Colleges, evidence and policy influence, and system strengthening.",
+  path: "/programmes",
+});
 
 const page = async () => {
   const [settings, programs] = await Promise.all([getSiteSettings(), getPrograms()]);
@@ -34,7 +36,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Programmes' bgImage='assets/images/banner/banner-causes.webp' />
+        <BreadcrumbOne subtitle='Programmes' title='Teacher Professional Development Programmes' bgImage='assets/images/banner/banner-causes.webp' />
 
         {/* CauseInner */}
         <CauseInner programs={programs} />

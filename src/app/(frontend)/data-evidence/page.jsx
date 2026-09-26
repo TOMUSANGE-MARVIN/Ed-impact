@@ -7,12 +7,14 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getPosts } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Insights & Policy Briefs | Education Research in Africa",
+export const metadata = pageMetadata({
+  title: "Education Research & Evidence from Africa",
   description:
-    "Policy briefs, evidence-based education research and impact evaluation reports from Ed Impact Africa Foundation on strengthening education systems across Africa.",
-};
+    "Evidence-based education research, policy briefs and data on teacher motivation, teacher development and learning outcomes from Ed Impact Africa Foundation.",
+  path: "/data-evidence",
+});
 
 const page = async () => {
   const [settings, posts] = await Promise.all([getSiteSettings(), getPosts()]);
@@ -33,7 +35,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Insights & Policy Briefs' bgImage='assets/images/banner/banner-insights.webp' />
+        <BreadcrumbOne subtitle='Data & Evidence' title='Education Research & Evidence' bgImage='assets/images/banner/banner-insights.webp' />
 
         {/* BlogListInner */}
         <BlogListInner posts={posts} />

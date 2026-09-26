@@ -116,7 +116,7 @@ const TestimonialOne = ({ testimonials = defaultTestimonials }) => {
                             <div className='author-thumb'>
                               <img
                                 src='assets/images/author.webp'
-                                alt='Image_inner'
+                                alt=''
                               />
                             </div>
                             <div className='author-content'>
@@ -127,7 +127,7 @@ const TestimonialOne = ({ testimonials = defaultTestimonials }) => {
                           <div className='quote'>
                             <img
                               src='assets/images/quote.webp'
-                              alt='Image_inner'
+                              alt=''
                             />
                           </div>
                         </div>
@@ -167,7 +167,7 @@ const TestimonialOne = ({ testimonials = defaultTestimonials }) => {
         >
           <img
             src='assets/images/community/shape.webp'
-            alt='Image_inner'
+            alt=''
             className='base-img'
           />
         </div>

@@ -37,7 +37,7 @@ const BlogDetailsInner = ({ post: currentPost, posts = [] }) => {
                 data-aos-duration={1000}
                 data-aos-delay={100}
               >
-                <img src={mediaSrc(post.image?.url) || "/assets/images/event/poster.webp"} alt='Image_inner' />
+                <img src={mediaSrc(post.image?.url) || "/assets/images/event/poster.webp"} alt={post.image?.alt || post.title} />
               </div>
               <div className='cm-details-meta'>
                 <p>
@@ -68,10 +68,10 @@ const BlogDetailsInner = ({ post: currentPost, posts = [] }) => {
               ) : null}
               <div className='cm-img-group cta'>
                 <div className='cm-img-single'>
-                  <img src='/assets/images/event/pp-one.webp' alt='Image_inner' />
+                  <img src='/assets/images/event/pp-one.webp' alt='' />
                 </div>
                 <div className='cm-img-single'>
-                  <img src='/assets/images/event/pp-two.webp' alt='Image_inner' />
+                  <img src='/assets/images/event/pp-two.webp' alt='' />
                 </div>
               </div>
               <div className='details-footer cta'>
@@ -199,7 +199,7 @@ const BlogDetailsInner = ({ post: currentPost, posts = [] }) => {
                 data-aos-delay={100}
               >
                 <div className='author-thumb'>
-                  <img src='/assets/images/author-two.webp' alt='Image_inner' />
+                  <img src='/assets/images/author-two.webp' alt='' />
                 </div>
                 <div className='author-meta'>
                   <h6>Ed Impact Africa Foundation</h6>
@@ -288,7 +288,7 @@ const BlogDetailsInner = ({ post: currentPost, posts = [] }) => {
                           <Link href={p.id ? `/insights/${p.id}` : '/data-evidence'}>
                             <img
                               src={mediaSrc(p.image?.url) || fallbackImages[index % fallbackImages.length]}
-                              alt='Image_inner'
+                              alt={p.image?.alt || p.title}
                             />
                           </Link>
                         </div>

@@ -8,8 +8,18 @@ import { Caveat, Outfit, Source_Sans_3 } from "next/font/google";
 import Script from "next/script";
 
 import ChatbotWidget from "@/components/ChatbotWidget";
+import JsonLd from "@/components/JsonLd";
 import InitializeAOS from "@/helper/InitializeAOS";
 import RouteScrollToTop from "@/helper/RouteScrollToTop";
+import { getSiteSettings } from "@/lib/payload";
+import {
+  DEFAULT_OG_IMAGE,
+  SITE_NAME,
+  SITE_URL,
+  isIndexable,
+  organizationJsonLd,
+  websiteJsonLd,
+} from "@/lib/seo";
 
 // Pages read their content from Payload at request time, so edits made in the
 // admin panel appear immediately. Without this Next prerenders them at build
@@ -17,21 +27,26 @@ import RouteScrollToTop from "@/helper/RouteScrollToTop";
 // populated database during the image build.
 export const dynamic = "force-dynamic";
 
-export const metadata = {
-  title: "Ed Impact Africa Foundation | Transforming Education Systems Across Africa",
-  description:
-    "Ed Impact Africa Foundation partners with governments and communities to strengthen education systems across Africa, so every learner receives equitable, high-quality and relevant teaching and learning.",
-  robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-    googleBot: {
-      index: false,
-      follow: false,
-      noimageindex: true,
-    },
+export const generateMetadata = () => ({
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Ed Impact Africa Foundation | Education System Strengthening in Africa",
+    template: "%s | Ed Impact Africa",
   },
-};
+  description:
+    "Ed Impact Africa Foundation partners with governments to strengthen education systems across Africa through teacher professional development, teacher motivation and evidence.",
+  applicationName: SITE_NAME,
+  openGraph: {
+    siteName: SITE_NAME,
+    locale: "en_GB",
+    type: "website",
+    images: [{ url: DEFAULT_OG_IMAGE, alt: SITE_NAME }],
+  },
+  twitter: { card: "summary_large_image" },
+  robots: isIndexable()
+    ? { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } }
+    : { index: false, follow: false, nocache: true, googleBot: { index: false, follow: false, noimageindex: true } },
+});
 
 // Self-hosted with size-adjusted fallbacks, so text doesn't wait on (or shift
 // after) a Google Fonts request. Exposed as the variables that --nunito,
@@ -44,10 +59,12 @@ const sourceSans = Source_Sans_3({
 const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const settings = await getSiteSettings();
+
   return (
     <html
-      lang="en"
+      lang="en-GB"
       className={`${sourceSans.variable} ${caveat.variable} ${outfit.variable}`}
     >
       <head>
@@ -64,6 +81,8 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}>
         <InitializeAOS />
         <RouteScrollToTop />
+        <JsonLd data={organizationJsonLd(settings)} />
+        <JsonLd data={websiteJsonLd()} />
 
         {children}
 

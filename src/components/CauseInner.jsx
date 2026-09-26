@@ -62,10 +62,10 @@ const CauseInner = ({ programs = defaultPrograms }) => {
             >
               <span className='sub-title'>
                 <i className='icon-education' />
-                Program Reach &amp; Impact
+                Programme Reach &amp; Impact
               </span>
               <h2 className='title-animation_inner'>
-                Explore Our <span>Programmes</span>
+                Our Teacher Development <span>Programmes</span>
               </h2>
             </div>
           </div>
@@ -84,7 +84,7 @@ const CauseInner = ({ programs = defaultPrograms }) => {
                     <Link href={`/programmes/${item.id}`}>
                       <img
                         src={mediaSrc(item.image?.url) || "/assets/images/cause/one.webp"}
-                        alt='Image_inner'
+                        alt={item.image?.alt || item.title}
                       />
                     </Link>
                     <div className='tag'>
@@ -129,7 +129,7 @@ const CauseInner = ({ programs = defaultPrograms }) => {
         </div>
       </div>
       <div className='spade'>
-        <img src='assets/images/help/spade.webp' alt='Image_inner' />
+        <img src='assets/images/help/spade.webp' alt='' />
       </div>
     </section>
   );

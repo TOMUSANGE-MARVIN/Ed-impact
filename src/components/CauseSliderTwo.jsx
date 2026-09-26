@@ -97,7 +97,7 @@ const CauseSliderTwo = () => {
               {images.map((img, index) => (
                 <div key={index} className='cause-two__slider-single'>
                   <div className='cause-thumb'>
-                    <img src={img} alt={`Slide ${index}`} />
+                    <img src={img} alt='Teacher guiding learners in a Ugandan classroom' />
                     <Link href='/our-work'>
                       <i className='fa-solid fa-arrow-right'></i>
                     </Link>

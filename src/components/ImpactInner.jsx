@@ -79,6 +79,12 @@ const ImpactInner = ({ stats = defaultStats }) => {
                 <h2 className='title-animation_inner'>
                   What The <span>Evidence</span> Shows
                 </h2>
+                <p>
+                  Our 2025 education impact evaluation compared programme schools with comparison schools
+                  that had not yet received the intervention. The evidence links teacher motivation and
+                  continuous professional development for teachers to measurably better learning outcomes,
+                  in literacy and numeracy alike.
+                </p>
               </div>
             </div>
           </div>

@@ -13,7 +13,7 @@ const ErrorInner = () => {
               data-aos-delay={300}
             >
               <div className='thumb'>
-                <img src='assets/images/error.webp' alt='Image_inner' />
+                <img src='assets/images/error.webp' alt='' />
               </div>
               <h3 className='title-animation_inner'>Page Not Found</h3>
               <p>
@@ -37,12 +37,12 @@ const ErrorInner = () => {
       <div className='spade'>
         <img
           src='assets/images/blog/spade-base.webp'
-          alt='Image_inner'
+          alt=''
           className='base-img'
         />
       </div>
       <div className='spade-green'>
-        <img src='assets/images/sprade-green.webp' alt='Image_inner' />
+        <img src='assets/images/sprade-green.webp' alt='' />
       </div>
     </section>
   );

@@ -6,12 +6,14 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Social Enterprise | Ed Impact Africa Foundation",
+export const metadata = pageMetadata({
+  title: "School-Based Teacher Professional Development",
   description:
-    "Ed Impact Africa Foundation's Service-for-Pay Model: a premium partnership offer for schools seeking sustained, data-driven teacher professional development.",
-};
+    "A paid partnership for schools in Uganda: school-based teacher professional development, professional learning communities, peer observation and CPD certificates.",
+  path: "/social-enterprise",
+});
 
 const page = async () => {
   const settings = await getSiteSettings();
@@ -23,7 +25,7 @@ const page = async () => {
         <CustomCursor />
         <TopBarOne settings={settings} />
         <HeaderOne settings={settings} />
-        <BreadcrumbOne title='Social Enterprise' />
+        <BreadcrumbOne subtitle='Social Enterprise' title='School-Based Teacher Professional Development' />
 
         <section className='blog-main'>
           <div className='container'>

@@ -82,7 +82,7 @@ const ContactOne = () => {
       <div className='contact-bg'>
         <img
           src='assets/images/contact/contact-bg.webp'
-          alt='Image_inner'
+          alt=''
           className='parallax-image'
         />
       </div>
@@ -94,7 +94,7 @@ const ContactOne = () => {
       >
         <img
           src='assets/images/cta/shape-left.webp'
-          alt='Image_inner'
+          alt=''
           className='base-img'
         />
       </div>

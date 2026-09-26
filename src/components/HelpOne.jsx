@@ -39,7 +39,7 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668", showVideo = false 
                   <div className='thumb-top thumb'>
                     <img
                       src='/assets/images/help/thumb-top.webp'
-                      alt='Image_inner'
+                      alt='Chalkboard notes from a teacher professional development session'
                     />
                   </div>
                   <div
@@ -49,7 +49,7 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668", showVideo = false 
                   >
                     <img
                       src='/assets/images/help/thumb-lg.webp'
-                      alt='Image_inner'
+                      alt='Learners outside a primary school classroom block in Uganda'
                     />
                     {showVideo && (
                       <div className='video-btn-wrapper'>
@@ -65,16 +65,16 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668", showVideo = false 
                   <div className='thumb thumb-bottom'>
                     <img
                       src='/assets/images/help/thumb-bottom.webp'
-                      alt='Image_inner'
+                      alt='Smiling headteacher at his desk, a school leader in the programme'
                     />
                   </div>
                   <div className='line'>
-                    <img src='/assets/images/help/line.webp' alt='Image_inner' />
+                    <img src='/assets/images/help/line.webp' alt='' />
                   </div>
                   <div className='grid-line'>
                     <img
                       src='/assets/images/help/grid.webp'
-                      alt='Image_inner'
+                      alt=''
                       className='base-img'
                     />
                   </div>
@@ -157,13 +157,13 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668", showVideo = false 
           </div>
         </div>
         <div className='hand'>
-          <img src='/assets/images/help/hand.webp' alt='Image_inner' />
+          <img src='/assets/images/help/hand.webp' alt='' />
         </div>
         <div className='parasuit'>
-          <img src='/assets/images/parasuit.webp' alt='Image_inner' />
+          <img src='/assets/images/parasuit.webp' alt='' />
         </div>
         <div className='spade'>
-          <img src='/assets/images/help/spade.webp' alt='Image_inner' />
+          <img src='/assets/images/help/spade.webp' alt='' />
         </div>
 
         <VideoModal

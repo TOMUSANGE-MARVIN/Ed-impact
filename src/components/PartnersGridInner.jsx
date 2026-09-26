@@ -32,7 +32,7 @@ const PartnersGridInner = ({ partners = [] }) => {
                 Who Stands With Us
               </span>
               <h2 className='title-animation_inner'>
-                Our <span>Partners</span>
+                Our Education <span>Partners</span>
               </h2>
             </div>
           </div>

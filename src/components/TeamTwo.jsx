@@ -109,7 +109,7 @@ const TeamTwo = ({ teamMembers = defaultTeam }) => {
         </div>
       </div>
       <div className='spade'>
-        <img src='assets/images/sprade-green.webp' alt='Image_inner' />
+        <img src='assets/images/sprade-green.webp' alt='' />
       </div>
     </section>
   );

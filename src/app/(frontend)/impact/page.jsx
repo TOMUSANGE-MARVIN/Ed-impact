@@ -9,12 +9,14 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getTestimonials } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Our Impact | Education Impact Evaluation & Learning Outcomes Africa",
+export const metadata = pageMetadata({
+  title: "Impact Evaluation & Learning Outcomes",
   description:
-    "Evidence-based education impact evaluation results from Ed Impact Africa Foundation: learning outcomes, teacher motivation research and stakeholder testimonials from education system strengthening work across Uganda and Africa.",
-};
+    "Our independent education impact evaluation found 73.1% literacy in programme schools against 57.0% in comparison schools. See the learning outcomes.",
+  path: "/impact",
+});
 
 const page = async () => {
   const [settings, testimonials] = await Promise.all([getSiteSettings(), getTestimonials()]);
@@ -35,7 +37,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Impact' bgImage='/assets/images/banner/banner-events.webp' />
+        <BreadcrumbOne subtitle='Our Impact' title='Improving Learning Outcomes, Proven By Evidence' bgImage='/assets/images/banner/banner-events.webp' />
 
         {/* ImpactInner */}
         <ImpactInner stats={settings?.stats} />

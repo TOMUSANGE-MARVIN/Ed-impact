@@ -7,12 +7,14 @@ import VolunteerInner from "@/components/VolunteerInner";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getCareersPage } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Careers & Volunteering | Education Development Jobs in Africa",
+export const metadata = pageMetadata({
+  title: "Careers in Education Development in Africa",
   description:
-    "Open roles, internships and volunteering opportunities at Ed Impact Africa Foundation, an education development organisation strengthening education systems and teacher professional development across Africa.",
-};
+    "Jobs, internships and volunteering at Ed Impact Africa Foundation. Help strengthen education systems and teacher professional development in Uganda and Africa.",
+  path: "/careers",
+});
 
 const page = async () => {
   const [settings, careers] = await Promise.all([getSiteSettings(), getCareersPage()]);
@@ -33,7 +35,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Careers & Volunteering' bgImage='assets/images/banner/banner-volunteer.webp' />
+        <BreadcrumbOne subtitle='Careers & Volunteering' title='Build A Career In Education Development' bgImage='assets/images/banner/banner-volunteer.webp' />
 
         {/* VolunteerInner */}
         <VolunteerInner careers={careers} />

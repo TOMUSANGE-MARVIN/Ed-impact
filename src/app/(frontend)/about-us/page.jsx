@@ -17,12 +17,14 @@ import {
   getAboutPage,
   getTeamMembers,
 } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "About Us | Education Reform & Equity in Africa | Ed Impact Africa Foundation",
+export const metadata = pageMetadata({
+  title: "About Us: Pan-African Education NGO in Uganda",
   description:
-    "The vision, mission and Ubuntu philosophy behind Ed Impact Africa Foundation's work on education system strengthening, education reform and education equity in Africa, successor to STIR Education Uganda.",
-};
+    "Ed Impact Africa Foundation is a Pan-African education NGO, successor to STiR Education Uganda, advancing education equity and quality in schools across Africa.",
+  path: "/about-us",
+});
 
 const page = async () => {
   const [settings, about, teamMembers] = await Promise.all([
@@ -47,7 +49,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='About Us' bgImage='assets/images/banner/banner-about.webp' />
+        <BreadcrumbOne subtitle='About Us' title='Education Equity & Quality For Every African Child' bgImage='assets/images/banner/banner-about.webp' />
 
         {/* 1. Background */}
         <AboutBackground

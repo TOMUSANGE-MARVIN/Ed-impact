@@ -6,11 +6,14 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Terms & Conditions | Ed Impact Africa Foundation",
-  description: "Terms of use for the Ed Impact Africa Foundation website.",
-};
+export const metadata = pageMetadata({
+  title: "Terms & Conditions",
+  description:
+    "Terms of use for the Ed Impact Africa Foundation website.",
+  path: "/terms-conditions",
+});
 
 const page = async () => {
   const settings = await getSiteSettings();

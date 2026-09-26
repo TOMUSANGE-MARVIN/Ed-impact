@@ -58,7 +58,7 @@ const BlogListInner = ({ posts = defaultPosts }) => {
                   <Link href={`/insights/${post.id}`}>
                     <img
                       src={mediaSrc(post.image?.url) || fallbackImages[index % fallbackImages.length]}
-                      alt='Image_inner'
+                      alt={post.image?.alt || post.title}
                     />
                   </Link>
                   <div className='tag'>
@@ -138,7 +138,7 @@ const BlogListInner = ({ posts = defaultPosts }) => {
                 data-aos-delay={100}
               >
                 <div className='author-thumb'>
-                  <img src='assets/images/author-two.webp' alt='Image_inner' />
+                  <img src='assets/images/author-two.webp' alt='' />
                 </div>
                 <div className='author-meta'>
                   <h6>Ed Impact Africa Foundation</h6>
@@ -227,7 +227,7 @@ const BlogListInner = ({ posts = defaultPosts }) => {
                           <Link href={`/insights/${post.id}`}>
                             <img
                               src={mediaSrc(post.image?.url) || fallbackImages[index % fallbackImages.length]}
-                              alt='Image_inner'
+                              alt={post.image?.alt || post.title}
                             />
                           </Link>
                         </div>

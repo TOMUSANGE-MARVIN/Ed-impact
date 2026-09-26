@@ -8,12 +8,14 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getHomePage, getFaqs } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "FAQs | Ed Impact Africa Foundation, Education Reform in Africa",
+export const metadata = pageMetadata({
+  title: "FAQs: Education System Strengthening in Africa",
   description:
-    "Answers to common questions about Ed Impact Africa Foundation's education system strengthening, teacher development and partnership work across Africa.",
-};
+    "Answers to common questions about our education system strengthening, teacher professional development, impact evaluation and partnership work across Africa.",
+  path: "/faq",
+});
 
 const page = async () => {
   const [settings, home, faqs] = await Promise.all([
@@ -38,7 +40,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='FAQs' />
+        <BreadcrumbOne subtitle='FAQs' title='Frequently Asked Questions' />
 
         {/* FaqOne */}
         <FaqOne faqs={faqs} />

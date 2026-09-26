@@ -8,12 +8,14 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getLegacyDocuments } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "STIR Legacy Documents | Ed Impact Africa Foundation",
+export const metadata = pageMetadata({
+  title: "Teacher Motivation Research: STiR Archive",
   description:
-    "Research, evaluations and reports from STiR Education Uganda's history, the organisation Ed Impact Africa Foundation continues and builds on.",
-};
+    "Teacher motivation research, impact evaluations and reports from STiR Education Uganda, the programme Ed Impact Africa Foundation continues and builds on.",
+  path: "/legacy-documents",
+});
 
 const page = async () => {
   const [settings, documents] = await Promise.all([
@@ -37,7 +39,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Legacy Documents' />
+        <BreadcrumbOne subtitle='Legacy Documents' title='STiR Education Uganda Research Archive' />
 
         {/* LegacyDocumentsInner */}
         <LegacyDocumentsInner documents={documents} />

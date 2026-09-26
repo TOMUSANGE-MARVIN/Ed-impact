@@ -44,7 +44,7 @@ const CtaSectionOne = ({ ctaSection = defaultCta, showVideo = false }) => {
                   </div>
                 </div>
                 <div className='cta-img'>
-                  <img src='assets/images/cta/one.webp' alt='Image_inner' />
+                  <img src='assets/images/cta/one.webp' alt='Teachers collaborating in a peer learning session' />
                 </div>
               </div>
             </div>
@@ -64,7 +64,7 @@ const CtaSectionOne = ({ ctaSection = defaultCta, showVideo = false }) => {
                 <div className='cta-img'>
                   <img
                     src='assets/images/cta/two.webp'
-                    alt='Image_inner'
+                    alt='Two secondary school learners reading together'
                     className='parallax-image'
                   />
                 </div>
@@ -99,7 +99,7 @@ const CtaSectionOne = ({ ctaSection = defaultCta, showVideo = false }) => {
                   </div>
                 </div>
                 <div className='cta-img'>
-                  <img src='assets/images/cta/three.webp' alt='Image_inner' />
+                  <img src='assets/images/cta/three.webp' alt='Education leaders and government partners at a stakeholder meeting' />
                 </div>
               </div>
             </div>

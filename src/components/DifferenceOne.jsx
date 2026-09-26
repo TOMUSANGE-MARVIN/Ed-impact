@@ -14,30 +14,30 @@ const defaultInterventions = [
   {
     icon: "icon-support-heart",
     title: "Teacher Motivation",
-    description: "Instilling autonomy, mastery, and purpose so teachers rediscover the love of teaching.",
+    description: "Building intrinsic motivation through autonomy, mastery and purpose, so teachers rediscover the love of teaching.",
   },
   {
     icon: "icon-support",
     title: "System Strengthening",
-    description: "Working through local government structures to build ownership that outlasts our involvement.",
+    description: "Education system strengthening through local government structures, building ownership that outlasts our involvement.",
   },
   {
     icon: "icon-education",
     title: "Professional Development",
-    description: "Peer-led feedback and classroom observation that builds lasting instructional practice.",
+    description: "Continuous professional development for teachers: peer learning, classroom observation and coaching that last.",
   },
   {
     icon: "icon-documents",
     title: "Evidence & Research",
-    description: "Generating rigorous, locally grounded data that informs policy design and proves what works.",
+    description: "Rigorous, locally grounded education research and evidence that informs policy and shows what works in education.",
   },
 ];
 
 const DifferenceOne = ({
   interventions = defaultInterventions,
   subtitle = "How We Create Change",
-  title = "Our Model: Four Interventions",
-  description = "A child cannot love learning without a teacher who loves teaching. We build the capacity of teachers, school leaders and officials together across both primary and secondary education, so motivation and quality take root and stay embedded in the system.",
+  title = "Four Interventions That Strengthen Education Systems",
+  description = "A child cannot love learning without a teacher who loves teaching. Through teacher motivation and teacher capacity development, we build the capacity of teachers, school leaders and officials together across primary and secondary education, so motivation and education quality take root and stay embedded in the system.",
 }) => {
   const sliderRef = useRef(null);
   const settings = {
@@ -171,7 +171,7 @@ const DifferenceOne = ({
         >
           <img
             src='/assets/images/difference/shape-hand.webp'
-            alt='Image_inner'
+            alt=''
           />
         </div>
       </section>

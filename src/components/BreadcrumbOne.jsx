@@ -12,20 +12,20 @@ const BreadcrumbOne = ({
               <i className='icon-education' />
               {subtitle}
             </span>
-            <h2 className='title-animation_inner'>{title}</h2>
+            <h1 className='title-animation_inner'>{title}</h1>
           </div>
         </div>
       </div>
       <div className='banner-bg'>
-        <img src={bgImage} alt='Image_inner' />
+        <img src={bgImage} alt='' />
       </div>
       <div className='shape'>
-        <img src='/assets/images/shape.webp' alt='Image_inner' />
+        <img src='/assets/images/shape.webp' alt='' />
       </div>
       <div className='sprade' data-aos='zoom-in' data-aos-duration={1000}>
         <img
           src='/assets/images/sprade-base.webp'
-          alt='Image_inner'
+          alt=''
           className='base-img'
         />
       </div>

@@ -10,12 +10,14 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Our Work | Teacher Professional Development & System Strengthening",
+export const metadata = pageMetadata({
+  title: "Teacher Motivation & Professional Development",
   description:
-    "Ed Impact Africa Foundation's four interventions, teacher motivation, education system strengthening, continuous professional development for teachers and education research, driving learning outcomes across Africa.",
-};
+    "Our four interventions, teacher motivation, system strengthening, teacher professional development and education research, improve learning outcomes in Africa.",
+  path: "/our-work",
+});
 
 const page = async () => {
   const settings = await getSiteSettings();
@@ -36,7 +38,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Our Work' bgImage='assets/images/banner/banner-causes.webp' />
+        <BreadcrumbOne subtitle='Our Work' title='How We Strengthen Education Systems' bgImage='assets/images/banner/banner-causes.webp' />
 
         {/* DifferenceOne - The 4 Interventions */}
         <DifferenceOne />

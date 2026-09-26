@@ -101,12 +101,12 @@ const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats, showVideo =
                   >
                     <img
                       src='assets/images/difference/thumb-sm.webp'
-                      alt='Image_inner'
+                      alt='District education officials and partners at a programme event'
                     />
                     <div className='grid-line'>
                       <img
                         src='assets/images/help/grid.webp'
-                        alt='Image_inner'
+                        alt=''
                         className='base-img'
                       />
                     </div>
@@ -129,7 +129,7 @@ const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats, showVideo =
                   >
                     <img
                       src='assets/images/difference/thumb-lg.webp'
-                      alt='Image_inner'
+                      alt='Teacher writing a grammar lesson on the chalkboard'
                     />
                   </div>
                 </div>
@@ -356,7 +356,7 @@ const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats, showVideo =
           </div>
         </div>
         <div className='spade'>
-          <img src='assets/images/spade-green-two.webp' alt='Image_inner' />
+          <img src='assets/images/spade-green-two.webp' alt='' />
         </div>
       </section>
       <VideoModal

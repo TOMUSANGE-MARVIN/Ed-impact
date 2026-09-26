@@ -96,11 +96,18 @@ const BannerOne = ({
                             <i className='icon-education' />
                             <span>{renderSubtitle(slide.subtitle)}</span>
                           </span>
-                          <h1>
-                            {slide.headingBeforeAccent}{" "}
-                            <span className='bottom-line'>{slide.headingAccent}</span>
-                            {slide.headingAfterAccent}
-                          </h1>
+                          {/* Only the first slide is the page's H1; the rest
+                              share its look without competing for it. */}
+                          {(() => {
+                            const Heading = index === 0 ? "h1" : "p";
+                            return (
+                              <Heading className='banner-two__title'>
+                                {slide.headingBeforeAccent}{" "}
+                                <span className='bottom-line'>{slide.headingAccent}</span>
+                                {slide.headingAfterAccent}
+                              </Heading>
+                            );
+                          })()}
                           <div className='banner__content-cta cta'>
                             <Link
                               href='/our-work'
@@ -150,7 +157,7 @@ const BannerOne = ({
           </button>
         </div>
         <div className='shape'>
-          <img src='/assets/images/shape.webp' alt='Image_inner' />
+          <img src='/assets/images/shape.webp' alt='' />
         </div>
         <div
           className='shape-left'
@@ -160,20 +167,20 @@ const BannerOne = ({
         >
           <img
             src='/assets/images/banner/banner-two-shape.webp'
-            alt='Image_inner'
+            alt=''
           />
         </div>
         <div className='sprade-shape'>
           <img
             src='assets/images/sprade-base.webp'
-            alt='Image_inner'
+            alt=''
             className='base-img'
             data-aos='zoom-in'
             data-aos-duration={1000}
           />
         </div>
         <div className='unity'>
-          <img src='/assets/images/unity.webp' alt='Image_inner' />
+          <img src='/assets/images/unity.webp' alt='' />
         </div>
       </section>
     </>

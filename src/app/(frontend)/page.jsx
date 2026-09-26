@@ -17,6 +17,7 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { heroBackground } from "@/lib/image";
+import { pageMetadata } from "@/lib/seo";
 import {
   getSiteSettings,
   getHomePage,
@@ -29,11 +30,13 @@ import {
   getPartners,
 } from "@/lib/payload";
 
-export const metadata = {
-  title: "Ed Impact Africa Foundation | Education System Strengthening in Africa",
+const homeMetadata = pageMetadata({
+  title: "Ed Impact Africa | Education System Strengthening in Africa",
   description:
-    "Ed Impact Africa Foundation partners with governments across Africa on education system strengthening, teacher professional development and teacher motivation, improving learning outcomes for every child.",
-};
+    "Pan-African education NGO strengthening education systems through teacher professional development and teacher motivation, improving learning outcomes in Africa.",
+  path: "/",
+});
+export const metadata = { ...homeMetadata, title: { absolute: homeMetadata.title } };
 
 const page = async () => {
   const [settings, home, about, interventions, programs, teamMembers, testimonials, posts, partners] =

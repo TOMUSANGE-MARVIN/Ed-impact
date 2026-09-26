@@ -39,10 +39,10 @@ const BlogOne = ({ posts = defaultPosts }) => {
             >
               <span className='sub-title'>
                 <i className='icon-documents' />
-                Insight Production
+                Research &amp; Policy Briefs
               </span>
               <h2 className='title-animation_inner'>
-                Policy Briefs &amp; <span>Insights</span>
+                Education Research &amp; <span>Insights</span>
               </h2>
             </div>
           </div>
@@ -61,7 +61,7 @@ const BlogOne = ({ posts = defaultPosts }) => {
                     <Link href={`/insights/${post.id}`}>
                       <img
                         src={mediaSrc(post.image?.url) || fallbackImages[index % fallbackImages.length]}
-                        alt='Image_inner'
+                        alt={post.image?.alt || post.title}
                       />
                     </Link>
                     <div className='tag'>
@@ -100,7 +100,7 @@ const BlogOne = ({ posts = defaultPosts }) => {
                   </div>
                   <img
                     src='assets/images/blog/spade.webp'
-                    alt='Image_inner'
+                    alt=''
                     className='spade-two'
                   />
                 </div>
@@ -124,12 +124,12 @@ const BlogOne = ({ posts = defaultPosts }) => {
         </div>
       </div>
       <div className='blog-bg'>
-        <img src='assets/images/blog/blog-bg.webp' alt='Image_inner' />
+        <img src='assets/images/blog/blog-bg.webp' alt='' />
       </div>
       <div className='spade'>
         <img
           src='assets/images/blog/spade-base.webp'
-          alt='Image_inner'
+          alt=''
           className='base-img'
         />
       </div>

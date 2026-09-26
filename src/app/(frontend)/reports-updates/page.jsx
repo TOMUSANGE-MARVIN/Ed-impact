@@ -7,12 +7,14 @@ import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
 import { getSiteSettings, getReports } from "@/lib/payload";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Reports & Updates | Education Impact Evaluation | Ed Impact Africa Foundation",
+export const metadata = pageMetadata({
+  title: "Education Research Reports & Evaluations",
   description:
-    "Annual reports, education impact evaluation updates and evidence from across Ed Impact Africa Foundation's programs strengthening education systems in Africa.",
-};
+    "Annual reports, education programme evaluations and impact updates from our work strengthening education systems and teacher development in Uganda and Africa.",
+  path: "/reports-updates",
+});
 
 const page = async () => {
   const [settings, reports] = await Promise.all([getSiteSettings(), getReports()]);
@@ -33,7 +35,7 @@ const page = async () => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title='Reports & Updates' bgImage='assets/images/banner/banner-events.webp' />
+        <BreadcrumbOne subtitle='Reports & Updates' title='Education Research Reports & Updates' bgImage='assets/images/banner/banner-events.webp' />
 
         {/* EventInner */}
         <EventInner reports={reports} />

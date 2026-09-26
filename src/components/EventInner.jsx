@@ -65,7 +65,7 @@ const EventInner = ({ reports = defaultReports }) => {
               >
                 <div className='event__single van-tilt'>
                   <div className='event__single-thumb'>
-                    <img src={mediaSrc(featured.image?.url) || fallbackImages[0]} alt='Image_inner' />
+                    <img src={mediaSrc(featured.image?.url) || fallbackImages[0]} alt={featured.image?.alt || featured.title} />
                   </div>
                   <div className='event__content'>
                     <span>{formatDate(featured.publishedDate)}</span>
@@ -93,7 +93,7 @@ const EventInner = ({ reports = defaultReports }) => {
                   <div className='event__single-thumb'>
                     <img
                       src={mediaSrc(report.image?.url) || fallbackImages[(index + 1) % fallbackImages.length]}
-                      alt='Image_inner'
+                      alt={report.image?.alt || report.title}
                     />
                   </div>
                   <div className='event__content'>
@@ -114,7 +114,7 @@ const EventInner = ({ reports = defaultReports }) => {
       <div className='spade'>
         <img
           src='assets/images/blog/spade-base.webp'
-          alt='Image_inner'
+          alt=''
           className='base-img'
         />
       </div>

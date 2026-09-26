@@ -341,6 +341,10 @@
     .sub-title {
       font-size: 24px;
     }
+    h1 {
+      font-size: 40px;
+      line-height: 50px;
+    }
   }
 
   .banner-two {
@@ -843,6 +847,7 @@
 
   // common banner
   .common-banner {
+    h1,
     h2 {
       font-size: 85px;
       line-height: 95px;
