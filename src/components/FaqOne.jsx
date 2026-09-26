@@ -92,7 +92,7 @@ const FaqOne = ({ faqs = defaultFaqs }) => {
                   data-aos-duration={1000}
                   data-aos-delay={100}
                 >
-                  <img src='assets/images/faq/thumb-lg.png' alt='Image_inner' />
+                  <img src='assets/images/faq/thumb-lg.webp' alt='Image_inner' />
                 </div>
                 <div
                   className='thumb-sm'
@@ -100,7 +100,7 @@ const FaqOne = ({ faqs = defaultFaqs }) => {
                   data-aos-duration={1000}
                   data-aos-delay={300}
                 >
-                  <img src='assets/images/faq/thumb-sm.png' alt='Image_inner' />
+                  <img src='assets/images/faq/thumb-sm.webp' alt='Image_inner' />
                 </div>
               </div>
             </div>
@@ -108,7 +108,7 @@ const FaqOne = ({ faqs = defaultFaqs }) => {
         </div>
       </div>
       <div className='shape d-none d-lg-block'>
-        <img src='assets/images/faq/shape.png' alt='Image_inner' />
+        <img src='assets/images/faq/shape.webp' alt='Image_inner' />
       </div>
     </section>
   );

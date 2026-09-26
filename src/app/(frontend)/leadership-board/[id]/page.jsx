@@ -45,7 +45,7 @@ const page = async ({ params }) => {
         <HeaderOne settings={settings} />
 
         {/* BreadcrumbOne */}
-        <BreadcrumbOne title={member.name} bgImage='assets/images/banner/banner-team-detail.png' />
+        <BreadcrumbOne title={member.name} bgImage='assets/images/banner/banner-team-detail.webp' />
 
         {/* TeamDetailsInner */}
         <TeamDetailsInner member={member} />

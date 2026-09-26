@@ -4,10 +4,10 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 
 const cardStyles = [
-  { bg: "bg-one.png", variant: "difference__single-first" },
-  { bg: "bg-two.png", variant: "difference__single-second" },
-  { bg: "bg-three.png", variant: "difference__single-third" },
-  { bg: "bg-four.png", variant: "difference__single-fourth" },
+  { bg: "bg-one.webp", variant: "difference__single-first" },
+  { bg: "bg-two.webp", variant: "difference__single-second" },
+  { bg: "bg-three.webp", variant: "difference__single-third" },
+  { bg: "bg-four.webp", variant: "difference__single-fourth" },
 ];
 
 const defaultInterventions = [
@@ -170,7 +170,7 @@ const DifferenceOne = ({
           data-aos-delay={300}
         >
           <img
-            src='/assets/images/difference/shape-hand.png'
+            src='/assets/images/difference/shape-hand.webp'
             alt='Image_inner'
           />
         </div>

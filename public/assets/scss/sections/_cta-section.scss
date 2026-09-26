@@ -45,14 +45,14 @@
 
   .cta-section__center {
     z-index: 2;
-    background-image: url("/assets/images/cta/mask-two.png");
+    background-image: url("/assets/images/cta/mask-two.webp");
     background-size: 100% 100%;
     position: relative;
     width: 120%;
     left: 50%;
     transform: translateX(-50%);
     .cta-img {
-      mask-image: url("/assets/images/cta/mask.png");
+      mask-image: url("/assets/images/cta/mask.webp");
       mask-repeat: no-repeat;
       mask-position: center;
       mask-size: 99% 100%;

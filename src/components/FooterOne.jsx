@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const FooterOne = ({ settings }) => {
-  const logoLightUrl = "/assets/images/logo-icon.png";
+  const logoLightUrl = "/assets/images/logo-icon.webp";
   const email = settings?.contact?.email || "info@edimpactafrica.org";
   const phone = settings?.contact?.phoneOne || "+256 781 064 668";
   const location = settings?.contact?.location || "Kampala, Uganda";
@@ -288,7 +288,7 @@ const FooterOne = ({ settings }) => {
         </div>
         <div className='sprade' data-aos='zoom-in' data-aos-duration={1000}>
           <img
-            src='/assets/images/sprade.png'
+            src='/assets/images/sprade.webp'
             alt='Image_inner'
             className='base-img'
           />
@@ -298,7 +298,7 @@ const FooterOne = ({ settings }) => {
           data-aos='zoom-in'
           data-aos-duration={1000}
         >
-          <img src='/assets/images/sprade-light.png' alt='Image_inner' />
+          <img src='/assets/images/sprade-light.webp' alt='Image_inner' />
         </div>
       </footer>
     </>

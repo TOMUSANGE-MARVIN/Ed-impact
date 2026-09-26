@@ -1,6 +1,7 @@
+import { mediaSrc } from "@/lib/image";
 import Link from "next/link";
 
-const fallbackImages = ["assets/images/blog/one.png", "assets/images/blog/two.png", "assets/images/blog/three.png"];
+const fallbackImages = ["assets/images/blog/one.webp", "assets/images/blog/two.webp", "assets/images/blog/three.webp"];
 const delays = [0, 300, 600];
 
 const defaultPosts = [
@@ -59,7 +60,7 @@ const BlogOne = ({ posts = defaultPosts }) => {
                   <div className='blog__single-thumb'>
                     <Link href={`/insights/${post.id}`}>
                       <img
-                        src={post.image?.url || fallbackImages[index % fallbackImages.length]}
+                        src={mediaSrc(post.image?.url) || fallbackImages[index % fallbackImages.length]}
                         alt='Image_inner'
                       />
                     </Link>
@@ -98,7 +99,7 @@ const BlogOne = ({ posts = defaultPosts }) => {
                     </div>
                   </div>
                   <img
-                    src='assets/images/blog/spade.png'
+                    src='assets/images/blog/spade.webp'
                     alt='Image_inner'
                     className='spade-two'
                   />
@@ -123,11 +124,11 @@ const BlogOne = ({ posts = defaultPosts }) => {
         </div>
       </div>
       <div className='blog-bg'>
-        <img src='assets/images/blog/blog-bg.png' alt='Image_inner' />
+        <img src='assets/images/blog/blog-bg.webp' alt='Image_inner' />
       </div>
       <div className='spade'>
         <img
-          src='assets/images/blog/spade-base.png'
+          src='assets/images/blog/spade-base.webp'
           alt='Image_inner'
           className='base-img'
         />

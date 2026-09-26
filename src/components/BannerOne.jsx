@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
+import { heroBackground } from "@/lib/image";
 
 const renderSubtitle = (subtitle) => {
   const parts = subtitle.split(/(STIR Education)/i);
@@ -15,13 +16,6 @@ const renderSubtitle = (subtitle) => {
     )
   );
 };
-
-const fallbackBgs = [
-  "banner-one-bg.png",
-  "banner-two-bg.png",
-  "banner-three-bg.png",
-  "banner-four-bg.png",
-];
 
 const defaultSlides = [
   {
@@ -56,6 +50,14 @@ const BannerOne = ({
   ctaSecondaryLabel = "Invest In Systemic Change",
 }) => {
   const sliderRef = useRef(null);
+  // Every slide is in the DOM from the start, so without this the browser
+  // downloads all hero backgrounds up front and delays the first one (LCP).
+  // Later slides only need theirs before autoplay reaches them.
+  const [loadAllBgs, setLoadAllBgs] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoadAllBgs(true), 2500);
+    return () => clearTimeout(timer);
+  }, []);
   const settings = {
     infinite: true,
     speed: 2000,
@@ -73,18 +75,18 @@ const BannerOne = ({
       <section className='banner-two'>
         <div className='banner-two__slider swiper'>
           <Slider {...settings} ref={sliderRef} className='swiper-wrapper'>
-            {slides.map((slide, index) => (
+            {slides.map((slide, index) => {
+              const bg = heroBackground(slide, index);
+              return (
               <div className='swiper-slide' key={slide.id || index}>
                 <div className='banner-two__slider-single'>
                   <div
                     className='banner-two__slider-bg'
-                    style={{
-                      backgroundImage: `url(${
-                        slide.backgroundImage?.url
-                          ? slide.backgroundImage.url
-                          : `/assets/images/banner/${fallbackBgs[index % fallbackBgs.length]}`
-                      })`,
-                    }}
+                    style={
+                      index === 0 || loadAllBgs
+                        ? { "--bg-lg": `url(${bg.lg})`, "--bg-sm": `url(${bg.sm})` }
+                        : undefined
+                    }
                   ></div>
                   <div className='container'>
                     <div className='row'>
@@ -123,7 +125,8 @@ const BannerOne = ({
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </Slider>
         </div>
         <div className='slider-navigation d-none d-md-flex'>
@@ -147,7 +150,7 @@ const BannerOne = ({
           </button>
         </div>
         <div className='shape'>
-          <img src='/assets/images/shape.png' alt='Image_inner' />
+          <img src='/assets/images/shape.webp' alt='Image_inner' />
         </div>
         <div
           className='shape-left'
@@ -156,13 +159,13 @@ const BannerOne = ({
           data-aos-delay={300}
         >
           <img
-            src='/assets/images/banner/banner-two-shape.png'
+            src='/assets/images/banner/banner-two-shape.webp'
             alt='Image_inner'
           />
         </div>
         <div className='sprade-shape'>
           <img
-            src='assets/images/sprade-base.png'
+            src='assets/images/sprade-base.webp'
             alt='Image_inner'
             className='base-img'
             data-aos='zoom-in'
@@ -170,7 +173,7 @@ const BannerOne = ({
           />
         </div>
         <div className='unity'>
-          <img src='/assets/images/unity.png' alt='Image_inner' />
+          <img src='/assets/images/unity.webp' alt='Image_inner' />
         </div>
       </section>
     </>

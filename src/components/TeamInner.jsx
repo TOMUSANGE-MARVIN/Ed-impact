@@ -1,14 +1,15 @@
+import { mediaSrc } from "@/lib/image";
 import Link from "next/link";
 
 const defaultTeam = [
-  { name: "Modern Karema Musiimenta", role: "Chief Executive Officer", category: "executive", photo: { url: "assets/images/team/one.png" } },
-  { name: "Wilber Birungi", role: "Chief Finance Officer", category: "executive", photo: { url: "assets/images/team/two.png" } },
-  { name: "Brenda Akite Otika", role: "Chief Program Officer", category: "executive", photo: { url: "assets/images/team/three.png" } },
-  { name: "Janat Namukose", role: "Chief People Officer", category: "executive", photo: { url: "assets/images/team/four.png" } },
-  { name: "Prof. Betty Ezati", role: "Board Chairperson", category: "board", photo: { url: "assets/images/team/eight.png" } },
-  { name: "Dr. Cleophas Mugenyi", role: "Board Member", category: "board", photo: { url: "assets/images/team/nine.png" } },
-  { name: "CPA Fredrick Kibeddi", role: "Board Member, Finance & Risk", category: "board", photo: { url: "assets/images/team/ten.png" } },
-  { name: "CPA Charles Lutimba", role: "Board Member, Finance & Risk", category: "board", photo: { url: "assets/images/team/eleven.png" } },
+  { name: "Modern Karema Musiimenta", role: "Chief Executive Officer", category: "executive", photo: { url: "assets/images/team/one.webp" } },
+  { name: "Wilber Birungi", role: "Chief Finance Officer", category: "executive", photo: { url: "assets/images/team/two.webp" } },
+  { name: "Brenda Akite Otika", role: "Chief Program Officer", category: "executive", photo: { url: "assets/images/team/three.webp" } },
+  { name: "Janat Namukose", role: "Chief People Officer", category: "executive", photo: { url: "assets/images/team/four.webp" } },
+  { name: "Prof. Betty Ezati", role: "Board Chairperson", category: "board", photo: { url: "assets/images/team/eight.webp" } },
+  { name: "Dr. Cleophas Mugenyi", role: "Board Member", category: "board", photo: { url: "assets/images/team/nine.webp" } },
+  { name: "CPA Fredrick Kibeddi", role: "Board Member, Finance & Risk", category: "board", photo: { url: "assets/images/team/ten.webp" } },
+  { name: "CPA Charles Lutimba", role: "Board Member, Finance & Risk", category: "board", photo: { url: "assets/images/team/eleven.webp" } },
 ];
 
 const categoryLabels = {
@@ -41,7 +42,7 @@ const TeamGroup = ({ label, members, anchorId }) => (
             <div className='team__single van-tilt'>
               <div className='team__single-thumb'>
                 <Link href={`/leadership-board/${member.id}`}>
-                  <img src={member.photo?.url || "assets/images/team/placeholder.png"} alt={member.name} />
+                  <img src={mediaSrc(member.photo?.url) || "assets/images/team/placeholder.webp"} alt={member.name} />
                 </Link>
                 <div className='team__icons'>
                   <div className='team__single-content__icon'>
@@ -121,7 +122,7 @@ const TeamInner = ({ teamMembers = defaultTeam }) => {
         ))}
       </div>
       <div className='spade'>
-        <img src='assets/images/sprade-green.png' alt='Image_inner' />
+        <img src='assets/images/sprade-green.webp' alt='Image_inner' />
       </div>
     </section>
   );

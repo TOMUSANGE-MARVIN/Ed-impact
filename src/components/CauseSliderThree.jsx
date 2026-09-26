@@ -1,4 +1,5 @@
 "use client";
+import { mediaSrc } from "@/lib/image";
 import { useRef } from "react";
 import Slider from "react-slick";
 import ProgressBar from "../helper/ProgressBar";
@@ -6,7 +7,7 @@ import Link from "next/link";
 
 const defaultPrograms = [
   {
-    image: { url: "/assets/images/cause/one.png" },
+    image: { url: "/assets/images/cause/one.webp" },
     tag: "Secondary",
     title: "National Secondary CPD",
     description: "Delivered with the Association of Secondary School Headteachers of Uganda, reaching secondary schools nationwide.",
@@ -17,7 +18,7 @@ const defaultPrograms = [
     statTwoValue: "199,856 teachers",
   },
   {
-    image: { url: "/assets/images/cause/two.png" },
+    image: { url: "/assets/images/cause/two.webp" },
     tag: "Primary",
     title: "Primary Teacher Colleges",
     description: "Delivered through 22 of 23 Core Primary Teacher Colleges, with NAMDEO and UNISA strengthening classroom instruction.",
@@ -28,7 +29,7 @@ const defaultPrograms = [
     statTwoValue: "105 Local Governments",
   },
   {
-    image: { url: "/assets/images/cause/three.png" },
+    image: { url: "/assets/images/cause/three.webp" },
     tag: "Evidence",
     title: "Evidence & Policy Influence",
     description: "Our 2025 impact evaluation shows measurably stronger learning outcomes in programme schools.",
@@ -39,7 +40,7 @@ const defaultPrograms = [
     statTwoValue: "57.0% control schools",
   },
   {
-    image: { url: "/assets/images/cause/four.png" },
+    image: { url: "/assets/images/cause/four.webp" },
     tag: "Systems",
     title: "System Strengthening",
     description: "Building institutional capacity so schools and districts own implementation long after we exit.",
@@ -145,7 +146,7 @@ const CauseSliderThree = ({ programs = defaultPrograms }) => {
                           <div className='thumb'>
                             <Link href={`/programmes/${item.id}`}>
                               <img
-                                src={item.image?.url || "/assets/images/cause/one.png"}
+                                src={mediaSrc(item.image?.url) || "/assets/images/cause/one.webp"}
                                 alt='Image_inner'
                               />
                             </Link>
@@ -195,7 +196,7 @@ const CauseSliderThree = ({ programs = defaultPrograms }) => {
         </div>
       </div>
       <div className='spade'>
-        <img src='/assets/images/help/spade.png' alt='Image_inner' />
+        <img src='/assets/images/help/spade.webp' alt='Image_inner' />
       </div>
     </section>
   );

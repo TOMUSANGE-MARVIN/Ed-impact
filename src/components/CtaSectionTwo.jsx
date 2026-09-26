@@ -44,7 +44,7 @@ const CtaSectionTwo = () => {
       </div>
       <div className='cta-bg'>
         <img
-          src='assets/images/cta/cta-bg.png'
+          src='assets/images/cta/cta-bg.webp'
           alt='Image_inner'
           className='parallax-image'
         />
@@ -55,10 +55,10 @@ const CtaSectionTwo = () => {
         data-aos-duration={1000}
         data-aos-delay={300}
       >
-        <img src='assets/images/cta/shape-left.png' alt='Image_inner' />
+        <img src='assets/images/cta/shape-left.webp' alt='Image_inner' />
       </div>
       <div className='shape'>
-        <img src='assets/images/shape-two.png' alt='Image_inner' />
+        <img src='assets/images/shape-two.webp' alt='Image_inner' />
       </div>
     </section>
   );

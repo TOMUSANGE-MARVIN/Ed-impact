@@ -38,7 +38,7 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668", showVideo = false 
                 <div className='help__thumb-inner'>
                   <div className='thumb-top thumb'>
                     <img
-                      src='/assets/images/help/thumb-top.png'
+                      src='/assets/images/help/thumb-top.webp'
                       alt='Image_inner'
                     />
                   </div>
@@ -48,7 +48,7 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668", showVideo = false 
                     data-aos-duration={1000}
                   >
                     <img
-                      src='/assets/images/help/thumb-lg.png'
+                      src='/assets/images/help/thumb-lg.webp'
                       alt='Image_inner'
                     />
                     {showVideo && (
@@ -64,16 +64,16 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668", showVideo = false 
                   </div>
                   <div className='thumb thumb-bottom'>
                     <img
-                      src='/assets/images/help/thumb-bottom.png'
+                      src='/assets/images/help/thumb-bottom.webp'
                       alt='Image_inner'
                     />
                   </div>
                   <div className='line'>
-                    <img src='/assets/images/help/line.png' alt='Image_inner' />
+                    <img src='/assets/images/help/line.webp' alt='Image_inner' />
                   </div>
                   <div className='grid-line'>
                     <img
-                      src='/assets/images/help/grid.png'
+                      src='/assets/images/help/grid.webp'
                       alt='Image_inner'
                       className='base-img'
                     />
@@ -157,20 +157,20 @@ const HelpOne = ({ ubuntu, stats, phone = "+256 781 064 668", showVideo = false 
           </div>
         </div>
         <div className='hand'>
-          <img src='/assets/images/help/hand.png' alt='Image_inner' />
+          <img src='/assets/images/help/hand.webp' alt='Image_inner' />
         </div>
         <div className='parasuit'>
-          <img src='/assets/images/parasuit.png' alt='Image_inner' />
+          <img src='/assets/images/parasuit.webp' alt='Image_inner' />
         </div>
         <div className='spade'>
-          <img src='/assets/images/help/spade.png' alt='Image_inner' />
+          <img src='/assets/images/help/spade.webp' alt='Image_inner' />
         </div>
 
         <VideoModal
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           youtubeId='pSwSX-TuiPE'
-          poster='/assets/images/help/thumb-lg.png'
+          poster='/assets/images/help/thumb-lg.webp'
         />
       </section>
     </>

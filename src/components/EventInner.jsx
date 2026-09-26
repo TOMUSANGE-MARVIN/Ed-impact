@@ -1,6 +1,7 @@
+import { mediaSrc } from "@/lib/image";
 import Link from "next/link";
 
-const fallbackImages = ["assets/images/event/one.png", "assets/images/event/two.png", "assets/images/event/three.png"];
+const fallbackImages = ["assets/images/event/one.webp", "assets/images/event/two.webp", "assets/images/event/three.webp"];
 
 const defaultReports = [
   {
@@ -64,7 +65,7 @@ const EventInner = ({ reports = defaultReports }) => {
               >
                 <div className='event__single van-tilt'>
                   <div className='event__single-thumb'>
-                    <img src={featured.image?.url || fallbackImages[0]} alt='Image_inner' />
+                    <img src={mediaSrc(featured.image?.url) || fallbackImages[0]} alt='Image_inner' />
                   </div>
                   <div className='event__content'>
                     <span>{formatDate(featured.publishedDate)}</span>
@@ -91,7 +92,7 @@ const EventInner = ({ reports = defaultReports }) => {
                 <div className='event__single event-single-alt van-tilt'>
                   <div className='event__single-thumb'>
                     <img
-                      src={report.image?.url || fallbackImages[(index + 1) % fallbackImages.length]}
+                      src={mediaSrc(report.image?.url) || fallbackImages[(index + 1) % fallbackImages.length]}
                       alt='Image_inner'
                     />
                   </div>
@@ -112,7 +113,7 @@ const EventInner = ({ reports = defaultReports }) => {
       </div>
       <div className='spade'>
         <img
-          src='assets/images/blog/spade-base.png'
+          src='assets/images/blog/spade-base.webp'
           alt='Image_inner'
           className='base-img'
         />

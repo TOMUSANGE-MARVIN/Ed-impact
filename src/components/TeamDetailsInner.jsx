@@ -1,9 +1,10 @@
+import { mediaSrc } from "@/lib/image";
 import Link from "next/link";
 
 const defaultMember = {
   name: "Modern Karema Musiimenta",
   role: "Chief Executive Officer",
-  photo: { url: "assets/images/team/one.png" },
+  photo: { url: "assets/images/team/one.webp" },
   bio: "Modern leads Ed Impact Africa Foundation's transition from STIR Education Uganda, drawing on his experience as Uganda Country Director-STIR Education and Head of National Programs. He is a Board Member and Chairperson of the Membership Committee at the Regional Education Learning Initiative (RELI Africa).\n\nBefore joining Ed Impact Africa Foundation, Modern held leadership roles across the education and development sector in Uganda, including General Manager at Jobconnect Ltd and Branch Operations Supervisor at NSSF Uganda. His career reflects a consistent thread: building institutions that outlast any single project, and putting local ownership at the centre of reform. Today, he leads Ed Impact Africa Foundation through its transition from a country office of a global INGO into an independent, locally governed Pan-African organisation.",
 };
 
@@ -31,7 +32,7 @@ const TeamDetailsInner = ({ member: currentMember }) => {
               data-aos='zoom-in'
               data-aos-duration={1000}
             >
-              <img src={member.photo?.url || "assets/images/team/one.png"} alt={member.name} />
+              <img src={mediaSrc(member.photo?.url) || "assets/images/team/one.webp"} alt={member.name} />
             </div>
           </div>
           <div className='col-12 col-lg-6 col-xl-7'>

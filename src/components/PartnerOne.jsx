@@ -1,10 +1,11 @@
 "use client";
+import { mediaSrc } from "@/lib/image";
 import Slider from "react-slick";
 
 const defaultPartners = [
-  { name: "Mastercard Foundation", logo: { url: "/assets/images/sponsor/mastercard.png" } },
-  { name: "Social Initiative", logo: { url: "/assets/images/sponsor/social-initiative.png" } },
-  { name: "Echidna Giving", logo: { url: "/assets/images/sponsor/echidna.png" } },
+  { name: "Mastercard Foundation", logo: { url: "/assets/images/sponsor/mastercard.webp" } },
+  { name: "Social Initiative", logo: { url: "/assets/images/sponsor/social-initiative.webp" } },
+  { name: "Echidna Giving", logo: { url: "/assets/images/sponsor/echidna.webp" } },
 ];
 
 const PartnerOne = ({ partners = defaultPartners }) => {
@@ -57,7 +58,7 @@ const PartnerOne = ({ partners = defaultPartners }) => {
                   <div className='swiper-slide' key={partner.id ? `${partner.id}-${index}` : index}>
                     <div className='partner__slider-single'>
                       <img
-                        src={partner.logo?.url}
+                        src={mediaSrc(partner.logo?.url, 384)}
                         alt={partner.name}
                         title={partner.name}
                       />

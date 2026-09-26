@@ -1,7 +1,7 @@
 const BreadcrumbOne = ({
   title,
   subtitle = "Ed Impact Africa Foundation",
-  bgImage = "assets/images/banner/banner-bg.png",
+  bgImage = "assets/images/banner/banner-bg.webp",
 }) => {
   return (
     <section className='common-banner'>
@@ -20,11 +20,11 @@ const BreadcrumbOne = ({
         <img src={bgImage} alt='Image_inner' />
       </div>
       <div className='shape'>
-        <img src='/assets/images/shape.png' alt='Image_inner' />
+        <img src='/assets/images/shape.webp' alt='Image_inner' />
       </div>
       <div className='sprade' data-aos='zoom-in' data-aos-duration={1000}>
         <img
-          src='/assets/images/sprade-base.png'
+          src='/assets/images/sprade-base.webp'
           alt='Image_inner'
           className='base-img'
         />

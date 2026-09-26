@@ -1,3 +1,4 @@
+import { mediaSrc } from "@/lib/image";
 import Link from "next/link";
 
 const defaultProgram = {
@@ -27,7 +28,7 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
                 data-aos-duration={1000}
                 data-aos-delay={100}
               >
-                <img src={program.image?.url || "/assets/images/event/poster.png"} alt='Image_inner' />
+                <img src={mediaSrc(program.image?.url) || "/assets/images/event/poster.webp"} alt='Image_inner' />
               </div>
               <div className='cm-details-meta'>
                 <p>
@@ -69,10 +70,10 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
               </div>
               <div className='cm-img-group cta'>
                 <div className='cm-img-single'>
-                  <img src='/assets/images/event/pp-one.png' alt='Image_inner' />
+                  <img src='/assets/images/event/pp-one.webp' alt='Image_inner' />
                 </div>
                 <div className='cm-img-single'>
-                  <img src='/assets/images/event/pp-two.png' alt='Image_inner' />
+                  <img src='/assets/images/event/pp-two.webp' alt='Image_inner' />
                 </div>
               </div>
               <div
@@ -174,7 +175,7 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
                     <div className='single-item' key={p.id}>
                       <div className='thumb'>
                         <Link href={`/programmes/${p.id}`}>
-                          <img src={p.image?.url || "/assets/images/cause/one.png"} alt='Image_inner' />
+                          <img src={mediaSrc(p.image?.url) || "/assets/images/cause/one.webp"} alt='Image_inner' />
                         </Link>
                       </div>
                       <div className='content'>
@@ -209,7 +210,7 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
                 data-aos-delay={100}
               >
                 <div className='cm-logo'>
-                  <img src='/assets/images/event/logo.png' alt='Image_inner' />
+                  <img src='/assets/images/event/logo.webp' alt='Image_inner' />
                 </div>
                 <div className='cm-content'>
                   <p>Africa's Systems Reform Partner</p>

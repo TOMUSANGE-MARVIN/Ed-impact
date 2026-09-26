@@ -1,17 +1,15 @@
 "use client";
-import dynamic from "next/dynamic";
 import InitializeAOS from "./InitializeAOS";
 
-const AOSWrapper = dynamic(() => import("@/helper/AOSWrapper"), {
-  ssr: false,
-});
-
+// Previously this loaded its children through next/dynamic with ssr: false,
+// which made every page wrapped in it render client-side only (an empty HTML
+// shell until all JS had loaded). AOS only needs initialising after mount.
 const AOSWrap = ({ children }) => {
   return (
-    <AOSWrapper>
+    <>
       <InitializeAOS />
       {children}
-    </AOSWrapper>
+    </>
   );
 };
 

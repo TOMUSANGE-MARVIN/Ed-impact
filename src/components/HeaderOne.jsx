@@ -1,10 +1,11 @@
 "use client";
+import { mediaSrc } from "@/lib/image";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const HeaderOne = ({ settings }) => {
-  const logoUrl = settings?.logo?.url || "/assets/images/logo.png";
+  const logoUrl = mediaSrc(settings?.logo?.url, 384) || "/assets/images/logo.webp";
   const phone = settings?.contact?.phoneOne || "+256 781 064 668";
   const social = settings?.social || {};
   let pathname = usePathname();
@@ -325,7 +326,7 @@ const HeaderOne = ({ settings }) => {
           <div className='mobile-menu__header nav-fade'>
             <div className='logo'>
               <Link href='/' aria-label='home page' title='logo'>
-                <img src='/assets/images/logo.png' alt='Ed Impact Africa Foundation' />
+                <img src='/assets/images/logo.webp' alt='Ed Impact Africa Foundation' />
               </Link>
             </div>
             <button

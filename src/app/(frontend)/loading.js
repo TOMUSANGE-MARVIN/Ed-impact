@@ -3,7 +3,7 @@ export default function Loading() {
   return (
     <div className='preloader'>
       <img
-        src='/assets/images/logo-icon.png'
+        src='/assets/images/logo-icon.webp'
         alt='Ed Impact Africa Foundation'
         style={{ width: 64, height: 64 }}
       />

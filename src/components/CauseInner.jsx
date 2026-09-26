@@ -1,9 +1,10 @@
+import { mediaSrc } from "@/lib/image";
 import Link from "next/link";
 import ProgressBar from "../helper/ProgressBar";
 
 const defaultPrograms = [
   {
-    image: { url: "/assets/images/cause/one.png" },
+    image: { url: "/assets/images/cause/one.webp" },
     tag: "Motivation",
     title: "Teacher Motivation",
     description: "Instilling autonomy, mastery and purpose so teachers rediscover the love of teaching.",
@@ -14,7 +15,7 @@ const defaultPrograms = [
     statTwoValue: "National",
   },
   {
-    image: { url: "/assets/images/cause/two.png" },
+    image: { url: "/assets/images/cause/two.webp" },
     tag: "Systems",
     title: "System Strengthening",
     description: "Working through local government structures to build ownership that outlasts our involvement.",
@@ -25,7 +26,7 @@ const defaultPrograms = [
     statTwoValue: "Secondary Education",
   },
   {
-    image: { url: "/assets/images/cause/three.png" },
+    image: { url: "/assets/images/cause/three.webp" },
     tag: "CPD",
     title: "Continuous Professional Development",
     description: "Peer-led feedback and classroom observation that builds lasting instructional practice.",
@@ -36,7 +37,7 @@ const defaultPrograms = [
     statTwoValue: "Primary Education",
   },
   {
-    image: { url: "/assets/images/cause/four.png" },
+    image: { url: "/assets/images/cause/four.webp" },
     tag: "Evidence",
     title: "Evidence & Research",
     description: "Generating rigorous, locally grounded data that informs policy design and proves what works.",
@@ -82,7 +83,7 @@ const CauseInner = ({ programs = defaultPrograms }) => {
                   <div className='thumb'>
                     <Link href={`/programmes/${item.id}`}>
                       <img
-                        src={item.image?.url || "/assets/images/cause/one.png"}
+                        src={mediaSrc(item.image?.url) || "/assets/images/cause/one.webp"}
                         alt='Image_inner'
                       />
                     </Link>
@@ -128,7 +129,7 @@ const CauseInner = ({ programs = defaultPrograms }) => {
         </div>
       </div>
       <div className='spade'>
-        <img src='assets/images/help/spade.png' alt='Image_inner' />
+        <img src='assets/images/help/spade.webp' alt='Image_inner' />
       </div>
     </section>
   );

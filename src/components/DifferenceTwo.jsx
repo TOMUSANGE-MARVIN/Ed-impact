@@ -100,12 +100,12 @@ const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats, showVideo =
                     data-aos-duration={1000}
                   >
                     <img
-                      src='assets/images/difference/thumb-sm.png'
+                      src='assets/images/difference/thumb-sm.webp'
                       alt='Image_inner'
                     />
                     <div className='grid-line'>
                       <img
-                        src='assets/images/help/grid.png'
+                        src='assets/images/help/grid.webp'
                         alt='Image_inner'
                         className='base-img'
                       />
@@ -128,7 +128,7 @@ const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats, showVideo =
                     data-aos-delay={300}
                   >
                     <img
-                      src='assets/images/difference/thumb-lg.png'
+                      src='assets/images/difference/thumb-lg.webp'
                       alt='Image_inner'
                     />
                   </div>
@@ -356,14 +356,14 @@ const DifferenceTwo = ({ about = defaultAbout, stats = defaultStats, showVideo =
           </div>
         </div>
         <div className='spade'>
-          <img src='assets/images/spade-green-two.png' alt='Image_inner' />
+          <img src='assets/images/spade-green-two.webp' alt='Image_inner' />
         </div>
       </section>
       <VideoModal
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
         youtubeId='1fGna8SwI8I'
-        poster='/assets/images/difference/thumb-sm.png'
+        poster='/assets/images/difference/thumb-sm.webp'
       />
     </>
   );

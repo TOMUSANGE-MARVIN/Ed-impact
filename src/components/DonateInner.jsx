@@ -1,4 +1,5 @@
 "use client";
+import { mediaSrc } from "@/lib/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -37,9 +38,9 @@ const defaultFaqs = [
 ];
 
 const defaultPrograms = [
-  { title: "National Secondary CPD", statOneValue: "176 Local Governments", image: { url: "assets/images/blog/ph-one.png" } },
-  { title: "Primary Teacher Colleges", statOneValue: "22/23 Core PTCs", image: { url: "assets/images/blog/ph-two.png" } },
-  { title: "Evidence & Policy Influence", statOneValue: "£3.12 return per £1", image: { url: "assets/images/blog/three.png" } },
+  { title: "National Secondary CPD", statOneValue: "176 Local Governments", image: { url: "assets/images/blog/ph-one.webp" } },
+  { title: "Primary Teacher Colleges", statOneValue: "22/23 Core PTCs", image: { url: "assets/images/blog/ph-two.webp" } },
+  { title: "Evidence & Policy Influence", statOneValue: "£3.12 return per £1", image: { url: "assets/images/blog/three.webp" } },
 ];
 
 const DonateInner = ({
@@ -69,7 +70,7 @@ const DonateInner = ({
                 data-aos-delay={100}
               >
                 <img
-                  src='assets/images/event/poster-two.png'
+                  src='assets/images/event/poster-two.webp'
                   alt='Image_inner'
                 />
               </div>
@@ -217,7 +218,7 @@ const DonateInner = ({
                       <div className='thumb'>
                         <Link href='/reports-updates'>
                           <img
-                            src='assets/images/award/one.png'
+                            src='assets/images/award/one.webp'
                             alt='Image_inner'
                           />
                         </Link>
@@ -234,7 +235,7 @@ const DonateInner = ({
                       <div className='thumb'>
                         <Link href='/reports-updates'>
                           <img
-                            src='assets/images/award/four.png'
+                            src='assets/images/award/four.webp'
                             alt='Image_inner'
                           />
                         </Link>
@@ -251,7 +252,7 @@ const DonateInner = ({
                       <div className='thumb'>
                         <Link href='/reports-updates'>
                           <img
-                            src='assets/images/award/two.png'
+                            src='assets/images/award/two.webp'
                             alt='Image_inner'
                           />
                         </Link>
@@ -268,7 +269,7 @@ const DonateInner = ({
                       <div className='thumb'>
                         <Link href='/reports-updates'>
                           <img
-                            src='assets/images/award/three.png'
+                            src='assets/images/award/three.webp'
                             alt='Image_inner'
                           />
                         </Link>
@@ -357,7 +358,7 @@ const DonateInner = ({
                       <div className='thumb'>
                         <Link href='/our-work'>
                           <img
-                            src={program.image?.url || "assets/images/blog/ph-one.png"}
+                            src={mediaSrc(program.image?.url) || "assets/images/blog/ph-one.webp"}
                             alt='Image_inner'
                           />
                         </Link>
@@ -400,7 +401,7 @@ const DonateInner = ({
                 data-aos-delay={100}
               >
                 <div className='cm-logo'>
-                  <img src='assets/images/event/logo.png' alt='Image_inner' />
+                  <img src='assets/images/event/logo.webp' alt='Image_inner' />
                 </div>
                 <div className='cm-content'>
                   <p>Africa's Systems Reform Partner</p>
@@ -422,7 +423,7 @@ const DonateInner = ({
                 >
                   <div className='parallax-image-inner'>
                     <img
-                      src='assets/images/event/overview.png'
+                      src='assets/images/event/overview.webp'
                       alt='Image_inner'
                       className='parallax-image'
                     />

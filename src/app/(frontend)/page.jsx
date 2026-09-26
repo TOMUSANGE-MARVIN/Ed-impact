@@ -16,6 +16,7 @@ import TestimonialOne from "@/components/TestimonialOne";
 import TopBarOne from "@/components/TopBarOne";
 import AOSWrap from "@/helper/AOSWrap";
 import CustomCursor from "@/helper/CustomCursor";
+import { heroBackground } from "@/lib/image";
 import {
   getSiteSettings,
   getHomePage,
@@ -48,9 +49,14 @@ const page = async () => {
       getPartners(),
     ]);
   const fundingPartners = partners.filter((p) => (p.category || "funding") === "funding");
+  // The first hero background is the LCP element. It is a CSS background, so
+  // the browser would otherwise only find it after the stylesheets load.
+  const heroBg = heroBackground(home?.heroSlides?.[0], 0);
 
   return (
     <AOSWrap>
+      <link rel='preload' as='image' href={heroBg.sm} media='(max-width: 767px)' fetchPriority='high' />
+      <link rel='preload' as='image' href={heroBg.lg} media='(min-width: 768px)' fetchPriority='high' />
       <section className='page-wrapper'>
         {/* Preloader */}
         <Preloader />

@@ -1,6 +1,7 @@
+import { mediaSrc } from "@/lib/image";
 import Link from "next/link";
 
-const fallbackImages = ["assets/images/blog/four.png", "assets/images/blog/five.png", "assets/images/blog/six.png"];
+const fallbackImages = ["assets/images/blog/four.webp", "assets/images/blog/five.webp", "assets/images/blog/six.webp"];
 
 const defaultPosts = [
   {
@@ -56,7 +57,7 @@ const BlogListInner = ({ posts = defaultPosts }) => {
                 <div className='blog__single-thumb'>
                   <Link href={`/insights/${post.id}`}>
                     <img
-                      src={post.image?.url || fallbackImages[index % fallbackImages.length]}
+                      src={mediaSrc(post.image?.url) || fallbackImages[index % fallbackImages.length]}
                       alt='Image_inner'
                     />
                   </Link>
@@ -137,7 +138,7 @@ const BlogListInner = ({ posts = defaultPosts }) => {
                 data-aos-delay={100}
               >
                 <div className='author-thumb'>
-                  <img src='assets/images/author-two.png' alt='Image_inner' />
+                  <img src='assets/images/author-two.webp' alt='Image_inner' />
                 </div>
                 <div className='author-meta'>
                   <h6>Ed Impact Africa Foundation</h6>
@@ -225,7 +226,7 @@ const BlogListInner = ({ posts = defaultPosts }) => {
                         <div className='thumb'>
                           <Link href={`/insights/${post.id}`}>
                             <img
-                              src={post.image?.url || fallbackImages[index % fallbackImages.length]}
+                              src={mediaSrc(post.image?.url) || fallbackImages[index % fallbackImages.length]}
                               alt='Image_inner'
                             />
                           </Link>

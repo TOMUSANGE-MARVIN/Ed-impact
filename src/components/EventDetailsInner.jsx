@@ -1,3 +1,4 @@
+import { mediaSrc } from "@/lib/image";
 import Link from "next/link";
 
 const defaultReport = {
@@ -46,7 +47,7 @@ function EventDetailsInner({ report: currentReport, reports = [], posts = [] }) 
                 data-aos-duration={1000}
                 data-aos-delay={100}
               >
-                <img src={report.image?.url || "/assets/images/event/poster.png"} alt='Image_inner' />
+                <img src={mediaSrc(report.image?.url) || "/assets/images/event/poster.webp"} alt='Image_inner' />
               </div>
               <div className='cm-details-meta'>
                 <p>
@@ -80,10 +81,10 @@ function EventDetailsInner({ report: currentReport, reports = [], posts = [] }) 
               </div>
               <div className='cm-img-group cta'>
                 <div className='cm-img-single'>
-                  <img src='/assets/images/event/pp-one.png' alt='Image_inner' />
+                  <img src='/assets/images/event/pp-one.webp' alt='Image_inner' />
                 </div>
                 <div className='cm-img-single'>
-                  <img src='/assets/images/event/pp-two.png' alt='Image_inner' />
+                  <img src='/assets/images/event/pp-two.webp' alt='Image_inner' />
                 </div>
               </div>
               <div
@@ -185,7 +186,7 @@ function EventDetailsInner({ report: currentReport, reports = [], posts = [] }) 
                     <div className='single-item' key={r.id}>
                       <div className='thumb'>
                         <Link href={`/reports-updates/${r.id}`}>
-                          <img src={r.image?.url || "/assets/images/blog/ph-one.png"} alt='Image_inner' />
+                          <img src={mediaSrc(r.image?.url) || "/assets/images/blog/ph-one.webp"} alt='Image_inner' />
                         </Link>
                       </div>
                       <div className='content'>
@@ -203,7 +204,7 @@ function EventDetailsInner({ report: currentReport, reports = [], posts = [] }) 
                       <div className='single-item' key={p.id}>
                         <div className='thumb'>
                           <Link href={`/insights/${p.id}`}>
-                            <img src={p.image?.url || "/assets/images/blog/ph-one.png"} alt='Image_inner' />
+                            <img src={mediaSrc(p.image?.url) || "/assets/images/blog/ph-one.webp"} alt='Image_inner' />
                           </Link>
                         </div>
                         <div className='content'>
@@ -239,7 +240,7 @@ function EventDetailsInner({ report: currentReport, reports = [], posts = [] }) 
                 data-aos-delay={100}
               >
                 <div className='cm-logo'>
-                  <img src='/assets/images/event/logo.png' alt='Image_inner' />
+                  <img src='/assets/images/event/logo.webp' alt='Image_inner' />
                 </div>
                 <div className='cm-content'>
                   <p>Africa's Systems Reform Partner</p>

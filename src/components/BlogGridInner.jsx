@@ -1,6 +1,7 @@
+import { mediaSrc } from "@/lib/image";
 import Link from "next/link";
 
-const fallbackImages = ["assets/images/blog/one.png", "assets/images/blog/two.png", "assets/images/blog/three.png"];
+const fallbackImages = ["assets/images/blog/one.webp", "assets/images/blog/two.webp", "assets/images/blog/three.webp"];
 const delays = [0, 300, 600, 900];
 
 const defaultPosts = [
@@ -39,7 +40,7 @@ const BlogGridInner = ({ posts = defaultPosts }) => {
                       <div className='blog__single-thumb'>
                         <Link href={`/insights/${post.id}`}>
                           <img
-                            src={post.image?.url || fallbackImages[index % fallbackImages.length]}
+                            src={mediaSrc(post.image?.url) || fallbackImages[index % fallbackImages.length]}
                             alt='Image_inner'
                           />
                         </Link>
@@ -78,7 +79,7 @@ const BlogGridInner = ({ posts = defaultPosts }) => {
                         </div>
                       </div>
                       <img
-                        src='assets/images/blog/spade.png'
+                        src='assets/images/blog/spade.webp'
                         alt='Image_inner'
                         className='spade-two'
                       />
@@ -130,7 +131,7 @@ const BlogGridInner = ({ posts = defaultPosts }) => {
                 data-aos-delay={100}
               >
                 <div className='author-thumb'>
-                  <img src='assets/images/author-two.png' alt='Image_inner' />
+                  <img src='assets/images/author-two.webp' alt='Image_inner' />
                 </div>
                 <div className='author-meta'>
                   <h6>Ed Impact Africa Foundation</h6>
@@ -218,7 +219,7 @@ const BlogGridInner = ({ posts = defaultPosts }) => {
                         <div className='thumb'>
                           <Link href={`/insights/${post.id}`}>
                             <img
-                              src={post.image?.url || fallbackImages[index % fallbackImages.length]}
+                              src={mediaSrc(post.image?.url) || fallbackImages[index % fallbackImages.length]}
                               alt='Image_inner'
                             />
                           </Link>

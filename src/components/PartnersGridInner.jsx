@@ -1,3 +1,4 @@
+import { mediaSrc } from "@/lib/image";
 const groupLabels = {
   funding: "Funding & Support Partners",
   research: "Research Partners",
@@ -52,7 +53,7 @@ const PartnersGridInner = ({ partners = [] }) => {
                     data-aos-delay={(index % 6) * 100}
                   >
                     <img
-                      src={partner.logo?.url}
+                      src={mediaSrc(partner.logo?.url, 384)}
                       alt={partner.name}
                       title={partner.name}
                     />

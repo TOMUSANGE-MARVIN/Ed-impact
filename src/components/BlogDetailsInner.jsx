@@ -1,3 +1,4 @@
+import { mediaSrc } from "@/lib/image";
 import Link from "next/link";
 
 const defaultPost = {
@@ -8,7 +9,7 @@ const defaultPost = {
   body: "It is tempting to measure success by how many teachers we have trained. But training alone rarely changes what happens in a classroom. What changes it is motivation, a teacher's sense of autonomy, mastery and purpose in their own craft.\n\nWhen teachers feel supported, recognised, and connected to their purpose, motivation grows and classrooms thrive. That is why our model is built around role-modelling and peer networks, not one-off workshops.\n\nOver 3,000 teachers are now applying evidence-informed teaching practices, strengthening learning for thousands of children across Uganda.",
 };
 
-const fallbackImages = ["/assets/images/blog/one.png", "/assets/images/blog/two.png", "/assets/images/blog/three.png"];
+const fallbackImages = ["/assets/images/blog/one.webp", "/assets/images/blog/two.webp", "/assets/images/blog/three.webp"];
 
 const formatDate = (dateValue) => {
   if (!dateValue) return "12 March 2026";
@@ -36,7 +37,7 @@ const BlogDetailsInner = ({ post: currentPost, posts = [] }) => {
                 data-aos-duration={1000}
                 data-aos-delay={100}
               >
-                <img src={post.image?.url || "/assets/images/event/poster.png"} alt='Image_inner' />
+                <img src={mediaSrc(post.image?.url) || "/assets/images/event/poster.webp"} alt='Image_inner' />
               </div>
               <div className='cm-details-meta'>
                 <p>
@@ -67,10 +68,10 @@ const BlogDetailsInner = ({ post: currentPost, posts = [] }) => {
               ) : null}
               <div className='cm-img-group cta'>
                 <div className='cm-img-single'>
-                  <img src='/assets/images/event/pp-one.png' alt='Image_inner' />
+                  <img src='/assets/images/event/pp-one.webp' alt='Image_inner' />
                 </div>
                 <div className='cm-img-single'>
-                  <img src='/assets/images/event/pp-two.png' alt='Image_inner' />
+                  <img src='/assets/images/event/pp-two.webp' alt='Image_inner' />
                 </div>
               </div>
               <div className='details-footer cta'>
@@ -198,7 +199,7 @@ const BlogDetailsInner = ({ post: currentPost, posts = [] }) => {
                 data-aos-delay={100}
               >
                 <div className='author-thumb'>
-                  <img src='/assets/images/author-two.png' alt='Image_inner' />
+                  <img src='/assets/images/author-two.webp' alt='Image_inner' />
                 </div>
                 <div className='author-meta'>
                   <h6>Ed Impact Africa Foundation</h6>
@@ -286,7 +287,7 @@ const BlogDetailsInner = ({ post: currentPost, posts = [] }) => {
                         <div className='thumb'>
                           <Link href={p.id ? `/insights/${p.id}` : '/data-evidence'}>
                             <img
-                              src={p.image?.url || fallbackImages[index % fallbackImages.length]}
+                              src={mediaSrc(p.image?.url) || fallbackImages[index % fallbackImages.length]}
                               alt='Image_inner'
                             />
                           </Link>

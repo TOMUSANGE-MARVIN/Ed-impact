@@ -103,7 +103,7 @@ const ChatbotWidget = () => {
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <img src="/assets/images/author-two.png" alt="" style={{ width: 24, height: 24, borderRadius: "50%", background: "#fff" }} onError={(e) => (e.target.style.display = "none")} />
+              <img src="/assets/images/author-two.webp" alt="" style={{ width: 24, height: 24, borderRadius: "50%", background: "#fff" }} onError={(e) => (e.target.style.display = "none")} />
               <strong style={{ fontSize: 14 }}>Ed Impact Assistant</strong>
               <span style={{ fontSize: 10, background: "#f5a623", color: "#0d3b2e", padding: "2px 6px", borderRadius: 8, fontWeight: 700 }}>DEMO</span>
             </div>

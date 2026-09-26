@@ -211,14 +211,26 @@
     }
   }
 
+  // react-slick's server render offsets a fade slider's track by one slide
+  // (left: -100%), which the client then resets to 0, shifting the whole hero
+  // sideways on hydration. In fade mode the track never moves, so pin it.
+  .slick-track {
+    left: 0 !important;
+  }
+
   .banner-two__slider-bg {
     position: absolute;
     inset: 0px;
     z-index: -4;
+    background-image: var(--bg-sm);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
     transform: scale(1);
+
+    @media (min-width: 768px) {
+      background-image: var(--bg-lg);
+    }
   }
 
   .banner-two__slider-content {

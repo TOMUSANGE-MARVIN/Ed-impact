@@ -64,7 +64,7 @@ const TestimonialOne = ({ testimonials = defaultTestimonials }) => {
       <section
         className='testimonial'
         style={{
-          backgroundImage: "url(/assets/images/bg-one.png)",
+          backgroundImage: "url(/assets/images/bg-one.webp)",
         }}
       >
         <div className='container'>
@@ -115,7 +115,7 @@ const TestimonialOne = ({ testimonials = defaultTestimonials }) => {
                           <div className='author-info'>
                             <div className='author-thumb'>
                               <img
-                                src='assets/images/author.png'
+                                src='assets/images/author.webp'
                                 alt='Image_inner'
                               />
                             </div>
@@ -126,7 +126,7 @@ const TestimonialOne = ({ testimonials = defaultTestimonials }) => {
                           </div>
                           <div className='quote'>
                             <img
-                              src='assets/images/quote.png'
+                              src='assets/images/quote.webp'
                               alt='Image_inner'
                             />
                           </div>
@@ -166,7 +166,7 @@ const TestimonialOne = ({ testimonials = defaultTestimonials }) => {
           data-aos-delay={200}
         >
           <img
-            src='assets/images/community/shape.png'
+            src='assets/images/community/shape.webp'
             alt='Image_inner'
             className='base-img'
           />

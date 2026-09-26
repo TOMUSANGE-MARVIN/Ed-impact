@@ -4,10 +4,10 @@
 
 :root {
   // font family
-  --nunito: "Source Sans 3", "Source Sans Pro", sans-serif;
+  --nunito: var(--font-source-sans), "Source Sans 3", "Source Sans Pro", sans-serif;
   --nunito-sans: "Source Sans 3", "Source Sans Pro", sans-serif;
-  --caveat: "Caveat", cursive;
-  --outfit: "Outfit", sans-serif;
+  --caveat: var(--font-caveat), "Caveat", cursive;
+  --outfit: var(--font-outfit), "Outfit", sans-serif;
 
   // template default
   --template-font: var(--nunito);

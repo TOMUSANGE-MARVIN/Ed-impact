@@ -81,7 +81,7 @@ const ContactOne = () => {
       </div>
       <div className='contact-bg'>
         <img
-          src='assets/images/contact/contact-bg.png'
+          src='assets/images/contact/contact-bg.webp'
           alt='Image_inner'
           className='parallax-image'
         />
@@ -93,7 +93,7 @@ const ContactOne = () => {
         data-aos-delay={300}
       >
         <img
-          src='assets/images/cta/shape-left.png'
+          src='assets/images/cta/shape-left.webp'
           alt='Image_inner'
           className='base-img'
         />
