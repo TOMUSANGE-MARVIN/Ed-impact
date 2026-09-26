@@ -76,65 +76,6 @@ const CauseDetailsInner = ({ program: currentProgram, programs = [] }) => {
                   <img src='/assets/images/event/pp-two.webp' alt='' />
                 </div>
               </div>
-              <div
-                className='blog-comment'
-                data-aos='fade-up'
-                data-aos-duration={1000}
-                data-aos-delay={100}
-              >
-                <div
-                  className='comment__form'
-                  data-aos='fade-up'
-                  data-aos-duration={1000}
-                  data-aos-delay={100}
-                >
-                  <div className='comment-header mb-40'>
-                    <h4 className='mt-8 fw-6'>Leave A Comment</h4>
-                  </div>
-                  <form action='#' method='post'>
-                    <div className='form-group'>
-                      <div className='input-icon'>
-                        <input
-                          type='text'
-                          required=''
-                          name='comment-name'
-                          id='commentName'
-                          placeholder='Your Name'
-                        />
-                        <i className='fa-solid fa-user' />
-                      </div>
-                      <div className='input-icon'>
-                        <input
-                          type='email'
-                          required=''
-                          name='comment-email'
-                          id='commentEmail'
-                          placeholder='Enter Email'
-                        />
-                        <i className='fa-regular fa-envelope' />
-                      </div>
-                    </div>
-                    <div className='input-icon input-icon-alt'>
-                      <textarea
-                        name='comment-message'
-                        id='commentMessage'
-                        cols={30}
-                        rows={10}
-                        placeholder='Type Your Comments...'
-                        defaultValue={""}
-                      />
-                      <i className='fa-regular fa-comments' />
-                    </div>
-                    <div className='cta mt-40'>
-                      <div className='btn-wrapper'>
-                        <button type='submit' className='btn--secondary'>
-                          Submit Comment
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
             </div>
           </div>
           <div className='col-12 col-xl-4'>
