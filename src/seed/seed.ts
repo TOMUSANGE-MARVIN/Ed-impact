@@ -65,7 +65,7 @@ async function seed() {
   for (const [key, file] of Object.entries({
     karema: 'team/exec-karema-2026.jpg',
     birungi: 'team/exec-birungi-2026.jpg',
-    otika: 'team/exec-otika-2026.jpg',
+    otika: 'team/exec-otika-2027.jpg',
     namukose: 'team/exec-namukose-2026.jpg',
     ezati: 'team/board-ezati-2026.jpg',
     mugenyi: 'team/board-mugenyi-2026.jpg',
