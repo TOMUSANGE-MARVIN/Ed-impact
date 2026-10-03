@@ -6,7 +6,7 @@ const FooterOne = async ({ settings }) => {
   const logoLightUrl = "/assets/images/logo-icon.webp";
   const email = settings?.contact?.email || "info@edimpactafrica.org";
   const phone = settings?.contact?.phoneOne || "+256 781 064 668";
-  const location = settings?.contact?.location || "Kampala, Uganda";
+  const location = settings?.contact?.location || "KAMPALA, UGANDA";
   const mapQuery = settings?.contact?.mapQuery || location;
   const social = settings?.social || {};
   return (

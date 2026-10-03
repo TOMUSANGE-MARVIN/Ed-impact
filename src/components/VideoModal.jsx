@@ -63,7 +63,7 @@ const VideoModal = ({ isOpen, onClose, src, poster, youtubeId, startSeconds }) =
       </button>
       <div
         onClick={(e) => e.stopPropagation()}
-        style={{ width: "100%", maxWidth: 960 }}
+        style={{ width: "100%", maxWidth: 1280 }}
       >
         {youtubeId ? (
           <div style={{ position: "relative", width: "100%", paddingTop: "56.25%" }}>

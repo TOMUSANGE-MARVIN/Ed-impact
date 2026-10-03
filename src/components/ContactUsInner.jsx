@@ -3,7 +3,7 @@ const ContactUsInner = ({ settings }) => {
   const partnershipsEmail = settings?.contact?.partnershipsEmail || "partnerships@edimpactafrica.org";
   const phoneOne = settings?.contact?.phoneOne || "+256 781 064 668";
   const phoneTwo = settings?.contact?.phoneTwo || "+256 414 696609";
-  const location = settings?.contact?.location || "Kampala, Uganda";
+  const location = settings?.contact?.location || "KAMPALA, UGANDA";
   const mapQuery = settings?.contact?.mapQuery || location;
   const social = settings?.social || {};
 
