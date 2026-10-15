@@ -93,7 +93,68 @@ const page = async () => {
         <div className='cm-details'>
           <div className='container'>
             <div className='row gutter-60'>
-              <div className='col-12 col-xl-8'>
+              <div className='col-12 col-xl-4 order-xl-1'>
+                <div className='cm-details__sidebar programme-sidebar--sticky'>
+                  <div
+                    className='cm-sidebar-widget'
+                    data-aos='fade-up'
+                    data-aos-duration={1000}
+                    data-aos-delay={100}
+                  >
+                    <div className='intro'>
+                      <h5>At A Glance</h5>
+                    </div>
+                    <div className='cm-details__list'>
+                      <ul>
+                        <li>
+                          <i className='icon-circle-check' />
+                          Country: Uganda
+                        </li>
+                        <li>
+                          <i className='icon-circle-check' />
+                          Duration: June 2025 &ndash; July 2030
+                        </li>
+                        <li>
+                          <i className='icon-circle-check' />
+                          Funder: Mastercard Foundation
+                        </li>
+                        <li>
+                          <i className='icon-circle-check' />
+                          Sector: Secondary Education
+                        </li>
+                        <li>
+                          <i className='icon-circle-check' />
+                          Status: Active
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div
+                    className='cm-sidebar-overview'
+                    data-aos='fade-up'
+                    data-aos-duration={1000}
+                    data-aos-delay={100}
+                  >
+                    <div className='cm-content'>
+                      <p>Join The Movement</p>
+                      <h4>Help Us Build A Motivated Teaching Workforce</h4>
+                    </div>
+                    <div className='cm-cta'>
+                      <Link
+                        href='/partner-with-us'
+                        aria-label='partner with us'
+                        title='partner with us'
+                        className='btn--primary'
+                      >
+                        Partner With Us <i className='fa-solid fa-arrow-right' />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className='col-12 col-xl-8 order-xl-2'>
                 <div className='cm-details__content'>
                   <div
                     className='cm-details__poster'
@@ -101,7 +162,7 @@ const page = async () => {
                     data-aos-duration={1000}
                     data-aos-delay={100}
                   >
-                    <img src='/assets/images/cause/program-secondary.webp' alt='Secondary school students in a Leaders in Teaching Uganda programme classroom' />
+                    <img src='/assets/images/banner/banner-three-bg.webp' alt='Leaders in Teaching Uganda programme launch with consortium partners' />
                   </div>
 
                   <div className='programme-facts'>
@@ -241,67 +302,6 @@ const page = async () => {
                         <li key={outcome}>{outcome}</li>
                       ))}
                     </ol>
-                  </div>
-                </div>
-              </div>
-
-              <div className='col-12 col-xl-4'>
-                <div className='cm-details__sidebar'>
-                  <div
-                    className='cm-sidebar-widget'
-                    data-aos='fade-up'
-                    data-aos-duration={1000}
-                    data-aos-delay={100}
-                  >
-                    <div className='intro'>
-                      <h5>At A Glance</h5>
-                    </div>
-                    <div className='cm-details__list'>
-                      <ul>
-                        <li>
-                          <i className='icon-circle-check' />
-                          Country: Uganda
-                        </li>
-                        <li>
-                          <i className='icon-circle-check' />
-                          Duration: June 2025 &ndash; July 2030
-                        </li>
-                        <li>
-                          <i className='icon-circle-check' />
-                          Funder: Mastercard Foundation
-                        </li>
-                        <li>
-                          <i className='icon-circle-check' />
-                          Sector: Secondary Education
-                        </li>
-                        <li>
-                          <i className='icon-circle-check' />
-                          Status: Active
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div
-                    className='cm-sidebar-overview'
-                    data-aos='fade-up'
-                    data-aos-duration={1000}
-                    data-aos-delay={100}
-                  >
-                    <div className='cm-content'>
-                      <p>Join The Movement</p>
-                      <h4>Help Us Build A Motivated Teaching Workforce</h4>
-                    </div>
-                    <div className='cm-cta'>
-                      <Link
-                        href='/partner-with-us'
-                        aria-label='partner with us'
-                        title='partner with us'
-                        className='btn--primary'
-                      >
-                        Partner With Us <i className='fa-solid fa-arrow-right' />
-                      </Link>
-                    </div>
                   </div>
                 </div>
               </div>

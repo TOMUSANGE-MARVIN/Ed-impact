@@ -1,6 +1,12 @@
 /* ====
  --------- programme detail (quick facts + outcomes) styles start ---------
  ==== */
+@media only screen and (min-width: 1200px) {
+  .programme-sidebar--sticky {
+    position: sticky;
+    top: 120px;
+  }
+}
 .programme-facts {
   background-color: rgba(26, 107, 72, 0.08);
   border-radius: 16px;
