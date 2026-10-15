@@ -65,7 +65,7 @@ async function seed() {
   for (const [key, file] of Object.entries({
     karema: 'team/exec-karema-2026.jpg',
     birungi: 'team/exec-birungi-2026.jpg',
-    otika: 'team/exec-otika-2027.jpg',
+    otika: 'team/exec-otika-2028.jpg',
     namukose: 'team/exec-namukose-2026.jpg',
     ezati: 'team/board-ezati-2026.jpg',
     mugenyi: 'team/board-mugenyi-2026.jpg',
@@ -83,7 +83,7 @@ async function seed() {
     bako: 'team/staff-bako-2026.jpg',
     kinyera: 'team/staff-kinyera-2026.jpg',
     natukunda: 'team/staff-natukunda-2026.jpg',
-    atria: 'team/staff-atria-2026.jpg',
+    atria: 'team/staff-atria-2027.jpg',
     atim: 'team/staff-atim-2026.jpg',
     kirungi: 'team/staff-kirungi-2026.jpg',
     nantaba: 'team/staff-nantaba-2026.jpg',
