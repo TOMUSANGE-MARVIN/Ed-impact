@@ -162,6 +162,7 @@ const HeaderOne = ({ settings }) => {
                             pathname.startsWith("/our-work") ||
                             pathname.startsWith("/programmes") ||
                             pathname.startsWith("/legacy-documents") ||
+                            pathname.startsWith("/our-projects") ||
                             pathname.startsWith("/social-enterprise") ||
                             pathname.startsWith("/leaders-in-teaching-uganda")
                               ? "active"
@@ -206,17 +207,10 @@ const HeaderOne = ({ settings }) => {
                             </li>
                             <li
                               className={
-                                pathname.startsWith("/social-enterprise") ? "active" : ""
+                                pathname.startsWith("/our-projects") ? "active" : ""
                               }
                             >
-                              <Link href='/social-enterprise'>Social Enterprise</Link>
-                            </li>
-                            <li
-                              className={
-                                pathname.startsWith("/leaders-in-teaching-uganda") ? "active" : ""
-                              }
-                            >
-                              <Link href='/leaders-in-teaching-uganda'>Leaders In Teaching Uganda</Link>
+                              <Link href='/our-projects'>Our Projects</Link>
                             </li>
                           </ul>
                         </li>
