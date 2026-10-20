@@ -12,7 +12,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Our Projects",
   description:
-    "Explore Ed Impact Africa Foundation's collaborative projects and partnerships, from the Leaders in Teaching Uganda programme to school-based teacher professional development.",
+    "Explore Ed Impact Africa Foundation's collaborative projects and partnerships: Leaders in Teaching Uganda, school-based teacher professional development, and the Primary Teacher Changemaker Development Programme.",
   path: "/our-projects",
 });
 
@@ -30,6 +30,13 @@ const projects = [
     title: "School-Based Teacher Professional Development",
     image: "/assets/images/banner/banner-four-bg.webp",
     alt: "A teacher coaching students during a classroom lesson",
+  },
+  {
+    href: "/teacher-changemaker-development-programme",
+    tag: "Uganda · 105 Districts",
+    title: "Primary Teacher Changemaker Development Programme",
+    image: "/assets/images/banner/banner-one-bg.webp",
+    alt: "A teacher with primary school learners at a Ugandan school",
   },
 ];
 
@@ -71,7 +78,7 @@ const page = async () => {
             </div>
             <div className='row gutter-30 justify-content-center'>
               {projects.map((project, index) => (
-                <div className='col-12 col-md-6 col-xl-5' key={project.href}>
+                <div className='col-12 col-md-6 col-xl-4' key={project.href}>
                   <div
                     data-aos='fade-up'
                     data-aos-duration={1000}
