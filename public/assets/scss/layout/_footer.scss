@@ -494,18 +494,19 @@
       }
     }
 
-    .footer-two__credit {
-      font-weight: 500;
-      font-size: 13px;
-      color: #949d9c;
-      margin-top: 4px;
+  }
 
-      a {
-        color: #949d9c;
-        text-decoration: underline;
-        &:hover {
-          color: var(--white);
-        }
+  .footer-two__credit {
+    font-weight: 500;
+    font-size: 13px;
+    color: #949d9c;
+    margin-top: 16px;
+
+    a {
+      color: #949d9c;
+      text-decoration: underline;
+      &:hover {
+        color: var(--white);
       }
     }
   }

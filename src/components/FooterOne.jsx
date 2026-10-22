@@ -250,12 +250,6 @@ const FooterOne = async ({ settings }) => {
                     Copyright © <span id='copyrightYear' />{" "}
                     <Link href='/'>{settings?.siteName || "Ed Impact Africa Foundation"}</Link>. All rights reserved.
                   </p>
-                  <p className='footer-two__credit'>
-                    Designed by{" "}
-                    <a href='https://kicowebdesign.com' target='_blank' rel='noopener noreferrer'>
-                      Kico Web Design
-                    </a>
-                  </p>
                 </div>
               </div>
               <div className='col-12 col-lg-6'>
@@ -274,6 +268,14 @@ const FooterOne = async ({ settings }) => {
                     </li>
                   </ul>
                 </div>
+              </div>
+              <div className='col-12'>
+                <p className='footer-two__credit text-center'>
+                  Designed by{" "}
+                  <a href='https://kicowebdesign.com' target='_blank' rel='noopener noreferrer'>
+                    Kico Web Design
+                  </a>
+                </p>
               </div>
             </div>
           </div>
