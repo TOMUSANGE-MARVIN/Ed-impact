@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const GREETING =
-  "Hi! I'm the Ed Impact Africa Foundation assistant (demo). Ask me about our programs, impact, or how to get in touch.";
+  "Hi! I'm the Ed Impact Africa Foundation assistant. Ask me about our programs, impact, or how to get in touch.";
 
 const FALLBACK =
   "I don't have a specific answer for that yet. You can reach our team directly at info@edimpactafrica.org or +256 781 064 668, or visit our Contact Us page.";
@@ -105,7 +105,6 @@ const ChatbotWidget = () => {
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
               <img src="/assets/images/author-two.webp" alt="" style={{ width: 24, height: 24, borderRadius: "50%", background: "#fff" }} onError={(e) => (e.target.style.display = "none")} />
               <strong style={{ fontSize: 14 }}>Ed Impact Assistant</strong>
-              <span style={{ fontSize: 10, background: "#f5a623", color: "#0d3b2e", padding: "2px 6px", borderRadius: 8, fontWeight: 700 }}>DEMO</span>
             </div>
             <button
               onClick={() => setIsOpen(false)}
@@ -177,6 +176,9 @@ const ChatbotWidget = () => {
                 height: 36,
                 cursor: "pointer",
                 flexShrink: 0,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
               <i className="fa-solid fa-paper-plane" />
@@ -199,7 +201,9 @@ const ChatbotWidget = () => {
           cursor: "pointer",
           fontSize: 22,
           marginLeft: "auto",
-          display: "block",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         <i className={isOpen ? "fa-solid fa-xmark" : "fa-solid fa-comment-dots"} />
