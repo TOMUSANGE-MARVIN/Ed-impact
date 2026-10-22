@@ -1,7 +1,8 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { buildConfig } from 'payload'
-import { sqliteAdapter } from '@payloadcms/db-sqlite'
+import { mongooseAdapter } from '@payloadcms/db-mongodb'
+import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import sharp from 'sharp'
 
 import { Users } from './collections/Users'
@@ -44,13 +45,19 @@ export default buildConfig({
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
-  db: sqliteAdapter({
-    client: {
-      url: process.env.DATABASE_URL || 'file:./ed-impact.db',
-    },
-    // Resolved from this file so it works regardless of the process working
-    // directory, production applies these instead of pushing the schema.
-    migrationDir: path.resolve(dirname, 'migrations'),
+  db: mongooseAdapter({
+    url: process.env.DATABASE_URL || '',
   }),
+  plugins: [
+    // Vercel's serverless functions have no persistent local disk, so
+    // uploaded media is stored in Vercel Blob instead of /public/media.
+    vercelBlobStorage({
+      enabled: true,
+      collections: {
+        media: true,
+      },
+      token: process.env.BLOB_READ_WRITE_TOKEN || '',
+    }),
+  ],
   sharp,
 })
