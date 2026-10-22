@@ -47,6 +47,16 @@ export default buildConfig({
   },
   db: mongooseAdapter({
     url: process.env.DATABASE_URL || '',
+    // Each Vercel serverless invocation can open its own connection; a
+    // large per-instance pool quickly exhausts Atlas's free-tier 500
+    // connection cap under concurrent traffic. Keep each instance's pool
+    // small - Payload/Mongoose still reuses the connection across requests
+    // within the same warm instance.
+    connectOptions: {
+      maxPoolSize: 3,
+      minPoolSize: 0,
+      maxIdleTimeMS: 30_000,
+    },
   }),
   plugins: [
     // Vercel's serverless functions have no persistent local disk, so
