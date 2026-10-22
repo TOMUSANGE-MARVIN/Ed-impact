@@ -3,7 +3,7 @@
 
 export const SITE_NAME = "Ed Impact Africa Foundation";
 
-export const SITE_URL = (process.env.NEXT_PUBLIC_SERVER_URL || "https://edimpactafrica.org").replace(/\/$/, "");
+export const SITE_URL = (process.env.NEXT_PUBLIC_SERVER_URL || "https://www.edimpactafrica.org").replace(/\/$/, "");
 
 // The site stays out of search results until ALLOW_INDEXING=true is set on the
 // production deployment, so staging and preview builds are never indexed.
