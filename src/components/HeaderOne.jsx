@@ -165,7 +165,8 @@ const HeaderOne = ({ settings }) => {
                             pathname.startsWith("/our-projects") ||
                             pathname.startsWith("/social-enterprise") ||
                             pathname.startsWith("/leaders-in-teaching-uganda") ||
-                            pathname.startsWith("/teacher-changemaker-development-programme")
+                            pathname.startsWith("/teacher-changemaker-development-programme") ||
+                              pathname.startsWith("/safeguarding-commitment")
                               ? "active"
                               : ""
                           }`}

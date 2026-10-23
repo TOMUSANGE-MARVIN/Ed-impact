@@ -20,6 +20,7 @@ const staticRoutes: Array<[string, number, MetadataRoute.Sitemap[number]['change
   ['/leaders-in-teaching-uganda', 0.7, 'monthly'],
   ['/social-enterprise', 0.7, 'monthly'],
   ['/teacher-changemaker-development-programme', 0.7, 'monthly'],
+  ['/safeguarding-commitment', 0.6, 'yearly'],
   ['/leadership-board', 0.6, 'monthly'],
   ['/legacy-documents', 0.6, 'yearly'],
   ['/faq', 0.5, 'monthly'],

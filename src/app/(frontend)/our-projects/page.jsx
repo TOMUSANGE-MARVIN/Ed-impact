@@ -12,7 +12,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Our Projects",
   description:
-    "Explore Ed Impact Africa Foundation's collaborative projects and partnerships: Leaders in Teaching Uganda, school-based teacher professional development, and the Primary Teacher Changemaker Development Programme.",
+    "Explore Ed Impact Africa Foundation's collaborative projects and partnerships: Leaders in Teaching Uganda, school-based teacher professional development, the Primary Teacher Changemaker Development Programme, and our safeguarding commitment.",
   path: "/our-projects",
 });
 
@@ -37,6 +37,13 @@ const projects = [
     title: "Primary Teacher Changemaker Development Programme",
     image: "/assets/images/banner/banner-one-bg.webp",
     alt: "A teacher with primary school learners at a Ugandan school",
+  },
+  {
+    href: "/safeguarding-commitment",
+    tag: "Policy · Zero-Tolerance",
+    title: "Our Safeguarding Commitment",
+    image: "/assets/images/banner/banner-two-bg.webp",
+    alt: "Staff and learners in conversation at a Ugandan school",
   },
 ];
 
